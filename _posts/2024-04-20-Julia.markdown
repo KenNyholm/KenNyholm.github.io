@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Julia
-date:   2024-04-20 12:00:00
+date:   2024-04-20
 ---
 #### Portfolio optimization example: 
 + [PDF file here](/assets/julia/PortfolioOpt.pdf "Download")
