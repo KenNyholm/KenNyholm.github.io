@@ -17,8 +17,8 @@ date:   2024-04-02
 #### Code for estimating various dynamic yield curve models (condensed version of codes also included above)
 + [download MATLAB code](/assets/matlab/YieldCurveModels.zip)
 
-<!-- #### Fitting yield curves using MATLAB's build-in functionality (without dynamically evolving the underlying factors)
-+ [example](/assets/html/FitCurve2BondData.html) -->
+#### Fitting yield curves using MATLAB's build-in functionality (without dynamically evolving the underlying factors)
++ [example](/assets/html/FitCurve2BondData.html)
 
 #### Code for estimating the Smith-Wilson yield curve model
 + [download MATLAB code here](/assets/matlab/SmithWilson.zip)
