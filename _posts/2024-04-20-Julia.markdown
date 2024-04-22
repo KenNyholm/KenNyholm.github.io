@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Julia"
+date:   2024-04-20
+categories: julia
+permalink: /julia/
+---
+#### Portfolio optimization example: 
++ [PDF file here](/assets/julia/PortfolioOpt.pdf "Download")
++ [HTML version here](/assets/html/PortfolioOpt.jl.html "Download")
++ [Julia code and data here](/assets/julia/PortfolioOpt.zip "Download")

@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "MATLAB"
+date:   2024-04-02
+categories: matlab
+permalink: /matlab/
+---
+#### Materials included in [A practitioners guide to discrete time yield curve modelling](https://www.cambridge.org/core/books/practitioners-guide-to-discretetime-yield-curve-modelling/6087FE5133D5F93D9BF5B955510BA643): 
++ [download MATLAB code here](/assets/matlab/Nyholm_APG2YCM_12092020.zip "Download")
++ [download a previous version of the text here](/assets/papers/A_practitioners_guide_to_yield_curve_modelling.pdf "Download")
+
+
+#### Materials included in [Strategic Asset Allocation in Fixed Income Markets: A Matlab Based User's Guide](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119207047):
++ [download MATLAB code here](/assets/matlab/Nyholm_BookCode_2008.zip)
++ [download previous version of the text here](/assets/papers/KenNyholm_Userguide_December2007.pdf)
++ Note that the MATLAB code is written for R2008, so parts of the code may need to be updated.
+
+#### Code for estimating various dynamic yield curve models (condensed version of codes also included above)
++ [download MATLAB code](/assets/matlab/YieldCurveModels.zip)
+
+#### Fitting yield curves using MATLAB's build-in functionality (without dynamically evolving the underlying factors)
++ [example](/assets/html/FitYieldCurve/FitCurve2BondData.html)
+
+#### Code for estimating the Smith-Wilson yield curve model
++ [download MATLAB code here](/assets/matlab/SmithWilson.zip)
+
+#### Code for performing [Diebold-Yilmaz spill-over analysis](https://financialconnectedness.org/research.html)
++ [download MATLAB code here](/assets/matlab/SpilloverAnalysisDY.zip) 
+
+#### Generlized impulse-response functions
++ [example](/assets/html/GIRF.html)
++ [download code](/assets/matlab/GIRF_code.zip)
