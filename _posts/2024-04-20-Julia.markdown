@@ -2,7 +2,6 @@
 layout: post
 title:  "Julia"
 date:   2024-04-20
-permalink: /julia/
 ---
 #### Portfolio optimization example: 
 + [PDF file here](/assets/julia/PortfolioOpt.pdf "Download")

@@ -1,9 +1,8 @@
 ---
-layout: post
-title:  "MATLAB"
+title:  MATLAB
 date:   2024-04-02
-permalink: /matlab/
 ---
+
 #### Materials included in [A practitioners guide to discrete time yield curve modelling](https://www.cambridge.org/core/books/practitioners-guide-to-discretetime-yield-curve-modelling/6087FE5133D5F93D9BF5B955510BA643): 
 + [download MATLAB code here](/assets/matlab/Nyholm_APG2YCM_12092020.zip "Download")
 + [download a previous version of the text here](/assets/papers/A_practitioners_guide_to_yield_curve_modelling.pdf "Download")
