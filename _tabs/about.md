@@ -9,4 +9,4 @@ Welcome to my website!
 
 Here I post papers, MATLAB, and Julia code. 
 
-I only recently started  programming in [Julia](https://julialang.org) and I will post code and examples as I generate them. 
+I only recently started programming in [Julia](https://julialang.org). I will post code and examples as I generate them. 
