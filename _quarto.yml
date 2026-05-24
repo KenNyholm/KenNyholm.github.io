@@ -1,0 +1,27 @@
+project:
+  type: website
+  resources:
+    - textbook/**
+
+website:
+  title: "Ken Nyholm"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: code.qmd
+        text: Code & Papers
+      - href: links.qmd
+        text: Links
+      - href: disclaimer.qmd
+        text: Disclaimer
+    right:
+      - icon: github
+        href: https://github.com/KenNyholm
+        aria-label: GitHub
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false

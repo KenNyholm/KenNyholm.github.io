@@ -1,0 +1,11 @@
+/* Custom styles for kennyholm.github.io */
+
+/* Slightly more breathing room in the main content area */
+.quarto-container {
+  max-width: 860px;
+}
+
+/* Navbar tweaks */
+.navbar-brand {
+  font-weight: 600;
+}

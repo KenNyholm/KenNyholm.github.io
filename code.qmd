@@ -1,0 +1,36 @@
+---
+title: "Code & Papers"
+---
+
+## MATLAB
+
+#### [A Terminal Rate Approach to Dissecting Term Premia](https://www.pm-research.com/content/iijfixinc/early/2024/09/13/jfi20241196) (joint with Johannes Kramer)
+- [Download MATLAB code](/assets/matlab/TerminalRateModel.zip)
+- [Download model description](/assets/papers/Terminal_Rate_Model_2024.pdf)
+
+#### [A Practitioner's Guide to Discrete Time Yield Curve Modelling](https://www.cambridge.org/core/books/practitioners-guide-to-discretetime-yield-curve-modelling/6087FE5133D5F93D9BF5B955510BA643)
+- [Download MATLAB code](/assets/matlab/Nyholm_APG2YCM_12092020.zip)
+- [Download previous version of the text](/assets/papers/A_practitioners_guide_to_yield_curve_modelling.pdf)
+
+#### [Strategic Asset Allocation in Fixed Income Markets: A MATLAB-Based User's Guide](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119207047)
+- [Download MATLAB code](/assets/matlab/Nyholm_BookCode_2008.zip)
+- [Download previous version of the text](/assets/papers/KenNyholm_Userguide_December2007.pdf)
+- *Note: code is written for MATLAB R2008 — some parts may need updating.*
+
+#### Dynamic yield curve models (condensed version)
+- [Download MATLAB code](/assets/matlab/YieldCurveModels.zip)
+
+#### Smith-Wilson yield curve model
+- [Download MATLAB code](/assets/matlab/SmithWilson.zip)
+
+#### [Diebold-Yilmaz spillover analysis](https://financialconnectedness.org/research.html)
+- [Download MATLAB code](/assets/matlab/SpilloverAnalysisDY.zip)
+
+---
+
+## Julia
+
+#### Portfolio optimisation example
+- [PDF write-up](/assets/julia/PortfolioOpt.pdf)
+- [Julia code and data](/assets/julia/PortfolioOpt.zip)
+- [HTML version](/assets/html/PortfolioOpt_jl.html)
