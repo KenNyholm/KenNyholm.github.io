@@ -1,19 +1,19 @@
 ---
-title: "Ken Nyholm"
+title: "Ken Nyholm's website"
 ---
 
 Welcome to my website!
 
 Here you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.
 
-I work at the European Central Bank. Views expressed on this site are my own and do not represent the ECB.
+### Textbook in progress
 
-I have recently started programming in [Julia](https://julialang.org) and will post code and examples as I generate them.
-
-### Textbook
-
-I am currently writing [*A Practitioner's Guide to Financial Market Analysis*](/textbook/index.html), covering yield curve modelling, DB pension funds, and related topics.
+I am currently writing a web-based textbook called: [*A Practitioner's Guide to Financial Market Analysis*](/textbook/index.html), covering yield curve modelling, DB pension funds, and related topics. Take a look and give me feedback!
 
 ### Links
 
 Find me on [Google Scholar](https://scholar.google.com/citations?user=IexGlR8AAAAJ), [ResearchGate](https://www.researchgate.net/profile/Ken-Nyholm), and the [ECB author page](https://www.ecb.europa.eu/pub/research/authors/profiles/ken-nyholm.en.html).
+
+### Disclaimer
+I work at the European Central Bank. Views expressed on this site are my own and do not necessarily represent the ECB. Please read the [disclaimer](disclaimer.qmd).
+
