@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Links",
+    "section": "",
+    "text": "Google Scholar\nResearchGate\nECB working papers"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ken Nyholm",
+    "section": "",
+    "text": "Welcome to my website!\nHere you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.\nI work at the European Central Bank. Views expressed on this site are my own and do not represent the ECB.\nI have recently started programming in Julia and will post code and examples as I generate them.\n\nTextbook\nI am currently writing A Practitioner’s Guide to Financial Market Analysis, covering yield curve modelling, DB pension funds, and related topics.\n\n\nLinks\nFind me on Google Scholar, ResearchGate, and the ECB author page."
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code & Papers",
+    "section": "",
+    "text": "Download MATLAB code\nDownload model description\n\n\n\n\n\nDownload MATLAB code\nDownload previous version of the text\n\n\n\n\n\nDownload MATLAB code\nDownload previous version of the text\nNote: code is written for MATLAB R2008 — some parts may need updating.\n\n\n\n\n\nDownload MATLAB code\n\n\n\n\n\nDownload MATLAB code\n\n\n\n\n\nDownload MATLAB code"
+  },
+  {
+    "objectID": "code.html#matlab",
+    "href": "code.html#matlab",
+    "title": "Code & Papers",
+    "section": "",
+    "text": "Download MATLAB code\nDownload model description\n\n\n\n\n\nDownload MATLAB code\nDownload previous version of the text\n\n\n\n\n\nDownload MATLAB code\nDownload previous version of the text\nNote: code is written for MATLAB R2008 — some parts may need updating.\n\n\n\n\n\nDownload MATLAB code\n\n\n\n\n\nDownload MATLAB code\n\n\n\n\n\nDownload MATLAB code"
+  },
+  {
+    "objectID": "code.html#julia",
+    "href": "code.html#julia",
+    "title": "Code & Papers",
+    "section": "Julia",
+    "text": "Julia\n\nPortfolio optimisation example\n\nPDF write-up\nJulia code and data\nHTML version"
+  },
+  {
+    "objectID": "disclaimer.html",
+    "href": "disclaimer.html",
+    "title": "Disclaimer",
+    "section": "",
+    "text": "General Information\nAll content and materials provided on this website, including but not limited to text, graphics, code snippets, and any other material, are for informational purposes only. The views, thoughts, and opinions expressed on this website belong solely to me, Ken Nyholm, and do not reflect the views, policies, or positions of the European Central Bank (ECB). The content here is created and published in my capacity as a private individual, not as an employee or representative of the ECB.\n\n\nCode Use and Reliability\nThe code and materials provided on this website are available under the MIT License, which allows use, copying, modification, merging, publishing, distributing, sublicensing, and/or selling copies of the code, subject to including a copy of the licence and copyright notice in all copies or substantial portions of the code.\n\n\nNon-Endorsement\nThe information and materials on this website are not intended to provide, and should not be interpreted as, investment advice or recommendations of any kind. Users should consult a qualified professional for investment advice tailored to their specific circumstances. The mention of any products, services, or other entities does not constitute an endorsement by me or by the ECB.\n\n\nExternal Links\nThis website may contain links to external websites and resources provided for convenience and informational purposes only. I do not control, endorse, or assume responsibility for the content, policies, or practices of any third-party websites.\n\n\nCopyright\nAll code and software materials are released under the MIT License. The software is provided “as is”, without warranty of any kind, express or implied.\n\n\nChanges to This Disclaimer\nThis disclaimer is subject to change at any time without notice.\n\n\nContact\nIf you have questions about this disclaimer, please reach out via the contact information on this website."
+  }
+]
