@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Ken Nyholm",
+    "title": "Ken Nyholm’s website",
     "section": "",
-    "text": "Welcome to my website!\nHere you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.\nI work at the European Central Bank. Views expressed on this site are my own and do not represent the ECB.\nI have recently started programming in Julia and will post code and examples as I generate them.\n\nTextbook\nI am currently writing A Practitioner’s Guide to Financial Market Analysis, covering yield curve modelling, DB pension funds, and related topics.\n\n\nLinks\nFind me on Google Scholar, ResearchGate, and the ECB author page."
+    "text": "Welcome to my website!\nHere you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.\n\nTextbook in progress\nI am currently writing a web-based textbook called: A Practitioner’s Guide to Financial Market Analysis, covering yield curve modelling, DB pension funds, and related topics. Take a look and give me feedback!\n\n\nLinks\nFind me on Google Scholar, ResearchGate, and the ECB author page.\n\n\nDisclaimer\nI work at the European Central Bank. Views expressed on this site are my own and do not necessarily represent the ECB. Please read the disclaimer."
   },
   {
     "objectID": "code.html",
