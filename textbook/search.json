@@ -14,7 +14,7 @@
     "href": "index.html#planned-topics",
     "title": "A Practitioner’s Guide to Financial Market Analysis",
     "section": "Planned Topics",
-    "text": "Planned Topics\n\nBackground information and tools\nDynamic behaviour of yields\nYield curve modelling and forecasting\nDefined benefit pensions\nInformation embedded in the yield curve\nGenerating return distributions\nPortfolio optimisation\nReturns and risks\nReturn decomposition\n\nEvaluating trading strategies\n\nThe overarching goal is to bridge theory and practice, and the style and structure will follow that of Nyholm (2021), combining theoretical concepts with practical examples, data-driven illustrations, and empirical applications.\n\n\n\n\nNyholm, Ken. 2021. A Practitioner’s Guide to Discrete-Time Yield Curve Modelling: With Empirical Illustrations and MATLAB Examples. Elements in Quantitative Finance. Cambridge University Press.",
+    "text": "Planned Topics\n\nBackground information\nYield curve modelling and forecasting\nDefined benefit pensions\nGenerating return distributions\nPortfolio optimisation\nReturns and risks\nReturn decomposition\n\nEvaluating trading strategies\n\nThe overarching goal is to bridge theory and practice, and the style and structure will follow that of Nyholm (2021), combining theoretical concepts with practical examples, data-driven illustrations, and empirical applications.\n\n\n\n\nNyholm, Ken. 2021. A Practitioner’s Guide to Discrete-Time Yield Curve Modelling: With Empirical Illustrations and MATLAB Examples. Elements in Quantitative Finance. Cambridge University Press.",
     "crumbs": [
       "Preface"
     ]
