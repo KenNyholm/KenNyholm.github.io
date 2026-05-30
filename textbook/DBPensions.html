@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Defined-Benefit Pensions – A Practitioner's Guide to Financial Market Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./DynamicYieldCurveModels.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DBPensions.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">A Practitioner’s Guide to Financial Market Analysis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">intro.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./theToolbox.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Notation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DynamicYieldCurveModels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The short rate and the yield curve[^1]</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DBPensions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#funding-ratio-and-basic-valuation" id="toc-funding-ratio-and-basic-valuation" class="nav-link active" data-scroll-target="#funding-ratio-and-basic-valuation"><span class="header-section-number">4.1</span> Funding ratio and basic valuation</a></li>
+  <li><a href="#deterministic-retirement-horizon" id="toc-deterministic-retirement-horizon" class="nav-link" data-scroll-target="#deterministic-retirement-horizon"><span class="header-section-number">4.2</span> Deterministic retirement horizon</a></li>
+  <li><a href="#generalising-to-survival-probabilities" id="toc-generalising-to-survival-probabilities" class="nav-link" data-scroll-target="#generalising-to-survival-probabilities"><span class="header-section-number">4.3</span> Generalising to survival probabilities</a></li>
+  <li><a href="#the-deterministic-horizon-as-a-special-case" id="toc-the-deterministic-horizon-as-a-special-case" class="nav-link" data-scroll-target="#the-deterministic-horizon-as-a-special-case"><span class="header-section-number">4.4</span> The deterministic horizon as a special case</a></li>
+  <li><a href="#a-simple-numerical-illustration" id="toc-a-simple-numerical-illustration" class="nav-link" data-scroll-target="#a-simple-numerical-illustration"><span class="header-section-number">4.5</span> A simple numerical illustration</a></li>
+  <li><a href="#sec:penaltyFactors" id="toc-sec:penaltyFactors" class="nav-link" data-scroll-target="#sec\:penaltyFactors"><span class="header-section-number">4.6</span> Early retirement penalty factors</a></li>
+  <li><a href="#sec:transfers" id="toc-sec:transfers" class="nav-link" data-scroll-target="#sec\:transfers"><span class="header-section-number">4.7</span> Transfers to and from the pension scheme</a></li>
+  <li><a href="#subsec:conversionFactor" id="toc-subsec:conversionFactor" class="nav-link" data-scroll-target="#subsec\:conversionFactor"><span class="header-section-number">4.8</span> The pension conversion factor</a>
+  <ul class="collapse">
+  <li><a href="#actuarial-neutrality-and-the-annuity-value" id="toc-actuarial-neutrality-and-the-annuity-value" class="nav-link" data-scroll-target="#actuarial-neutrality-and-the-annuity-value">Actuarial neutrality and the annuity value</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec:IntroPensions" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This chapter covers the following topics:</p>
+<ul>
+<li>Basic principles of defined pension benefits.</li>
+<li>Key parameters, and the pension conversion factor.</li>
+<li>Asset and liability considerations.</li>
+<li>Solvency calculations.</li>
+<li>Early retirement factors.</li>
+<li>Transfers to and from the plan.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>This chapter examines defined benefit pension schemes. Under such arrangements, the pension provider promises to pay the pension recipient an annuity that starts at a later point in time, based on terms that are agreed upon when the agreement is made. In occupational schemes, the provider is typically the employer and the recipient an employee, whereas in market-based arrangements the provider is a financial institution and the recipient a private individual.</p>
+<p>The funding of future pension payments is achieved through regular, typically monthly, contributions. Occasional irregular payments, known as transfer-ins, can also be made. Pension savings often benefit from a favourable tax treatment. In occupational schemes, contributions are usually deducted from the pre-tax salary, which lowers the employee’s taxable income and thus the size of the immediate tax bill. Moreover, returns generated from the invested funds are exempt from taxation during the accumulation phase. Tax is only payable once the annuity payments start, allowing the funds to compound more rapidly on a larger base. At retirement, the recipient is typically in a lower tax bracket than during active employment, which further reduces the overall tax bill across the person’s lifetime.</p>
+<p>Pension analysis integrates long-term investment management, the transfer of risk between the employee (the pension recipient) and the plan sponsor (the pension provider), asset–liability matching, and comprehensive risk monitoring. It is therefore a discipline that unites several key elements of financial theory and analytical practice.</p>
+<p>While the discussion is general, for ease of notation and narrative clarity, I will refer to the pension provider as the ‘plan sponsor’ and the pension recipient as the ‘employee’. This terminology aligns with occupational pension schemes but is adopted here purely for convenience.</p>
+<p>Defined-benefit (DB) pension plans promise employees a pre-specified stream of retirement income that is linked to salary and service, rather than to the realised performance of the underlying investments. <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> illustrates the phases of pension cash flows for a single employee over the full life cycle of a DB arrangement. At time <span class="math inline">\(t_0\)</span> the employee joins the pension scheme and starts making contributions toward the funding of the pension; typically, the employer also contributes a fixed fraction of the employee’s salary, as specified in the employment contract.</p>
+<div id="fig-pensionOverview" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pensionOverview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/DBPension_fig_overview.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pensionOverview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Pension cash flows
+</figcaption>
+</figure>
+</div>
+<p>Between <span class="math inline">\(t_0\)</span> and the retirement date <span class="math inline">\(R\)</span> the member accumulates service years in the pension plan. <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> distinguishes between past service, from <span class="math inline">\(t_0\)</span> up to the date <span class="math inline">\(t\)</span> where it is assumed that the funding level of the plan is assessed (e.g.&nbsp;through an actuarial funding study or an assessment made by the employer), and future service, from <span class="math inline">\(t\)</span> to retirement at <span class="math inline">\(R\)</span>. The solid blue and orange lines illustrate the build-up of pension assets due to contributions and investment returns; the dotted extensions indicate the continuation of these flows over the future-service period. At the retirement date <span class="math inline">\(R\)</span>, the DB pension is paid out as an annuity that grows according to the agreed pension indexation until the time of death <span class="math inline">\(D\)</span>. Geometrically, a pension plan is well funded when the area of the combined triangle formed by contributions and investment returns matches the area of the rectangle representing the pension annuity together with the triangular area capturing the annuity’s indexation over time.</p>
+<p>In a stylised but widely used formulation, the annual pension benefit at retirement is given by <span id="eq-pb_def"><span class="math display">\[
+    PB = \alpha \cdot SY \cdot FS,
+\tag{4.1}\]</span></span> where <span class="math inline">\(PB\)</span> denotes the annual pension benefit, <span class="math inline">\(\alpha\)</span> is the accrual rate per year of service (for example <span class="math inline">\(2\%\)</span>), <span class="math inline">\(SY\)</span> is the number of service years accumulated in the plan, and <span class="math inline">\(FS\)</span> is the final salary at retirement. This simple benefit formula links the length of the past-service period and the level of final pay to the height of the pension-benefit rectangle in <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> . It also highlights the defining feature of DB schemes: pension payments are contractually guaranteed by the sponsor, and the financial and demographic risks required to honour <a href="#eq-pb_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-pb_def</span></a> are borne by the plan sponsor (employer) rather than by the individual member.</p>
+<section id="funding-ratio-and-basic-valuation" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="funding-ratio-and-basic-valuation"><span class="header-section-number">4.1</span> Funding ratio and basic valuation</h2>
+<p>From a valuation perspective, the central task at time <span class="math inline">\(t\)</span> is to compare (i) the present value of all past-service contributions and accumulated investment returns to date, represented by the blue and orange areas to the left of <span class="math inline">\(t\)</span> in <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a>, with (ii) the present value of the accrued portion of the pension-benefit rectangle to the right of <span class="math inline">\(R\)</span>. Denote by <span class="math inline">\(A_t\)</span> the market value of the pension assets at time <span class="math inline">\(t\)</span> and by <span class="math inline">\(L_t\)</span> the actuarial present value of accrued pension liabilities at the same date. The funding ratio at time <span class="math inline">\(t\)</span> is defined as <span id="eq-FR_def"><span class="math display">\[
+    FR_t = \frac{A_t}{L_t},
+\tag{4.2}\]</span></span> which is the standard summary indicator of the solvency position of DB arrangements. Values of <span class="math inline">\(FR_t\)</span> below one indicate underfunding (assets are insufficient to cover the present value of accrued benefits), whereas values above one indicate a funding surplus. In equilibrium, the discounted area under the contribution and return profiles matches the discounted area of the pension-benefit block plus the inflation adjustments.</p>
+</section>
+<section id="deterministic-retirement-horizon" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="deterministic-retirement-horizon"><span class="header-section-number">4.2</span> Deterministic retirement horizon</h2>
+<p><a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> labels <span class="math inline">\(D\)</span> as the expected date of death. In a basic version of the framework, one treats <span class="math inline">\(R\)</span> and <span class="math inline">\(D\)</span> as fixed, so that the member is assumed to receive benefits over a deterministic retirement horizon of length <span class="math display">\[
+    t_{DR} = D - R.
+\]</span> The pension-benefit rectangle between <span class="math inline">\(R\)</span> and <span class="math inline">\(D\)</span> in the figure is then interpreted literally: <span class="math inline">\(PB\)</span> (indexed to inflation) is paid every year from <span class="math inline">\(R\)</span> until <span class="math inline">\(D\)</span>, and no benefits are paid outside this interval.</p>
+<p>Let <span class="math inline">\(r_d\)</span> denote the nominal discount rate and <span class="math inline">\(r_{inf}\)</span> the annual rate at which pension benefits are indexed (for example the inflation rate). The annual pension at retirement is <span class="math inline">\(PB\)</span>, and it grows at the rate <span class="math inline">\(r_{inf}\)</span> each year between <span class="math inline">\(R\)</span> and <span class="math inline">\(D\)</span>. Under these assumptions, the present value of the pension benefits at the retirement date <span class="math inline">\(R\)</span> can be expressed as the present value of a finite, inflation-indexed annuity: <span id="eq-PV-R-deterministic"><span class="math display">\[
+PV_{R}(PB) = PB \cdot \frac{1}{r_d - r_{inf}} \left[ 1 - \left(\frac{1 + r_{inf}}{1 + r_d}\right)^{t_{DR}} \right].
+\tag{4.3}\]</span></span> If <span class="math inline">\(t\)</span> denotes the valuation date and <span class="math inline">\(t_R = R - t\)</span> the number of years from <span class="math inline">\(t\)</span> to retirement, the present value of the liabilities at the valuation date is obtained by discounting <a href="#eq-PV-R-deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV-R-deterministic</span></a> back <span class="math inline">\(t_R\)</span> years: <span id="eq-PV-t-deterministic"><span class="math display">\[
+    L_{t} \;=\; PV_{t}(PB) = PV_R(PB) \cdot (1 + r_d)^{-t_R}.
+\tag{4.4}\]</span></span></p>
+<p>Substituting <a href="#eq-PV-t-deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV-t-deterministic</span></a> into <a href="#eq-FR_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FR_def</span></a> yields a closed-form expression for the funding ratio when both the retirement date and the date of death are assumed deterministic. In terms of <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a>, the deterministic-horizon valuation discounts the entire green benefit rectangle back to the valuation date <span class="math inline">\(t\)</span> using a fixed horizon of length <span class="math inline">\(t_R + t_{DR}\)</span>.</p>
+</section>
+<section id="generalising-to-survival-probabilities" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="generalising-to-survival-probabilities"><span class="header-section-number">4.3</span> Generalising to survival probabilities</h2>
+<p>In practice, the date of death <span class="math inline">\(D\)</span> in <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> is uncertain: the height the pension-benefit block is known, but the right-hand edge, and thus the width, is random. For actuarial work it is therefore conceptually cleaner, to treat the retirement horizon as random by modelling mortality explicitly. For this, we apply the following notation and work in annual steps (a generalisation to monthly or daily steps is straight forward):</p>
+<ul>
+<li><span class="math inline">\({}_tp_y\)</span> is the probability that a person aged <span class="math inline">\(y\)</span> survives at least <span class="math inline">\(t\)</span> more years.</li>
+<li><span class="math inline">\(v = (1 + r_d)^{-1}\)</span> is the annual discount factor.</li>
+</ul>
+<p>Assume that the pension commences at age <span class="math inline">\(y\)</span> with an initial annual amount of <span class="math inline">\(PB\)</span> that is indexed annually at the rate of <span class="math inline">\(r_{inf}\)</span>. The payment at age <span class="math inline">\(y + k\)</span> is then <span class="math display">\[
+    \text{Benefit at age}\; y + k = PB \cdot (1 + r_{inf})^{k}, \qquad k = 0,1,2,\dots.
+\]</span> In the diagram, these payments correspond to vertical slices of the pension-benefit rectangle at successive points in time. The probability that the member is alive to receive the payment at age <span class="math inline">\(y + k\)</span> is <span class="math inline">\({}_k p_y\)</span>, and the payment is discounted back to the valuation age, denoted by <span class="math inline">\(x\)</span>, using <span class="math inline">\(v^{(y - x)+k}\)</span>. The actuarial present value at age <span class="math inline">\(x\)</span> of the pension benefits is therefore <span id="eq-PV_x_general"><span class="math display">\[
+    L_t \;\equiv\; PV_x(PB) = v^{\,y - x} \sum_{k=0}^{\infty} PB \cdot (1 + r_{inf})^{k} \cdot v^{k} \cdot {}_k p_r.
+\tag{4.5}\]</span></span> <span class="math inline">\(PB\)</span> can be factored out, and the inner sum is therefore a growing life annuity starting at age <span class="math inline">\(y\)</span>: <span class="math display">\[
+    PV_x(PB) = PB \cdot v^{\,y - x} \cdot \ddot{a}^{g}_y,
+\]</span> where <span class="math display">\[
+    \ddot{a}^{g}_y = \sum_{k=0}^{\infty} (1 + r_{inf})^{k} v^{k} \, {}_k p_y
+\]</span> is the expected present value, at age <span class="math inline">\(y\)</span>, of a payment of one unit per year, increasing at rate <span class="math inline">\(r_{inf}\)</span>, payable while the member is alive.</p>
+<p>Substituting <a href="#eq-PV_x_general" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_x_general</span></a> into <a href="#eq-FR_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FR_def</span></a> gives the funding ratio in the general mortality framework: <span id="eq-FR_general"><span class="math display">\[
+    FR_t = \frac{A_t}{PV_x(PB)} \;=\; \frac{A_t}{v^{\,y - x} \displaystyle \sum_{k=0}^{\infty} PB \cdot (1 + r_{inf})^{k} \cdot v^{k} \cdot {}_k p_y }.
+\tag{4.6}\]</span></span> Relative to the deterministic-horizon case, the right-hand boundary of the benefit block in <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> is now stochastic: each potential payment year contributes to <span class="math inline">\(L_t\)</span> with a weight equal to the probability that the member is still alive at that age.</p>
+</section>
+<section id="the-deterministic-horizon-as-a-special-case" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="the-deterministic-horizon-as-a-special-case"><span class="header-section-number">4.4</span> The deterministic horizon as a special case</h2>
+<p>The deterministic-lifespan assumption used in <a href="#eq-PV_R_deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_R_deterministic</span></a> – <a href="#eq-PV_t_deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_t_deterministic</span></a> emerges as a special case of the more general survival-probability framework. Suppose that the member is assumed to be certain to survive from retirement until a fixed age <span class="math inline">\(D\)</span> and to die with certainty at that age. In actuarial terms this corresponds to <span id="eq-survival"><span class="math display">\[
+\begin{aligned}
+    {}_k p_y &amp;= 1, \qquad k = 0,1,\dots,t_{DR}-1, \\
+    {}_k p_y &amp;= 0, \qquad k \ge t_{DR}
+\end{aligned}
+\tag{4.7}\]</span></span> where <span class="math inline">\(t_{DR} = D - y\)</span> is now a deterministic retirement horizon. Substituting these survival probabilities into <a href="#eq-PV_x_general" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_x_general</span></a> gives <span class="math display">\[
+    PV_x(PB) = v^{\,y - x} \sum_{k=0}^{t_{DR}-1} PB \cdot (1 + r_{inf})^{k} \cdot v^{k},
+\]</span> which is exactly the present value of a finite growing annuity with <span class="math inline">\(t_{DR}\)</span> payments, indexed at rate <span class="math inline">\(r_{inf}\)</span> and discounted at rate <span class="math inline">\(r_d\)</span>. Evaluating the finite sum yields <span class="math display">\[
+    PV_x(PB) = v^{\,y - x} \cdot PB \cdot \frac{1}{r_d - r_{inf}} \left[1 - \left(\frac{1 + r_{inf}}{1 + r_d}\right)^{t_{DR}} \right],
+\]</span> which coincides with <a href="#eq-PV_R_deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_R_deterministic</span></a> – <a href="#eq-PV_t_deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_t_deterministic</span></a> when <span class="math inline">\(x\)</span> is interpreted as the valuation age and <span class="math inline">\(y - x = t_R\)</span>. Thus, the closed-form valuation of liabilities under a fixed lifespan can be seen as the special case of a general mortality model in which the retirement horizon is degenerate rather than stochastic. In the same way, the general funding-ratio formula <a href="#eq-FR_general" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FR_general</span></a> reduces to the deterministic-horizon expression obtained by inserting <a href="#eq-PV_t_deterministic" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_t_deterministic</span></a> into <a href="#eq-FR_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-FR_def</span></a>.</p>
+</section>
+<section id="a-simple-numerical-illustration" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="a-simple-numerical-illustration"><span class="header-section-number">4.5</span> A simple numerical illustration</h2>
+<p>To connect the geometry of <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a> with actual magnitudes, consider a worker aged <span class="math inline">\(x = 45\)</span> who retires at age <span class="math inline">\(y = 65\)</span> with an annual pension benefit determined by <a href="#eq-pb_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-pb_def</span></a>. Suppose the final salary at retirement is <span class="math inline">\(FS = 65{.}000\)</span>, the accrual rate is <span class="math inline">\(\alpha = 2\%\)</span>, and the worker has <span class="math inline">\(SY = 35\)</span> service years at retirement. Then the height of the pension-benefit rectangle at retirement is <span class="math display">\[
+    PB = 0.02 \cdot 35 \cdot 65{.}000 \;=\; 45{.}500.
+\]</span> Assume a nominal discount rate of <span class="math inline">\(r_d = 3\%\)</span> and an indexation rate of <span class="math inline">\(r_{inf} = 2\%\)</span>, so <span class="math inline">\(v = (1.03)^{-1}\)</span>.</p>
+<section id="deterministic-horizon." class="level4" data-number="4.5.0.1">
+<h4 data-number="4.5.0.1" class="anchored" data-anchor-id="deterministic-horizon."><span class="header-section-number">4.5.0.1</span> Deterministic horizon.</h4>
+<p>If we first assume a deterministic retirement horizon of <span class="math inline">\(t_{DR} = 20\)</span> years (for example from age 65 to 85), the present value of pension benefits at retirement is <span class="math display">\[
+    PV_{R}(PB) = 45{.}500 \cdot \frac{1}{0.03 - 0.02} \left[ 1 - \left(\frac{1.02}{1.03}\right)^{20} \right],
+\]</span> and the present value at age <span class="math inline">\(45\)</span> is <span class="math inline">\(PV_{45}(PB) = PV_R(PB) \cdot (1.03)^{-20}\)</span>. If the asset value at age <span class="math inline">\(45\)</span> is <span class="math inline">\(A_{45}\)</span>, the corresponding funding ratio under this deterministic horizon is <span class="math inline">\(FR_{45} = A_{45} / PV_{45}(PB)\)</span>.</p>
+</section>
+<section id="stochastic-horizon-with-survival-probabilities." class="level4" data-number="4.5.0.2">
+<h4 data-number="4.5.0.2" class="anchored" data-anchor-id="stochastic-horizon-with-survival-probabilities."><span class="header-section-number">4.5.0.2</span> Stochastic horizon with survival probabilities.</h4>
+<p>Now replace the deterministic horizon with survival probabilities drawn from an appropriate life table. Let <span class="math inline">\({}_k p_{65}\)</span> denote the probability that a person aged <span class="math inline">\(65\)</span> today survives at least <span class="math inline">\(k\)</span> more years. The present value at age <span class="math inline">\(45\)</span> becomes <span class="math display">\[
+    PV_{45}(PB)  = v^{20} \sum_{k=0}^{\infty} 45{.}500 \cdot (1.02)^{k} \cdot v^{k} \cdot {}_kp_{65},
+\]</span> and the corresponding funding ratio is <span class="math display">\[
+    FR_{45} = \frac{A_{45}}{PV_{45}(PB)}.
+\]</span> For typical mortality patterns, the sum is effectively truncated at ages where <span class="math inline">\({}_k p_{65}\)</span> becomes negligible. Relative to the deterministic case with the same maximum age, incorporating realistic survival probabilities generally reduces the liability value because some members die earlier and therefore receive fewer payments in expectation. In terms of <a href="#fig-pensionOverview" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-pensionOverview</span></a>, the right edge of the benefit block is now random rather than fixed, and the expected height–width area of the green rectangle shrinks once survival probabilities are taken into account.</p>
+</section>
+</section>
+<section id="sec:penaltyFactors" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec:penaltyFactors"><span class="header-section-number">4.6</span> Early retirement penalty factors</h2>
+<p>In many occupational pension schemes, the retirement date is to some extent discretionary, allowing employees to retire earlier than the scheme’s standard retirement age. Choosing early retirement brings the start of the pension annuity forward, so payments are made over a longer period. At the same time, fewer service years have been accrued, so the benefit formula delivers a lower annual pension.</p>
+<p>For example, if the normal retirement age is 65, employees may be permitted to retire as early as age 55. In such cases, pension benefits are typically reduced by a penalty factor—a percentage deduction applied for each year of early retirement. Under an actuarially neutral approach, the penalty is calibrated such that the present value of the early retirement pension equals the present value of the income stream beginning at the normal retirement age. With <span class="math inline">\(R\)</span> denoting the normal retirement age, and <span class="math inline">\(E&lt;R\)</span> be an admissible early retirement age, the requirement for actuarial neutrality is that <span id="eq-actuarialNeutralEarlyRetirement"><span class="math display">\[
+    PV_E(PB_E) = PV_E(PB_R).
+\tag{4.8}\]</span></span> Using equation <a href="#eq-pb_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-pb_def</span></a> early retirement benefits are given by: <span class="math display">\[
+   PV_E(PB_E) = \alpha \cdot SY_E \cdot FS \cdot (1+\mathbb{E}\left[r_{sgr}\right])^{E-R},
+\]</span> where <span class="math inline">\(r_{sgr}\)</span> is the annual salary growth rate, assumed to be constant across years. At the same time, the present value of the of the pension benefit at normal retirement, at early retirement, is: <span class="math display">\[
+    PV_E(PB_R) = \alpha \cdot SY_R \cdot FS \cdot v^{R-E} \cdot {}_{(R-E)}p_E.
+\]</span> Using <a href="#eq-actuarialNeutralEarlyRetirement" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-actuarialNeutralEarlyRetirement</span></a>, and defining <span class="math inline">\(v_{sgr}=(1+\mathbb{E}\left[r_{sgr}\right])^{-1}\)</span> the actuarial neutral early retirement penalty factor can be expressed as: <span class="math display">\[
+\begin{aligned}
+    P_{E\leftarrow R} &amp;= \frac{\alpha \cdot SY_E \cdot FS \cdot v_{sgr}^{R-E}}{\alpha \cdot SY_R \cdot FS \cdot v^{R-E} \cdot {}_{(R-E)}p_E} \nonumber \\
+    &amp;= \frac{ SY_E \cdot v_{sgr}^{R-E}}{SY_R \cdot v^{R-E} \cdot {}_{(R-E)}p_E} \nonumber \\
+    &amp;= \frac{SY_E}{SY_R \cdot {}_{(R-E)}p_E} \left( \frac{v_{sgr}}{v} \right)^{R-E}
+\end{aligned}
+\]</span> This expression highlights three distinct components. First, the ratio <span class="math inline">\(\frac{SY_E}{SY_R}\)</span> captures the effect of shorter service at the early retirement age: with fewer accrual years, the pensionable salary at age <span class="math inline">\(E\)</span> is typically lower than at age <span class="math inline">\(R\)</span>. Second, the term <span class="math inline">\({}_{(R-E)}p_E\)</span> in the denominator reflects survival over the period from <span class="math inline">\(E\)</span> to <span class="math inline">\(R\)</span>, so that a lower probability of reaching the normal retirement age implies a higher actuarial penalty for bringing payments forward. Finally, the factor <span class="math inline">\(\left(\frac{v_{sgr}}{v}\right)^{R-E}\)</span> isolates the interaction between expected salary growth and financial discounting over the interval <span class="math inline">\([E,R]\)</span>: if expected salary growth (embedded in <span class="math inline">\(v_{sgr}\)</span>) offsets part of the pure financial discounting (captured by <span class="math inline">\(v\)</span>), the overall penalty is reduced, whereas if discounting dominates expected salary growth the penalty becomes more severe.</p>
+<p><a href="#tbl-penaltyFactors" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-penaltyFactors</span></a> reports example calculations for the actuarially neutral early retirement penalty factors for retirement ages <span class="math inline">\(t=55,\ldots,65\)</span>, relative to the normal retirement age 65. The salary growth rate is assumed to be <span class="math inline">\(r_{\text{sgr}} = 2.4\%\)</span> per year, while the discount rate is <span class="math inline">\(r_{d} = 3\%\)</span> per year. The survival probabilities <span class="math inline">\({}_{(65-t)}p_{t}\)</span> are based on the ICSLT 2023 mortality table and reflect the average of male and female survival probabilities. The column labelled <span class="math inline">\(SY_{E}/SY_{R}\)</span> captures the ratio of service years at the early and normal retirement ages relative to the normal retirement age of 65 years. <span class="math inline">\((v_{\text{sgr}}/v)^{65-t}\)</span> reflects the interaction between the salary growth rate and the discounting rate. The final two columns show the resulting penalty factor as a ratio and a percentage reduction relative to the unreduced pension at age <span class="math inline">\(65\)</span>.</p>
+<div id="tbl-penaltyFactors" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-penaltyFactors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Actuarially neutral early retirement penalty factors
+</figcaption>
+<div aria-describedby="tbl-penaltyFactors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(t\)</span></th>
+<th style="text-align: right;"><span class="math inline">\({}_{(65-t)}p_t\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(SY_E/SY_R\)</span></th>
+<th style="text-align: right;"><span class="math inline">\((v_{\text{sgr}}/v)^{65-t}\)</span></th>
+<th style="text-align: right;">Penalty ratio</th>
+<th style="text-align: right;">Penalty (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>55</td>
+<td style="text-align: right;">0.97639</td>
+<td style="text-align: right;">0.71429</td>
+<td style="text-align: right;">1.06016</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">22%</td>
+</tr>
+<tr class="even">
+<td>56</td>
+<td style="text-align: right;">0.97772</td>
+<td style="text-align: right;">0.74286</td>
+<td style="text-align: right;">1.05399</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">20%</td>
+</tr>
+<tr class="odd">
+<td>57</td>
+<td style="text-align: right;">0.97921</td>
+<td style="text-align: right;">0.77143</td>
+<td style="text-align: right;">1.04785</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">17%</td>
+</tr>
+<tr class="even">
+<td>58</td>
+<td style="text-align: right;">0.98087</td>
+<td style="text-align: right;">0.80000</td>
+<td style="text-align: right;">1.04174</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: right;">15%</td>
+</tr>
+<tr class="odd">
+<td>59</td>
+<td style="text-align: right;">0.98273</td>
+<td style="text-align: right;">0.82857</td>
+<td style="text-align: right;">1.03568</td>
+<td style="text-align: right;">0.87</td>
+<td style="text-align: right;">13%</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td style="text-align: right;">0.98482</td>
+<td style="text-align: right;">0.85714</td>
+<td style="text-align: right;">1.02964</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: right;">10%</td>
+</tr>
+<tr class="odd">
+<td>61</td>
+<td style="text-align: right;">0.98716</td>
+<td style="text-align: right;">0.88571</td>
+<td style="text-align: right;">1.02364</td>
+<td style="text-align: right;">0.92</td>
+<td style="text-align: right;">8%</td>
+</tr>
+<tr class="even">
+<td>62</td>
+<td style="text-align: right;">0.98981</td>
+<td style="text-align: right;">0.91429</td>
+<td style="text-align: right;">1.01768</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">6%</td>
+</tr>
+<tr class="odd">
+<td>63</td>
+<td style="text-align: right;">0.99280</td>
+<td style="text-align: right;">0.94286</td>
+<td style="text-align: right;">1.01175</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">4%</td>
+</tr>
+<tr class="even">
+<td>64</td>
+<td style="text-align: right;">0.99617</td>
+<td style="text-align: right;">0.97143</td>
+<td style="text-align: right;">1.00586</td>
+<td style="text-align: right;">0.98</td>
+<td style="text-align: right;">2%</td>
+</tr>
+<tr class="odd">
+<td>65</td>
+<td style="text-align: right;">0.99617</td>
+<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec:transfers" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="sec:transfers"><span class="header-section-number">4.7</span> Transfers to and from the pension scheme</h2>
+<p>During the savings phase of an occupational pension plan, employees may have the possibility to transfer additional funds into the plan in order to purchase extra pension service years. Likewise, if an employee changes employer, it may be possible to transfer accumulated funds from one occupational pension plan to another. In defined benefit pension plans there is no direct link, at the individual level, between the amounts contributed (and their investment returns) and the benefit entitlement. Instead, employees accrue pension service years and the pension benefits are determined by a formula, see equation <a href="#eq-pb_def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-pb_def</span></a>. It is therefore necessary to establish a consistent mapping between pension service years and monetary amounts when dealing with transfers into and out of a defined benefit occupational pension plan.</p>
+<p>The situation is not entirely straightforward. When funds are transferred into a plan and converted into additional pension service years, the plan sponsor effectively takes over the investment risk and guarantees a future pension stream, thereby also committing to at least a minimum investment return over (potentially) many years. Likewise, when an employee leaves the plan, the accrued pension service years are converted into a cash amount at the time of exit (to be transferred to another occupational scheme) using assumptions about future investment returns and discount rates. In both directions, typically the principle of actuarial neutrality is imposed such that the value of the expected promised pension benefits is consistent with the value of the underlying funds.</p>
+<p>To calculate actuarially neutral transfer amounts, both in and out of the plan, a pension conversion factor, <span class="math inline">\(K_x\)</span> at age <span class="math inline">\(x\)</span>, is used. In its simplest form, <span class="math inline">\(K_x\)</span> links a monetary amount <span class="math inline">\(C_x\)</span> to an increment in pension benefit (or, equivalently, in pension service years) through a relation of the form <span class="math display">\[
+    \Delta PB_x = K_x \, C_x.
+\]</span> The factor <span class="math inline">\(K_x\)</span> is chosen such that the present value of the additional pension benefit <span class="math inline">\(\Delta PB_x\)</span> equals the value of the contribution <span class="math inline">\(C_x\)</span>, under the plan’s economic and demographic assumptions. Writing <span class="math inline">\(a_x\)</span> for the present value at age <span class="math inline">\(x\)</span> of a life annuity of <span class="math inline">\(1\)</span> per year, actuarial neutrality requires <span class="math display">\[
+    C_x = \Delta PB_x \, \ddot{a}_x,
+\]</span></p>
+<p>so that <span class="math display">\[
+    K_x = \frac{1}{\ddot{a}_x}.
+\]</span></p>
+</section>
+<section id="subsec:conversionFactor" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="subsec:conversionFactor"><span class="header-section-number">4.8</span> The pension conversion factor</h2>
+<p>During the savings phase, employees may transfer additional funds into the pension plan or have capital amounts transferred from other occupational schemes, in order to purchase extra pension service years or to enhance their future pension benefit. Conversely, when employees leave the plan, accrued benefits are often commuted to a capital sum and transferred out to another scheme. In both directions, it is common actuarial practice to impose actuarial neutrality such that the present value of the future pension benefit must equal the monetary value of the underlying funds.</p>
+<p>To calculate actuarially neutral transfer amounts, a pension conversion factor, <span class="math inline">\(K_x\)</span> at age <span class="math inline">\(x\)</span>, is used. In its simplest form, <span class="math inline">\(K_x\)</span> links a monetary amount <span class="math inline">\(C_x\)</span> at age <span class="math inline">\(x\)</span> to an increment in the annual pension benefit <span class="math inline">\(\Delta PB_R\)</span> at normal retirement age <span class="math inline">\(R\)</span>: <span class="math display">\[
+    \Delta PB_R = K_x \cdot C_x.
+\]</span> Intuitively, <span class="math inline">\(K_x\)</span> is the price at time <span class="math inline">\(x\)</span> of one unit of additional annual pension at time <span class="math inline">\(R\)</span>, expressed per unit of capital contributed at time <span class="math inline">\(x\)</span>. It reflects the time value of money, expected investment returns on the underlying assets, and survival probabilities between <span class="math inline">\(x\)</span> and retirement, as well as the conversion of accumulated wealth at <span class="math inline">\(R\)</span> into an annuity.</p>
+<p>To formalise this intuition, let <span class="math inline">\(\tilde{v}\)</span> be a generic discount factor. For any future random cash flow <span class="math inline">\(X_T\)</span> payable at time <span class="math inline">\(T\)</span>, the time–<span class="math inline">\(x\)</span> value of <span class="math inline">\(X_T\)</span> can then be written generically as <span class="math display">\[
+    PV_x(X_T) = \mathbb{E}_x\!\left[ \tilde{v}^{\,T-x} \, X_T \right],
+\]</span> In this representation, <span class="math inline">\(v_z\)</span> plays the role of the appropriate one–period pricing operator that embeds both financial and demographic effects.</p>
+<p>Now let <span class="math inline">\(K_R\)</span> denote the pension conversion factor at the normal retirement age <span class="math inline">\(R\)</span>. If <span class="math inline">\(C_R\)</span> denotes the amount of capital at time <span class="math inline">\(R\)</span> attributable to a contribution <span class="math inline">\(C_x\)</span> made at time <span class="math inline">\(x\)</span>, we can write <span class="math display">\[
+    \Delta PB_R = K_R \cdot C_R.
+\]</span> From the perspective of time <span class="math inline">\(x\)</span>, the capital <span class="math inline">\(C_R\)</span> is itself a random variable driven by investment returns, mortality and possibly other plan–specific features. Using the generic discount factor <span class="math inline">\(v_z\)</span>, we have: <span id="eq-Kx_as_discounted_KR"><span class="math display">\[
+    K_x \cdot C_x = \mathbb{E}_x\!\left[ K_R \, C_R \right] = v_z^{\,R-x} \cdot K_R \cdot C_x,
+\tag{4.9}\]</span></span> where <span class="math inline">\(\tilde{v}\)</span> accounts for the expected growth of the capital <span class="math inline">\(C_x\)</span> to <span class="math inline">\(C_R\)</span> and discounting of <span class="math inline">\(K_R\)</span> to time-<span class="math inline">\(x\)</span>. Equation <a href="#eq-Kx_as_discounted_KR" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Kx_as_discounted_KR</span></a> states that the pension conversion factor at age <span class="math inline">\(x\)</span> is the time–<span class="math inline">\(x\)</span> expectation of the at–retirement conversion factor <span class="math inline">\(K_R\)</span>, discounted back from <span class="math inline">\(R\)</span> to <span class="math inline">\(x\)</span> using the appropriate pricing operator <span class="math inline">\(\tilde{v}\)</span>: <span class="math display">\[
+    K_x = \tilde{v}^{\,R-x} \cdot K_R.
+\]</span></p>
+<section id="actuarial-neutrality-and-the-annuity-value" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="actuarial-neutrality-and-the-annuity-value">Actuarial neutrality and the annuity value</h3>
+<p>Assume that the additional pension benefit <span class="math inline">\(\Delta PB_R\)</span> is first payable at age <span class="math inline">\(R\)</span> and continues as long as the member is alive, and is indexed at rate <span class="math inline">\(r_{inf}\)</span> per year. Recall that <span class="math inline">\(v = (1 + r_d)^{-1}\)</span> is the nominal discount factor used for valuing pension liabilities. As in Section&nbsp;<a href="#sec:IntroPensions" data-reference-type="ref" data-reference="sec:IntroPensions">1</a>, let <span class="math inline">\({}_t p_z\)</span> be the probability that a person aged <span class="math inline">\(z\)</span> today survives at least <span class="math inline">\(t\)</span> more years. Under these assumptions, the additional pension stream acquired by paying <span class="math inline">\(C_x\)</span> at age <span class="math inline">\(x\)</span> can be described as follows:</p>
+<ul>
+<li><p>At age <span class="math inline">\(R\)</span> the member receives an additional annual pension of <span class="math inline">\(\Delta PB_R\)</span>.</p></li>
+<li><p>At age <span class="math inline">\(R + k\)</span>, for <span class="math inline">\(k = 1, 2, \dots\)</span>, this additional pension is indexed at rate <span class="math inline">\(r_{inf}\)</span>, so the payment becomes <span class="math display">\[
+  \Delta PB_{R, R+k} = \Delta PB_R \, (1 + r_{inf})^{k}.
+\]</span></p></li>
+<li><p>The probability that the member is alive at age <span class="math inline">\(R + k\)</span> is <span class="math inline">\({}_k p_R\)</span>.</p></li>
+<li><p>Payments are discounted back to age <span class="math inline">\(x\)</span> using the factor <span class="math inline">\(v^{(R-x) + k}\)</span>.</p></li>
+</ul>
+<p>The actuarial present value at age <span class="math inline">\(x\)</span> of an additional pension of one unit per year, starting at age <span class="math inline">\(R\)</span> and indexed at rate <span class="math inline">\(r_{inf}\)</span> while the member is alive, is therefore determined by the growing life annuity factor <span id="eq-growingLifeAnnuity"><span class="math display">\[
+    \ddot{a}_x^{g} = v^{\,R - x} \sum_{k=0}^{\infty} (1 + r_{inf})^{k} \, v^{k} \, {}_k p_R
+\tag{4.10}\]</span></span></p>
+<p>This expression is directly analogous to the general present‑value formula <a href="#eq-PV_x_general" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PV_x_general</span></a>, but specialised to an annuity of one unit per year and with <span class="math inline">\(x\)</span> as valuation age and <span class="math inline">\(R\)</span> as retirement age.</p>
+<p>If the member receives an additional pension <span class="math inline">\(\Delta PB_x\)</span> rather than one unit, the present value at age <span class="math inline">\(x\)</span> is simply <span class="math display">\[
+    PV_x(\Delta PB_x) = \Delta PB_x \, \ddot{a}_x^{g}.
+\]</span> Actuarial neutrality now requires that this present value equals the contribution paid at age <span class="math inline">\(x\)</span>: <span class="math display">\[
+    C_x = PV_x(\Delta PB_x) \;=\; \Delta PB_x \, \ddot{a}_x^{g}.
+\]</span> Solving for <span class="math inline">\(\Delta PB_x\)</span> gives <span class="math display">\[
+    \Delta PB_x = \frac{1}{\ddot{a}_x^{g}} \, C_x,
+\]</span> so that the pension conversion factor at age <span class="math inline">\(x\)</span> is <span id="eq-Kx_def_basic"><span class="math display">\[
+    K_x = \frac{1}{\ddot{a}_x^{g}}.
+\tag{4.11}\]</span></span></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./DynamicYieldCurveModels.html" class="pagination-link" aria-label="The short rate and the yield curve[^1]">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The short rate and the yield curve[^1]</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
