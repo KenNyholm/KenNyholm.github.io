@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; The short rate and the yield curve[^1] – A Practitioner's Guide to Financial Market Analysis</title>
+<title>2&nbsp; The short rate and the yield curve[^1] – A Practitioner's Guide to Financial Market Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -60,10 +60,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-48abc47ddc2cbc14860ddec9e9fdb395.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -133,7 +133,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DynamicYieldCurveModels.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The short rate and the yield curve</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./DynamicYieldCurveModels.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The short rate and the yield curve</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -166,26 +166,20 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">intro.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./theToolbox.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Notation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Notation</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./DynamicYieldCurveModels.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The short rate and the yield curve</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The short rate and the yield curve</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./DBPensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,37 +198,37 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-transmission-mechanism" id="toc-the-transmission-mechanism" class="nav-link active" data-scroll-target="#the-transmission-mechanism"><span class="header-section-number">3.1</span> The Transmission Mechanism</a></li>
-  <li><a href="#the-taylor-rule-as-a-policy-benchmark" id="toc-the-taylor-rule-as-a-policy-benchmark" class="nav-link" data-scroll-target="#the-taylor-rule-as-a-policy-benchmark"><span class="header-section-number">3.2</span> The Taylor Rule as a Policy Benchmark</a></li>
-  <li><a href="#modelling-the-short-rate-as-an-ar1-process" id="toc-modelling-the-short-rate-as-an-ar1-process" class="nav-link" data-scroll-target="#modelling-the-short-rate-as-an-ar1-process"><span class="header-section-number">3.3</span> Modelling the Short Rate as an AR(1) Process</a></li>
-  <li><a href="#building-the-yield-curve-from-the-short-rate-evolution3" id="toc-building-the-yield-curve-from-the-short-rate-evolution3" class="nav-link" data-scroll-target="#building-the-yield-curve-from-the-short-rate-evolution3"><span class="header-section-number">3.4</span> Building the yield curve from the short rate evolution</a></li>
-  <li><a href="#a-first-look-at-the-panel-of-yield-curve-data" id="toc-a-first-look-at-the-panel-of-yield-curve-data" class="nav-link" data-scroll-target="#a-first-look-at-the-panel-of-yield-curve-data"><span class="header-section-number">3.5</span> A first look at the panel of yield curve data</a></li>
-  <li><a href="#risk-premia-and-the-mathbbp-and-mathbbq-measures" id="toc-risk-premia-and-the-mathbbp-and-mathbbq-measures" class="nav-link" data-scroll-target="#risk-premia-and-the-mathbbp-and-mathbbq-measures"><span class="header-section-number">3.6</span> Risk premia and the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measures</a></li>
-  <li><a href="#multi-factor-models" id="toc-multi-factor-models" class="nav-link" data-scroll-target="#multi-factor-models"><span class="header-section-number">4</span> Multi factor models</a>
+  <li><a href="#the-transmission-mechanism" id="toc-the-transmission-mechanism" class="nav-link active" data-scroll-target="#the-transmission-mechanism"><span class="header-section-number">2.1</span> The Transmission Mechanism</a></li>
+  <li><a href="#the-taylor-rule-as-a-policy-benchmark" id="toc-the-taylor-rule-as-a-policy-benchmark" class="nav-link" data-scroll-target="#the-taylor-rule-as-a-policy-benchmark"><span class="header-section-number">2.2</span> The Taylor Rule as a Policy Benchmark</a></li>
+  <li><a href="#modelling-the-short-rate-as-an-ar1-process" id="toc-modelling-the-short-rate-as-an-ar1-process" class="nav-link" data-scroll-target="#modelling-the-short-rate-as-an-ar1-process"><span class="header-section-number">2.3</span> Modelling the Short Rate as an AR(1) Process</a></li>
+  <li><a href="#building-the-yield-curve-from-the-short-rate-evolution3" id="toc-building-the-yield-curve-from-the-short-rate-evolution3" class="nav-link" data-scroll-target="#building-the-yield-curve-from-the-short-rate-evolution3"><span class="header-section-number">2.4</span> Building the yield curve from the short rate evolution</a></li>
+  <li><a href="#a-first-look-at-the-panel-of-yield-curve-data" id="toc-a-first-look-at-the-panel-of-yield-curve-data" class="nav-link" data-scroll-target="#a-first-look-at-the-panel-of-yield-curve-data"><span class="header-section-number">2.5</span> A first look at the panel of yield curve data</a></li>
+  <li><a href="#risk-premia-and-the-mathbbp-and-mathbbq-measures" id="toc-risk-premia-and-the-mathbbp-and-mathbbq-measures" class="nav-link" data-scroll-target="#risk-premia-and-the-mathbbp-and-mathbbq-measures"><span class="header-section-number">2.6</span> Risk premia and the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measures</a></li>
+  <li><a href="#multi-factor-models" id="toc-multi-factor-models" class="nav-link" data-scroll-target="#multi-factor-models"><span class="header-section-number">3</span> Multi factor models</a>
   <ul class="collapse">
-  <li><a href="#empirically-determining-the-number-of-yield-curve-factors" id="toc-empirically-determining-the-number-of-yield-curve-factors" class="nav-link" data-scroll-target="#empirically-determining-the-number-of-yield-curve-factors"><span class="header-section-number">4.1</span> Empirically determining the number of yield curve factors</a>
+  <li><a href="#empirically-determining-the-number-of-yield-curve-factors" id="toc-empirically-determining-the-number-of-yield-curve-factors" class="nav-link" data-scroll-target="#empirically-determining-the-number-of-yield-curve-factors"><span class="header-section-number">3.1</span> Empirically determining the number of yield curve factors</a>
   <ul class="collapse">
-  <li><a href="#crosssectional-factor-loadings" id="toc-crosssectional-factor-loadings" class="nav-link" data-scroll-target="#crosssectional-factor-loadings"><span class="header-section-number">4.1.1</span> Cross–sectional factor loadings</a></li>
-  <li><a href="#timeseries-behaviour-of-the-pca-factors" id="toc-timeseries-behaviour-of-the-pca-factors" class="nav-link" data-scroll-target="#timeseries-behaviour-of-the-pca-factors"><span class="header-section-number">4.1.2</span> Time–series behaviour of the PCA factors</a></li>
-  <li><a href="#pca-as-a-static-factor-model-and-its-statespace-representation" id="toc-pca-as-a-static-factor-model-and-its-statespace-representation" class="nav-link" data-scroll-target="#pca-as-a-static-factor-model-and-its-statespace-representation"><span class="header-section-number">4.1.3</span> PCA as a static factor model and its state–space representation</a></li>
+  <li><a href="#crosssectional-factor-loadings" id="toc-crosssectional-factor-loadings" class="nav-link" data-scroll-target="#crosssectional-factor-loadings"><span class="header-section-number">3.1.1</span> Cross–sectional factor loadings</a></li>
+  <li><a href="#timeseries-behaviour-of-the-pca-factors" id="toc-timeseries-behaviour-of-the-pca-factors" class="nav-link" data-scroll-target="#timeseries-behaviour-of-the-pca-factors"><span class="header-section-number">3.1.2</span> Time–series behaviour of the PCA factors</a></li>
+  <li><a href="#pca-as-a-static-factor-model-and-its-statespace-representation" id="toc-pca-as-a-static-factor-model-and-its-statespace-representation" class="nav-link" data-scroll-target="#pca-as-a-static-factor-model-and-its-statespace-representation"><span class="header-section-number">3.1.3</span> PCA as a static factor model and its state–space representation</a></li>
   </ul></li>
-  <li><a href="#a-recipe-for-building-term-structure-models9" id="toc-a-recipe-for-building-term-structure-models9" class="nav-link" data-scroll-target="#a-recipe-for-building-term-structure-models9"><span class="header-section-number">4.2</span> A recipe for building term-structure models</a></li>
+  <li><a href="#a-recipe-for-building-term-structure-models9" id="toc-a-recipe-for-building-term-structure-models9" class="nav-link" data-scroll-target="#a-recipe-for-building-term-structure-models9"><span class="header-section-number">3.2</span> A recipe for building term-structure models</a></li>
   </ul></li>
-  <li><a href="#implementation-and-estimation" id="toc-implementation-and-estimation" class="nav-link" data-scroll-target="#implementation-and-estimation"><span class="header-section-number">5</span> Implementation and estimation</a>
+  <li><a href="#implementation-and-estimation" id="toc-implementation-and-estimation" class="nav-link" data-scroll-target="#implementation-and-estimation"><span class="header-section-number">4</span> Implementation and estimation</a>
   <ul class="collapse">
-  <li><a href="#dynamic-nelson-siegel" id="toc-dynamic-nelson-siegel" class="nav-link" data-scroll-target="#dynamic-nelson-siegel"><span class="header-section-number">5.1</span> Dynamic Nelson-Siegel</a>
+  <li><a href="#dynamic-nelson-siegel" id="toc-dynamic-nelson-siegel" class="nav-link" data-scroll-target="#dynamic-nelson-siegel"><span class="header-section-number">4.1</span> Dynamic Nelson-Siegel</a>
   <ul class="collapse">
   <li><a href="#yield-representation-and-state-vector" id="toc-yield-representation-and-state-vector" class="nav-link" data-scroll-target="#yield-representation-and-state-vector">Yield representation and state vector</a></li>
   <li><a href="#riskneutral-dynamics-and-short-rate" id="toc-riskneutral-dynamics-and-short-rate" class="nav-link" data-scroll-target="#riskneutral-dynamics-and-short-rate">Risk–neutral dynamics and short rate</a></li>
   <li><a href="#exponentialaffine-bond-prices" id="toc-exponentialaffine-bond-prices" class="nav-link" data-scroll-target="#exponentialaffine-bond-prices">Exponential–affine bond prices</a></li>
   <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
   </ul></li>
-  <li><a href="#joslin-singleton-zhu" id="toc-joslin-singleton-zhu" class="nav-link" data-scroll-target="#joslin-singleton-zhu"><span class="header-section-number">5.2</span> Joslin, Singleton, Zhu</a>
+  <li><a href="#joslin-singleton-zhu" id="toc-joslin-singleton-zhu" class="nav-link" data-scroll-target="#joslin-singleton-zhu"><span class="header-section-number">4.2</span> Joslin, Singleton, Zhu</a>
   <ul class="collapse">
   <li><a href="#canonical-mathbbqdynamics-and-rotation" id="toc-canonical-mathbbqdynamics-and-rotation" class="nav-link" data-scroll-target="#canonical-mathbbqdynamics-and-rotation">Canonical <span class="math inline">\(\mathbb{Q}\)</span>–dynamics and rotation</a></li>
   <li><a href="#short-rate-and-affine-term-structure" id="toc-short-rate-and-affine-term-structure" class="nav-link" data-scroll-target="#short-rate-and-affine-term-structure">Short rate and affine term structure</a></li>
   </ul></li>
-  <li><a href="#a-terminal-rate-model" id="toc-a-terminal-rate-model" class="nav-link" data-scroll-target="#a-terminal-rate-model"><span class="header-section-number">5.3</span> A terminal rate model</a></li>
+  <li><a href="#a-terminal-rate-model" id="toc-a-terminal-rate-model" class="nav-link" data-scroll-target="#a-terminal-rate-model"><span class="header-section-number">4.3</span> A terminal rate model</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -244,7 +238,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec:shortRateModel" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The short rate and the yield curve[^1]</span></span></h1>
+<h1 class="title"><span id="sec:shortRateModel" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The short rate and the yield curve[^1]</span></span></h1>
 </div>
 
 
@@ -285,8 +279,8 @@ window.Quarto = {
 <p>Central banks play a key role in steering macroeconomic outcomes by setting the short-term nominal interest rate, often referred to as the policy rate. By adjusting this rate, monetary authorities seek to control inflation and anchor expectations about future inflation, thereby providing an environment of price stability that facilitates efficient decision-making among households and firms. Stable and predictable prices support optimal consumption, investment, and production decisions, and ultimately help the economy to move toward its potential level of output and employment.</p>
 <p>While the ultimate objectives of central banks are comparable across economies, their mandates differ in scope. For example, the European Central Bank (ECB) defines price stability as its sole objective, as former ECB President Jean‑Claude Trichet<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> used to say: the ECB has only one needle in its compass. The United States Federal Reserve, in contrast, operates under a dual mandate, seeking both price stability and maximum sustainable employment. These distinct objectives imply different sensitivities to output gaps and, in practice, to business-cycle fluctuations.</p>
 <p>The operational implementation of monetary policy occurs through control of the policy rate corridor, typically comprising the deposit facility rate (floor), the main refinancing rate (target), and the marginal lending facility rate (ceiling). By adjusting these rates, the central bank determines the cost of short-term liquidity for commercial banks. This defines the lower boundary for interest rates in money markets and influences the entire structure of rates across maturities and risk categories, including interbank rates, government bond yields, and ultimately risk premia and credit spreads throughout the financial system.</p>
-<section id="the-transmission-mechanism" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="the-transmission-mechanism"><span class="header-section-number">3.1</span> The Transmission Mechanism</h2>
+<section id="the-transmission-mechanism" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-transmission-mechanism"><span class="header-section-number">2.1</span> The Transmission Mechanism</h2>
 <p>The monetary policy transmission mechanism captures how changes in the policy rate propagate through the financial system and into the real economy. Several key channels are typically identified:</p>
 <ul>
 <li><p><strong>Interest rate channel:</strong> Changes in the policy rate affect short-term market rates (e.g., overnight and three‑month interbank rates), which in turn influence longer-term yields through expectations of future short rates. These shifts alter borrowing costs for households and firms, thus affecting consumption and investment decisions.</p></li>
@@ -296,9 +290,9 @@ window.Quarto = {
 </ul>
 <p>The effectiveness of transmission depends on the responsiveness of financial markets, the credibility of the central bank, and the degree of expectation anchoring. In well‑anchored regimes, even small policy changes can have large expectation effects.</p>
 </section>
-<section id="the-taylor-rule-as-a-policy-benchmark" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="the-taylor-rule-as-a-policy-benchmark"><span class="header-section-number">3.2</span> The Taylor Rule as a Policy Benchmark</h2>
-<p>To formalise and condense the reaction function of central banks, the Taylor rule, <span class="citation" data-cites="Taylor1993">Taylor (<a href="#ref-Taylor1993" role="doc-biblioref">1993</a>)</span>, provides a parsimonious representation of how the policy rate responds to deviations of inflation and output from their respective targets. The base-formulation is: <span class="math display">\[
+<section id="the-taylor-rule-as-a-policy-benchmark" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="the-taylor-rule-as-a-policy-benchmark"><span class="header-section-number">2.2</span> The Taylor Rule as a Policy Benchmark</h2>
+<p>To formalise and condense the reaction function of central banks, the Taylor rule, <span class="citation" data-cites="Taylor1993">Taylor (<a href="references.html#ref-Taylor1993" role="doc-biblioref">1993</a>)</span>, provides a parsimonious representation of how the policy rate responds to deviations of inflation and output from their respective targets. The base-formulation is: <span class="math display">\[
 \begin{align}
     r_t &amp;= r^* + \pi_t + \alpha (\pi_t - \pi^*) + \beta (y_t - y^*),
 \end{align}
@@ -313,36 +307,36 @@ window.Quarto = {
 </ul>
 <p>The Taylor rule captures the idea that when inflation exceeds its target or when the economy operates above potential, the central bank raises the policy rate to cool demand. Conversely, if inflation runs below target or a negative output gap emerges, the central bank cuts rates to stimulate activity. Although real-world policy is more complex and sometimes constrained by non-linearities (e.g., the effective lower bound), the Taylor rule provides a convenient reference point and an empirical tool for estimating monetary policy behaviour over time.</p>
 </section>
-<section id="modelling-the-short-rate-as-an-ar1-process" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="modelling-the-short-rate-as-an-ar1-process"><span class="header-section-number">3.3</span> Modelling the Short Rate as an AR(1) Process</h2>
+<section id="modelling-the-short-rate-as-an-ar1-process" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="modelling-the-short-rate-as-an-ar1-process"><span class="header-section-number">2.3</span> Modelling the Short Rate as an AR(1) Process</h2>
 <p>In macro-financial modelling, it is common to represent the short-term interest rate as a stochastic process that captures its time-series dynamics around a policy-driven mean. The simplest, but often used, specification is an autoregressive process of order one, AR(1): <span id="eq-ar1"><span class="math display">\[
 \begin{align}
     r_t &amp;= \mu + \rho \, (r_{t-1} - \mu) + \varepsilon_t, \quad \varepsilon_t \sim N(0, \sigma^2),
 \end{align}
-\tag{3.1}\]</span></span></p>
+\tag{2.1}\]</span></span></p>
 <p>where <span class="math inline">\(\mu\)</span> is the long-run mean policy rate (often consistent with the <em>neutral</em> or <em>natural</em> rate of interest), <span class="math inline">\(\rho\)</span> measures the persistence of the rate, and <span class="math inline">\(\varepsilon_t\)</span> captures random innovations due to economic data surprises or policy shocks. When <span class="math inline">\(|\rho| &lt; 1\)</span>, the process is stationary and mean-reverting, a property consistent with the empirical observation that interest rates fluctuate around a long-term equilibrium.</p>
-<p>The AR(1) model is valuable both theoretically and empirically. It provides a tractable structure for term-structure models such as Vasicek <span class="citation" data-cites="vasicek.77">(<a href="#ref-vasicek.77" role="doc-biblioref">Vasicek 1977</a>)</span> or Cox–Ingersoll–Ross <span class="citation" data-cites="cox.ing.ross.85">(<a href="#ref-cox.ing.ross.85" role="doc-biblioref">Cox et al. 1985</a>)</span>, and in econometric applications it allows for forecasting and simulation of the short rate’s impact on other financial variables. Embedding an AR(1) process within a Taylor-rule framework can be interpreted as a reduced-form representation of policy inertia: central banks adjust interest rates gradually in response to evolving macroeconomic conditions rather than instantaneously, resulting in the observed persistence of short rates.</p>
+<p>The AR(1) model is valuable both theoretically and empirically. It provides a tractable structure for term-structure models such as Vasicek <span class="citation" data-cites="vasicek.77">(<a href="references.html#ref-vasicek.77" role="doc-biblioref">Vasicek 1977</a>)</span> or Cox–Ingersoll–Ross <span class="citation" data-cites="cox.ing.ross.85">(<a href="references.html#ref-cox.ing.ross.85" role="doc-biblioref">Cox et al. 1985</a>)</span>, and in econometric applications it allows for forecasting and simulation of the short rate’s impact on other financial variables. Embedding an AR(1) process within a Taylor-rule framework can be interpreted as a reduced-form representation of policy inertia: central banks adjust interest rates gradually in response to evolving macroeconomic conditions rather than instantaneously, resulting in the observed persistence of short rates.</p>
 </section>
-<section id="building-the-yield-curve-from-the-short-rate-evolution3" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="building-the-yield-curve-from-the-short-rate-evolution3"><span class="header-section-number">3.4</span> Building the yield curve from the short rate evolution<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<p>As shown in Chapter 0, following <span class="citation" data-cites="Cochrane2001">Cochrane (<a href="#ref-Cochrane2001" role="doc-biblioref">2001</a>)</span>, the fundamental pricing relationship is recursive, and for the risk-free zero-coupon <span class="math inline">\(n\)</span>-maturity bond, there is only a single payment to price, namely: <span class="math inline">\(P_{t+n}^{\, (n-n)}=1\)</span>. Applying this pricing formula gives: <span id="eq-fundamentalPrice"><span class="math display">\[
+<section id="building-the-yield-curve-from-the-short-rate-evolution3" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="building-the-yield-curve-from-the-short-rate-evolution3"><span class="header-section-number">2.4</span> Building the yield curve from the short rate evolution<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<p>As shown in Chapter 0, following <span class="citation" data-cites="Cochrane2001">Cochrane (<a href="references.html#ref-Cochrane2001" role="doc-biblioref">2001</a>)</span>, the fundamental pricing relationship is recursive, and for the risk-free zero-coupon <span class="math inline">\(n\)</span>-maturity bond, there is only a single payment to price, namely: <span class="math inline">\(P_{t+n}^{\, (n-n)}=1\)</span>. Applying this pricing formula gives: <span id="eq-fundamentalPrice"><span class="math display">\[
 \begin{align}
     P_t^{(n)} &amp;= \mathbb{E}_t\!\left( \mathcal{M}_{t+1} \, P_{t+1}^{\,n-1} \right) \nonumber \\
      &amp;= \mathbb{E}_t\!\left( \mathcal{M}_{t+1} \, \mathcal{M}_{t+2} \, P_{t+2}^{\,n-2} \right) \nonumber \\
      &amp;= \mathbb{E}_t\!\left( \mathcal{M}_{t+1} \, \mathcal{M}_{t+2}\, \cdots \, \mathcal{M}_{t+n} \, P_{t+n}^{\,n-n} \right) \ \\
      &amp;= \mathbb{E}_t\!\left( \prod_{j=1}^{(n)} \mathcal{M}_{t+j} \right) \cdot 1
 \end{align}
-\tag{3.2}\]</span></span></p>
+\tag{2.2}\]</span></span></p>
 <p>where <span class="math inline">\(\mathcal{M}\)</span> is the stochastic discount factor. The choice of <span class="math inline">\(\mathcal{M}\)</span> clearly impacts the price at time <span class="math inline">\(t&lt;n\)</span>. Using <span class="math inline">\(\mathcal{M}_{t}=e^{-r_t\,\Delta t}\)</span> corresponds to one such choice and therefore one particular "type" of expectation and price. Lets denote this choice by the letter <span class="math inline">\(\mathbb{P}\)</span>, such that expectations calculated under this <span class="math inline">\(\mathbb{P}\)</span>-measure are given by: <span id="eq-P-P"><span class="math display">\[
 \begin{align}
          \mathbb{E}_t^{\mathbb{P}} \left[P_t^{(n)}\right] = \mathbb{E}^{\mathbb{P}}_t\left[ e^{-\sum^{n}_{t=1} r_t\Delta t} \right].
 \end{align}
-\tag{3.3}\]</span></span></p>
-<p>Assuming that <span class="math inline">\(r_t\)</span> evolves according to the AR(1) model in <a href="#eq-ar1" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-ar1</span></a>, with <span class="math inline">\(|\rho| &lt; 1\)</span>, it is possible to derive a closed form expression for the yield at time. Letting <span class="math inline">\(c = \mu \, (1-\rho)\)</span> gives: <span id="eq-AR1-1"><span class="math display">\[
+\tag{2.3}\]</span></span></p>
+<p>Assuming that <span class="math inline">\(r_t\)</span> evolves according to the AR(1) model in <a href="#eq-ar1" class="quarto-xref">Equation&nbsp;<span>2.1</span></a>, with <span class="math inline">\(|\rho| &lt; 1\)</span>, it is possible to derive a closed form expression for the yield at time. Letting <span class="math inline">\(c = \mu \, (1-\rho)\)</span> gives: <span id="eq-AR1-1"><span class="math display">\[
 \begin{align}
     r_t = c + \rho \, r_{t-1} + \varepsilon_t, \quad \varepsilon_t \sim N(0, \sigma^2)
 \end{align}
-\tag{3.4}\]</span></span></p>
+\tag{2.4}\]</span></span></p>
 <p>and a closed form expression for the expectation to the sum of <span class="math inline">\(r_t\)</span> can be found. First, writing out the sum for <span class="math inline">\(t=\{1,2,3\}\)</span>, and then generalising to <span class="math inline">\(j\)</span> shows the basic structure as: <span class="math display">\[
 \begin{align}
         r_1 &amp;= c + \rho \, r_0 \nonumber \\
@@ -363,8 +357,8 @@ window.Quarto = {
 \begin{align}
     \sum_{k=1}^{(n)} r_k &amp;= \frac{c}{1-\rho} \sum_{j=1}^{(n)} (1-\rho^j) + r_0 \, \sum_{j=1}^{n} \rho^j.
 \end{align}
-\tag{3.5}\]</span></span></p>
-<p>Given the closed form expression for the geometric sum: <span class="math inline">\(\sum_{k=0}^{n-1} \rho^k =\dfrac{1-\rho^{(n)}}{1-\rho}\)</span>, the first sum in <a href="#eq-sum-r-k" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-sum-r-k</span></a> can be written as: <span class="math display">\[
+\tag{2.5}\]</span></span></p>
+<p>Given the closed form expression for the geometric sum: <span class="math inline">\(\sum_{k=0}^{n-1} \rho^k =\dfrac{1-\rho^{(n)}}{1-\rho}\)</span>, the first sum in <a href="#eq-sum-r-k" class="quarto-xref">Equation&nbsp;<span>2.5</span></a> can be written as: <span class="math display">\[
 \begin{align}
     \sum_{j=1}^{(n)} (1-\rho^j) &amp;= \sum_{j=1}^{(n)} 1 - \rho \sum_{j=0}^{n-1} \rho^j \nonumber \\
     &amp;= n - \rho \, \frac{1-\rho^{(n)}}{1-\rho},
@@ -376,7 +370,7 @@ window.Quarto = {
     &amp;= \rho \, \frac{1-\rho^{(n)}}{1-\rho}.
 \end{align}
 \]</span></p>
-<p>Inserting the above expressions for the sums into <a href="#eq-sum-r-k" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-sum-r-k</span></a> gives: <span class="math display">\[
+<p>Inserting the above expressions for the sums into <a href="#eq-sum-r-k" class="quarto-xref">Equation&nbsp;<span>2.5</span></a> gives: <span class="math display">\[
 \begin{align}
         \sum_{k=1}^{(n)} r_k &amp;= \frac{c}{1-\rho} \left(n - \rho \, \frac{1-\rho^{(n)}}{1-\rho}\right) + r_0 \, \rho \, \frac{1-\rho^{(n)}}{1-\rho} \nonumber \\  
         &amp;= \frac{c\,n}{1-\rho} - \frac{c\,(\rho-\rho^{(n+1)})}{(1-\rho)^2} + \frac{\rho-\rho^{(n+1)}}{1-\rho} \cdot r_0
@@ -386,33 +380,33 @@ window.Quarto = {
 \begin{align}
     A_n &amp;= \frac{c\,n}{1-\rho} - \frac{c\,(\rho-\rho^{(n+1)})}{(1-\rho)^2},
 \end{align}
-\tag{3.6}\]</span></span></p>
+\tag{2.6}\]</span></span></p>
 <p>and, <span id="eq-Bn"><span class="math display">\[
 \begin{align}
     B_n &amp;= \frac{\rho-\rho^{(n+1)}}{1-\rho},
 \end{align}
-\tag{3.7}\]</span></span></p>
+\tag{2.7}\]</span></span></p>
 <p>where <span class="math inline">\(A_n\)</span> is a deterministic component and <span class="math inline">\(B_n\)</span> is a regression coefficient (loading) on the initial short rate <span class="math inline">\(r_0\)</span>, both depending on the maturity <span class="math inline">\(n\)</span>, and the expression for the sum of short rates can therefore be written as: <span class="math display">\[
 \begin{align}
     \sum_{k=1}^{(n)} r_k &amp;= A_n + B_n \cdot r_0.
 \end{align}
 \]</span></p>
-<p>Looking at <a href="#eq-P-P" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-P-P</span></a>, which is the bond price under what we labelled the <span class="math inline">\(\mathbb{P}\)</span> measure and given the reworked expression for the sum of short rates this price can now be written as: <span id="eq-logP1"><span class="math display">\[
+<p>Looking at <a href="#eq-P-P" class="quarto-xref">Equation&nbsp;<span>2.3</span></a>, which is the bond price under what we labelled the <span class="math inline">\(\mathbb{P}\)</span> measure and given the reworked expression for the sum of short rates this price can now be written as: <span id="eq-logP1"><span class="math display">\[
 \begin{align}
     -log\left[ \mathbb{E}_t^{\mathbb{P}}(P_t^{(n)}) \right] = \mathbb{E}_t^{\mathbb{P}}\left(A_n + B_n \cdot r_t\right) \, \Delta t
 \end{align}
-\tag{3.8}\]</span></span></p>
+\tag{2.8}\]</span></span></p>
 <p>Recall from Chapter 0 that the yield to maturity is the constant rate that equates the present value of future cash flows to the bond price. In the case of a zero-coupon bond, there is a single payment at maturity, so we have: <span id="eq-logP2"><span class="math display">\[
 \begin{align}
     P_t^{(n)} = e^{-y^{(n)}_t\, n \Delta t}
 \end{align}
-\tag{3.9}\]</span></span></p>
-<p>where <span class="math inline">\(y_t^{(n)}\)</span> is the annualised rate for maturity <span class="math inline">\(n\)</span> for a zero-coupon bond that pays 1 at maturity. Combining <a href="#eq-logP1" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-logP1</span></a> and <a href="#eq-logP2" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-logP2</span></a>, we get: <span id="eq-sr-yieldCurve"><span class="math display">\[
+\tag{2.9}\]</span></span></p>
+<p>where <span class="math inline">\(y_t^{(n)}\)</span> is the annualised rate for maturity <span class="math inline">\(n\)</span> for a zero-coupon bond that pays 1 at maturity. Combining <a href="#eq-logP1" class="quarto-xref">Equation&nbsp;<span>2.8</span></a> and <a href="#eq-logP2" class="quarto-xref">Equation&nbsp;<span>2.9</span></a>, we get: <span id="eq-sr-yieldCurve"><span class="math display">\[
 \begin{align}
     \mathbb{E}_t^{\mathbb{P}}(y_t^{(n)}) &amp;= \frac{1}{n} \, \mathbb{E}_t^{\mathbb{P}}\left(A_n + B_n \cdot r_t\right) \nonumber \\
     &amp;= \mathbb{E}_t^{\mathbb{P}}\left(a_n + b_n \cdot r_t\right),
 \end{align}
-\tag{3.10}\]</span></span></p>
+\tag{2.10}\]</span></span></p>
 <p>with <span class="math inline">\(a_n = A_n/n\)</span> and <span class="math inline">\(b_n = B_n/n\)</span>. Varying <span class="math inline">\(n\)</span> provides the entire yield curve, i.e.&nbsp;the set of model-implied zero-coupon yields across all relevant maturities. Under the stationarity assumption (<span class="math inline">\(|\rho|&lt;1\)</span>), it follows that <span class="math inline">\(\rho^{(n+1)} \to 0\)</span> as <span class="math inline">\(n \to \infty\)</span>. Hence <span class="math display">\[
 \begin{align}
     \frac{c(\rho-\rho^{(n+1)})}{(1-\rho)^2} \; \to \; \frac{c\rho}{(1-\rho)^2}.
@@ -457,24 +451,24 @@ b_n = \frac{\rho-\rho^{(n+1)}}{1-\rho}\,\frac{1}{n},
 <li><p>It should therefore not be expected that this model will provide an especially close fit to observed market yields, which will incorporate duration risk premia in addition to credit and liquidity premia (except in the most liquid and highly rated government bond markets).</p></li>
 </ul>
 </section>
-<section id="a-first-look-at-the-panel-of-yield-curve-data" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="a-first-look-at-the-panel-of-yield-curve-data"><span class="header-section-number">3.5</span> A first look at the panel of yield curve data</h2>
-<p>The empirical analysis in this chapter is based on monthly zero‑coupon U.S. Treasury yields at standard maturities ranging from three months to ten years (3, 12, 24, 36, 48, 60, 72, 84, 96, 108 and 120 months), as shown in <a href="#fig-gsw-yieldcurve" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-gsw-yieldcurve</span></a>. These yields are obtained from the widely used data set constructed by <span class="citation" data-cites="Gurkaynak.Sack.Wright.2006">Gurkaynak et al. (<a href="#ref-Gurkaynak.Sack.Wright.2006" role="doc-biblioref">2006</a>)</span>, who estimate a smooth term structure each day by fitting a parametric yield‑curve model to the cross‑section of outstanding Treasury coupon bonds and bills. From the estimated curve, zero‑coupon yields at fixed maturities are inferred and then aggregated to a monthly frequency. The resulting series provide an internally consistent representation of the U.S. Treasury yield curve and have become a standard benchmark for empirical work on interest rates and the term structure.</p>
+<section id="a-first-look-at-the-panel-of-yield-curve-data" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="a-first-look-at-the-panel-of-yield-curve-data"><span class="header-section-number">2.5</span> A first look at the panel of yield curve data</h2>
+<p>The empirical analysis in this chapter is based on monthly zero‑coupon U.S. Treasury yields at standard maturities ranging from three months to ten years (3, 12, 24, 36, 48, 60, 72, 84, 96, 108 and 120 months), as shown in <a href="#fig-gsw-yieldcurve" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>. These yields are obtained from the widely used data set constructed by <span class="citation" data-cites="Gurkaynak.Sack.Wright.2006">Gurkaynak et al. (<a href="references.html#ref-Gurkaynak.Sack.Wright.2006" role="doc-biblioref">2006</a>)</span>, who estimate a smooth term structure each day by fitting a parametric yield‑curve model to the cross‑section of outstanding Treasury coupon bonds and bills. From the estimated curve, zero‑coupon yields at fixed maturities are inferred and then aggregated to a monthly frequency. The resulting series provide an internally consistent representation of the U.S. Treasury yield curve and have become a standard benchmark for empirical work on interest rates and the term structure.</p>
 <div id="fig-gsw-yieldcurve" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gsw-yieldcurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/GSW_yieldcurve.png" class="img-fluid figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gsw-yieldcurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Term structure of yields
+Figure&nbsp;2.1: Term structure of yields
 </figcaption>
 </figure>
 </div>
-<p>Estimating <a href="#eq-AR1-1" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AR1-1</span></a> for the three-month zero-coupon yield produces the parameter estimates reported in <a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-ar1-m3</span></a>. The constant term is small and only marginally significant, while the autoregressive coefficient is very close to unity, indicating a high degree of persistence in the short rate. The estimated innovation variance <span class="math inline">\(\sigma_{\varepsilon}^{2}\)</span> reflects the conditional volatility of unexpected changes in the rate. Together, the constant and autoregressive coefficient imply an unconditional mean of approximately <span class="math inline">\(4.7\%\)</span>.</p>
+<p>Estimating <a href="#eq-AR1-1" class="quarto-xref">Equation&nbsp;<span>2.4</span></a> for the three-month zero-coupon yield produces the parameter estimates reported in <a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span>2.1</span></a>. The constant term is small and only marginally significant, while the autoregressive coefficient is very close to unity, indicating a high degree of persistence in the short rate. The estimated innovation variance <span class="math inline">\(\sigma_{\varepsilon}^{2}\)</span> reflects the conditional volatility of unexpected changes in the rate. Together, the constant and autoregressive coefficient imply an unconditional mean of approximately <span class="math inline">\(4.7\%\)</span>.</p>
 <div id="tbl-ar1-m3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ar1-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.1: AR(1) estimates for the 3-month yield
+Table&nbsp;2.1: AR(1) estimates for the 3-month yield
 </figcaption>
 <div aria-describedby="tbl-ar1-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -511,51 +505,53 @@ Table&nbsp;3.1: AR(1) estimates for the 3-month yield
 </div>
 </figure>
 </div>
-<p>Inserting the parameter estimates from <a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-ar1-m3</span></a> into the expression for the short-rate derived yield curve in <a href="#eq-sr-yieldCurve" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-sr-yieldCurve</span></a> allows for estimating the model based yield curves. <a href="#fig-model-based-yieldcurve-estimates-ar1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-model-based-yieldcurve-estimates-ar1</span></a> compares the model based yield curves obtained from the AR(1) model for the short rate under the <span class="math inline">\(\mathbb{P}\)</span>-measure.</p>
+<p>Inserting the parameter estimates from <a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span>2.1</span></a> into the expression for the short-rate derived yield curve in <a href="#eq-sr-yieldCurve" class="quarto-xref">Equation&nbsp;<span>2.10</span></a> allows for estimating the model based yield curves. <a href="#fig-model-based-yieldcurve-estimates-ar1" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> compares the model based yield curves obtained from the AR(1) model for the short rate under the <span class="math inline">\(\mathbb{P}\)</span>-measure.</p>
 <div id="fig-model-based-yieldcurve-estimates-ar1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-model-based-yieldcurve-estimates-ar1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/AR1_yieldcurve_P_measure.png" class="img-fluid figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-based-yieldcurve-estimates-ar1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span>-measure
+Figure&nbsp;2.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span>-measure
 </figcaption>
 </figure>
 </div>
-<p><em>The figure shows model‑implied zero‑coupon yields for maturities from 3 months to 10 years under the <span class="math inline">\(\mathbb{P}\)</span>‑measure, obtained from an AR(1) specification for the short‑rate dynamics with parameter estimates given in Table&nbsp;<a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-ar1-m3</span></a>. The top‑left panel shows the time‑series evolution of the model‑implied yields at all maturities contained in the original data set (Figure&nbsp;<a href="#fig-gsw-yieldcurve" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-gsw-yieldcurve</span></a>). The top‑right panel compares the observed and model‑implied <span class="math inline">\(\mathbb{P}\)</span>‑measure yield curves for two selected dates. The bottom panel compares the observed and model‑implied 10‑year yield over the full sample from 1960 to 2026.</em></p>
-<p><a href="#fig-model-based-yieldcurve-estimates-ar1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-model-based-yieldcurve-estimates-ar1</span></a> provides an illustration of how the AR(1) short‑rate model translates into yield curves at each time step covered by the data sample. As mentioned above, this yield curve surface does not embed any correction for risk premia. The wedge between the observed yields and the <span class="math inline">\(\mathbb{P}\)</span>-measure yields therefore represents the existence of risk premia - and the need for integrating those in the model.</p>
-<p>In the top‑left panel of the figure the model‑implied zero‑coupon yields for maturities ranging from 3 months to 10 years are shown. Each coloured line corresponds to a particular maturity, and all curves are generated from an AR(1) representation of the short rate using the parameter estimates reported in <a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-ar1-m3</span></a>. Several features stand out. First, since the model relies on a single factor (the short rate) the model produces curves that move in parallel over time. The level of the whole curve tracks the underlying short‑rate dynamics, with higher short‑rate regimes in the 1970s and early 1980s associated with a generally higher model‑implied term structure, and the low‑rate environment after the global financial crisis leading to persistently low model‑implied yields. Second, the dispersion across maturities is modest: long‑term yields are only slightly above short‑term yields, reflecting the fact that under the <span class="math inline">\(\mathbb{P}\)</span>‑measure the curve is essentially determined by averages of expected future short rates.</p>
+<p><em>The figure shows model‑implied zero‑coupon yields for maturities from 3 months to 10 years under the <span class="math inline">\(\mathbb{P}\)</span>‑measure, obtained from an AR(1) specification for the short‑rate dynamics with parameter estimates given in Table&nbsp;<a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span>2.1</span></a>. The top‑left panel shows the time‑series evolution of the model‑implied yields at all maturities contained in the original data set (Figure&nbsp;<a href="#fig-gsw-yieldcurve" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>). The top‑right panel compares the observed and model‑implied <span class="math inline">\(\mathbb{P}\)</span>‑measure yield curves for two selected dates. The bottom panel compares the observed and model‑implied 10‑year yield over the full sample from 1960 to 2026.</em></p>
+<p><a href="#fig-model-based-yieldcurve-estimates-ar1" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> provides an illustration of how the AR(1) short‑rate model translates into yield curves at each time step covered by the data sample. As mentioned above, this yield curve surface does not embed any correction for risk premia. The wedge between the observed yields and the <span class="math inline">\(\mathbb{P}\)</span>-measure yields therefore represents the existence of risk premia - and the need for integrating those in the model.</p>
+<p>In the top‑left panel of the figure the model‑implied zero‑coupon yields for maturities ranging from 3 months to 10 years are shown. Each coloured line corresponds to a particular maturity, and all curves are generated from an AR(1) representation of the short rate using the parameter estimates reported in <a href="#tbl-ar1-m3" class="quarto-xref">Table&nbsp;<span>2.1</span></a>. Several features stand out. First, since the model relies on a single factor (the short rate) the model produces curves that move in parallel over time. The level of the whole curve tracks the underlying short‑rate dynamics, with higher short‑rate regimes in the 1970s and early 1980s associated with a generally higher model‑implied term structure, and the low‑rate environment after the global financial crisis leading to persistently low model‑implied yields. Second, the dispersion across maturities is modest: long‑term yields are only slightly above short‑term yields, reflecting the fact that under the <span class="math inline">\(\mathbb{P}\)</span>‑measure the curve is essentially determined by averages of expected future short rates.</p>
 <p>The top‑right panels compare observed and model‑implied yield curves for two specific cross‑sections. These snapshots highlight the role of risk premia. In the first example, taken from a high‑rate environment, the observed yield curve is noticeably steeper than the model‑implied curve, especially at longer maturities. While the AR(1) model implies a relatively moderate upward slope – consistent with expectations of future short‑rate mean reversion – market yields at intermediate and long maturities lie substantially above the <span class="math inline">\(\mathbb{P}\)</span>‑measure curve. The wedge between the two curves is naturally interpreted as a positive term premium: investors require extra compensation to hold long‑dated bonds when interest‑rate uncertainty is high. In the second cross‑section, taken from a low‑rate or stressed environment, the pattern may reverse or flatten, with observed long‑term yields in some cases closer to, or even below, the model‑implied values. This reflects periods in which term premia are compressed or even negative, for instance when there is strong demand for safe long‑dated assets or when monetary policy guidance anchors expectations about future short rates. These yield-curve plots make it clear that the limited flexibility of the one‑factor model prevents it from fully reproducing the shapes of the observed yield curves.</p>
 <p>The bottom panel focuses on the 10‑year maturity and compares the full‑sample evolution of the observed yield with its model‑implied counterpart. The model‑implied 10‑year yield inherits the smoothness of the AR(1) short‑rate process: it co‑moves with the observed yield over the business cycle and correctly captures broad low‑ and high‑rate regimes, but it displays smaller peaks and shallower troughs. In the high‑inflation period of the late 1970s and early 1980s, for example, the observed 10‑year yield rises far above the model‑implied level, indicating a substantial positive term premium compensated investors for heightened inflation and interest‑rate risk. Conversely, in more recent decades the observed 10‑year yield frequently lies close to, or below, the model‑implied curve, signalling compressed or negative term premia consistent with accommodative monetary policy, quantitative easing and safe‑asset scarcity.</p>
 <p>Overall, this highlights two key messages. First, a very parsimonious AR(1) model for the short rate (under the <span class="math inline">\(\mathbb{P}\)</span>‑measure) is able to reproduce the dynamic evolution of the short rate in the time series dimension, and broad-based movements in the yield curve. Second, and more importantly for asset‑pricing applications, systematic and time‑varying deviations between observed and model‑implied yields provide direct evidence of risk premia embedded in bond prices. These risk premia are economically significant at longer maturities and vary across regimes, underscoring the need for models that go beyond pure expectations of future short rates when pricing and managing fixed‑income portfolios.</p>
 </section>
-<section id="risk-premia-and-the-mathbbp-and-mathbbq-measures" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="risk-premia-and-the-mathbbp-and-mathbbq-measures"><span class="header-section-number">3.6</span> Risk premia and the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measures</h2>
-<p>To introduce risk premia in a one‑factor setting, we follow <span class="citation" data-cites="vasicek.77">Vasicek (<a href="#ref-vasicek.77" role="doc-biblioref">1977</a>)</span>. He presents a simple and tractable model where the distinction between the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measure dynamics is explicit, and where the role played by risk premia is clear. In other models, as we will see later, this principle is extended to a multi-factor setting. But, for clarity, it is probably easier to start with a 1-factor model first. Although Vasicek formulates his model in continuous time, we work in discrete time to maintain consistency with the rest of the book.</p>
+<section id="risk-premia-and-the-mathbbp-and-mathbbq-measures" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="risk-premia-and-the-mathbbp-and-mathbbq-measures"><span class="header-section-number">2.6</span> Risk premia and the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measures</h2>
+<p>To introduce risk premia in a one‑factor setting, we follow <span class="citation" data-cites="vasicek.77">Vasicek (<a href="references.html#ref-vasicek.77" role="doc-biblioref">1977</a>)</span>. He presents a simple and tractable model where the distinction between the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measure dynamics is explicit, and where the role played by risk premia is clear. In other models, as we will see later, this principle is extended to a multi-factor setting. But, for clarity, it is probably easier to start with a 1-factor model first. Although Vasicek formulates his model in continuous time, we work in discrete time to maintain consistency with the rest of the book.</p>
 <p>Under the (historical) <span class="math inline">\(\mathbb{P}\)</span> measure, Vasicek assumes that the short rate follows a mean-reverting Gaussian autoregressive process of order 1, which is the discrete-time analogue of a mean-reverting diffusion for the short rate. <span class="math display">\[
 \begin{align}
     r_t &amp;= \mu^{\mathbb{P}} + \rho^{\mathbb{P}} \, (r_{t-1} - \mu^{\mathbb{P}}) + \varepsilon^{\mathbb{P}}_t, \quad \varepsilon^{\mathbb{P}}_t \sim N(0, \sigma_{\mathbb{P}}^2),
 \end{align}
-\]</span> This is the AR(1) process we looked at in the previous section in <a href="#eq-ar1" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-ar1</span></a>; but here it is made explicit that this process evolves under the <span class="math inline">\(\mathbb{P}\)</span> measure, which is equal to the dynamics expressed by historical data. The requirements of stationarity also apply here.</p>
+\]</span> This is the AR(1) process we looked at in the previous section in <a href="#eq-ar1" class="quarto-xref">Equation&nbsp;<span>2.1</span></a>; but here it is made explicit that this process evolves under the <span class="math inline">\(\mathbb{P}\)</span> measure, which is equal to the dynamics expressed by historical data. The requirements of stationarity also apply here.</p>
 <p>In addition to the <span class="math inline">\(\mathbb{P}\)</span>, also <span class="math inline">\(\mathbb{Q}\)</span> measure dynamics are assumed for the short rate: <span class="math display">\[
 \begin{align}
     r_t &amp;= \mu^{\mathbb{Q}} + \rho^{\mathbb{Q}} \, (r_{t-1} - \mu^{\mathbb{Q}}) + \varepsilon^{\mathbb{Q}}_t, \quad \varepsilon^{\mathbb{Q}}_t \sim N(0, \sigma_{\mathbb{Q}}^2).
 \end{align}
-\]</span> As it was the case in the previous section, where bond prices were calculated under the <span class="math inline">\(\mathbb{P}\)</span> in <a href="#eq-P-P" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-P-P</span></a>, bond prices can similarly be calculated under the <span class="math inline">\(\mathbb{Q}\)</span> measure: <span id="eq-P-Q"><span class="math display">\[
+\]</span> As it was the case in the previous section, where bond prices were calculated under the <span class="math inline">\(\mathbb{P}\)</span> in <a href="#eq-P-P" class="quarto-xref">Equation&nbsp;<span>2.3</span></a>, bond prices can similarly be calculated under the <span class="math inline">\(\mathbb{Q}\)</span> measure: <span id="eq-P-Q"><span class="math display">\[
 \begin{align}
          \mathbb{E}_t^{\mathbb{Q}} \left[P_t^{(n)}\right] = \mathbb{E}^{\mathbb{Q}}_t\left[ e^{-\sum^{n}_{t=1} r_t\Delta t} \right].
 \end{align}
-\tag{3.11}\]</span></span> The sum <span class="math inline">\(\sum_{j=0}^{n-1} r_{t+j}\)</span> is the discrete-time analogue of the integral of the short rate that appears in continuous-time models.</p>
-<p>As we saw in <a href="#fig-model-based-yieldcurve-estimates-ar1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-model-based-yieldcurve-estimates-ar1</span></a>, the estimated <span class="math inline">\(\mathbb{P}\)</span>-dynamics do not generate bond prices (and thus zero-coupon yields) that fit the data particularly well. In contrast, the <span class="math inline">\(\mathbb{Q}\)</span>-measure is constructed precisely so that the model can match the observed cross-section of bond prices and zero-coupon yields as closely as possible. However, the presence of two different measures naturally raises the question of how they are related: The <span class="math inline">\(\mathbb{P}\)</span>-measure dynamics describe the statistical behaviour of the short rate (and hence yields) in the data, while the <span class="math inline">\(\mathbb{Q}\)</span>-measure dynamics must be consistent with the no-arbitrage pricing of bonds. Moving from <span class="math inline">\(\mathbb{P}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span> involves adjusting the short-rate process to reflect investors’ compensation for bearing interest-rate risk; this adjustment amounts to the market price of risk. In this sense, the <span class="math inline">\(\mathbb{P}\)</span>-measure captures the time-series evolution of yields, whereas the <span class="math inline">\(\mathbb{Q}\)</span>-measure governs their cross-sectional behaviour across maturities at a given point in time (the shape and level of the yield curve). The same underlying state process is therefore described in two ways: under <span class="math inline">\(\mathbb{P}\)</span> to match the historical dynamics, and under <span class="math inline">\(\mathbb{Q}\)</span> to match observed prices.</p>
+\tag{2.11}\]</span></span></p>
+<p>The sum <span class="math inline">\(\sum_{j=0}^{n-1} r_{t+j}\)</span> is the discrete-time analogue of the integral of the short rate that appears in continuous-time models.</p>
+<p>As we saw in <a href="#fig-model-based-yieldcurve-estimates-ar1" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>, the estimated <span class="math inline">\(\mathbb{P}\)</span>-dynamics do not generate bond prices (and thus zero-coupon yields) that fit the data particularly well. In contrast, the <span class="math inline">\(\mathbb{Q}\)</span>-measure is constructed precisely so that the model can match the observed cross-section of bond prices and zero-coupon yields as closely as possible. However, the presence of two different measures naturally raises the question of how they are related: The <span class="math inline">\(\mathbb{P}\)</span>-measure dynamics describe the statistical behaviour of the short rate (and hence yields) in the data, while the <span class="math inline">\(\mathbb{Q}\)</span>-measure dynamics must be consistent with the no-arbitrage pricing of bonds. Moving from <span class="math inline">\(\mathbb{P}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span> involves adjusting the short-rate process to reflect investors’ compensation for bearing interest-rate risk; this adjustment amounts to the market price of risk. In this sense, the <span class="math inline">\(\mathbb{P}\)</span>-measure captures the time-series evolution of yields, whereas the <span class="math inline">\(\mathbb{Q}\)</span>-measure governs their cross-sectional behaviour across maturities at a given point in time (the shape and level of the yield curve). The same underlying state process is therefore described in two ways: under <span class="math inline">\(\mathbb{P}\)</span> to match the historical dynamics, and under <span class="math inline">\(\mathbb{Q}\)</span> to match observed prices.</p>
 <p>The <span class="math inline">\(\mathbb{Q}\)</span>-measure is also often referred to as the risk-neutral measure. This terminology can appear counter-intuitive, because it is exactly the change from <span class="math inline">\(\mathbb{P}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span> that embeds risk premia into prices. The point, however, is that under <span class="math inline">\(\mathbb{Q}\)</span> the adjustment is made in such a way that all discounted asset prices become martingales, so that their expected excess return (above the risk-free rate) is zero and all cash flows therefore can be discounted at the risk-free rate.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>Leaving the model-rigour for later, and taking a purely empirical perspective, we know that model-implied bond prices under the <span class="math inline">\(\mathbb{Q}\)</span>-measure have the same exponential-affine form as the prices derived above under the <span class="math inline">\(\mathbb{P}\)</span>-measure. Therefore, following <a href="#eq-sr-yieldCurve" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-sr-yieldCurve</span></a> and <a href="#eq-An-Bn" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-An-Bn</span></a> we can write <span id="eq-sr-yieldCurve-Q"><span class="math display">\[
+<p>Leaving the model-rigour for later, and taking a purely empirical perspective, we know that model-implied bond prices under the <span class="math inline">\(\mathbb{Q}\)</span>-measure have the same exponential-affine form as the prices derived above under the <span class="math inline">\(\mathbb{P}\)</span>-measure. Therefore, following <a href="#eq-sr-yieldCurve" class="quarto-xref">Equation&nbsp;<span>2.10</span></a>, <a href="#eq-An" class="quarto-xref">Equation&nbsp;<span>2.6</span></a>, and <a href="#eq-Bn" class="quarto-xref">Equation&nbsp;<span>2.7</span></a> we can write <span id="eq-sr-yieldCurve-Q"><span class="math display">\[
 \begin{align}
     \mathbb{E}_t^{\mathbb{Q}}(y_t^{(n)})
     &amp;= \frac{1}{n}\,\mathbb{E}_t^{\mathbb{Q}}\!\left(A_n + B_n r_t\right)
         \nonumber \\
     &amp;= \mathbb{E}_t^{\mathbb{Q}}\!\left(a_n + b_n r_t\right),
 \end{align}
-\tag{3.12}\]</span></span> which implies that <span id="eq-An-Bn-Q"><span class="math display">\[
+\tag{2.12}\]</span></span></p>
+<p>which implies that <span id="eq-An-Bn-Q"><span class="math display">\[
 \begin{align}
     A_n^{\mathbb{Q}}
     &amp;= \frac{c^{\mathbb{Q}}\,n}{1-\rho^{\mathbb{Q}}}
@@ -567,14 +563,14 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
     &amp;= \frac{\rho^{\mathbb{Q}}-\left(\rho^{\mathbb{Q}}\right)^{(n+1)}}
              {1-\rho^{\mathbb{Q}}}.
 \end{align}
-\tag{3.13}\]</span></span> Similarly, under the historical measure we have <span id="eq-sr-yieldCurve-P"><span class="math display">\[
+\tag{2.13}\]</span></span> Similarly, under the historical measure we have <span id="eq-sr-yieldCurve-P"><span class="math display">\[
 \begin{align}
     \mathbb{E}_t^{\mathbb{P}}(y_t^{(n)})
     &amp;= \frac{1}{n}\,\mathbb{E}_t^{\mathbb{P}}\!\left(A_n + B_n \, r_t\right)
         \nonumber \\
     &amp;= \mathbb{E}_t^{\mathbb{P}}\!\left(a_n + b_n\, r_t\right),
 \end{align}
-\tag{3.14}\]</span></span> implying <span id="eq-An-Bn-P"><span class="math display">\[
+\tag{2.14}\]</span></span> implying <span id="eq-An-Bn-P"><span class="math display">\[
 \begin{align}
     A_n^{\mathbb{P}}
     &amp;= \frac{c^{\mathbb{P}}\,n}{1-\rho^{\mathbb{P}}}
@@ -586,15 +582,16 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
     &amp;= \frac{\rho^{\mathbb{P}}-\left(\rho^{\mathbb{P}}\right)^{(n+1)}}
              {1-\rho^{\mathbb{P}}}.
 \end{align}
-\tag{3.15}\]</span></span></p>
+\tag{2.15}\]</span></span></p>
 <p>The model-implied term premia are then given by the difference between the <span class="math inline">\(\mathbb{Q}\)</span> and <span class="math inline">\(\mathbb{P}\)</span> expected yields, <span id="eq-TP-def"><span class="math display">\[
 \begin{align}
     \theta_t^{(n)} = \mathbb{E}_t^{\mathbb{Q}}(y_t^{(n)}) - \mathbb{E}_t^{\mathbb{P}}(y_t^{(n)})
     &amp;= \big(a_n^{\mathbb{Q}} - a_n^{\mathbb{P}}\big)
         + \big(b_n^{\mathbb{Q}} - b_n^{\mathbb{P}}\big)\, r_t,
 \end{align}
-\tag{3.16}\]</span></span> with <span class="math inline">\(a_n^{\mathbb{Q}} = A_n^{\mathbb{Q}}/n\)</span> and <span class="math inline">\(a_n^{\mathbb{P}} = A_n^{\mathbb{P}}/n\)</span>, and similarly <span class="math inline">\(b_n^{\mathbb{Q}} = B_n^{\mathbb{Q}}/n\)</span> and <span class="math inline">\(b_n^{\mathbb{P}} = B_n^{\mathbb{P}}/n\)</span>.</p>
-<p>To ensure consistent market pricing and adherence to the no‑arbitrage principle, recall that bond prices are obtained from a single stochastic discount factor (SDF) <span class="math inline">\(\mathcal{M}\)</span>, as in <a href="#eq-fundamentalPrice" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-fundamentalPrice</span></a> and repeated here: <span class="math display">\[
+\tag{2.16}\]</span></span></p>
+<p>with <span class="math inline">\(a_n^{\mathbb{Q}} = A_n^{\mathbb{Q}}/n\)</span> and <span class="math inline">\(a_n^{\mathbb{P}} = A_n^{\mathbb{P}}/n\)</span>, and similarly <span class="math inline">\(b_n^{\mathbb{Q}} = B_n^{\mathbb{Q}}/n\)</span> and <span class="math inline">\(b_n^{\mathbb{P}} = B_n^{\mathbb{P}}/n\)</span>.</p>
+<p>To ensure consistent market pricing and adherence to the no‑arbitrage principle, recall that bond prices are obtained from a single stochastic discount factor (SDF) <span class="math inline">\(\mathcal{M}\)</span>, as in <a href="#eq-fundamentalPrice" class="quarto-xref">Equation&nbsp;<span>2.2</span></a> and repeated here: <span class="math display">\[
 \begin{align}
     P_t^{(n)} &amp;= \mathbb{E}_t\!\left( \mathcal{M}_{t+1} \, P_{t+1}^{\,n-1} \right). \nonumber
 \end{align}
@@ -608,28 +605,28 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
 \begin{align}
     \lambda_t &amp;= \lambda_0 + \lambda_1 \, r_t,
 \end{align}
-\tag{3.17}\]</span></span> where <span class="math inline">\(\lambda_0\)</span> and <span class="math inline">\(\lambda_1\)</span> are constants. The intercept <span class="math inline">\(\lambda_0\)</span> captures a level component of risk compensation that is independent of the current interest‑rate level, while the slope coefficient <span class="math inline">\(\lambda_1\)</span> allows the market price of short‑rate risk to vary systematically with <span class="math inline">\(r_t\)</span>.</p>
-<p>As shown above and exemplified by <a href="#eq-TP-def" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-TP-def</span></a>, the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measure parameters are connected through risk adjustment performed by the market price of risk in <a href="#eq-marketPriceOfRisk" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-marketPriceOfRisk</span></a>. Inspecting short-rate process under the historical measure <span class="math inline">\(\mathbb{P}\)</span>: <span id="eq-vasicek-P-drift"><span class="math display">\[
+\tag{2.17}\]</span></span> where <span class="math inline">\(\lambda_0\)</span> and <span class="math inline">\(\lambda_1\)</span> are constants. The intercept <span class="math inline">\(\lambda_0\)</span> captures a level component of risk compensation that is independent of the current interest‑rate level, while the slope coefficient <span class="math inline">\(\lambda_1\)</span> allows the market price of short‑rate risk to vary systematically with <span class="math inline">\(r_t\)</span>.</p>
+<p>As shown above and exemplified by <a href="#eq-TP-def" class="quarto-xref">Equation&nbsp;<span>2.16</span></a>, the <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span> measure parameters are connected through risk adjustment performed by the market price of risk in <a href="#eq-marketPriceOfRisk" class="quarto-xref">Equation&nbsp;<span>2.17</span></a>. Inspecting short-rate process under the historical measure <span class="math inline">\(\mathbb{P}\)</span>: <span id="eq-vasicek-P-drift"><span class="math display">\[
 \begin{align}
     r_t &amp;= \alpha^{\mathbb{P}} + \rho^{\mathbb{P}} \, r_{t-1}
             + \varepsilon_t^{\mathbb{P}}, \qquad
             \varepsilon_t^{\mathbb{P}} \sim N(0,\sigma^2),
 \end{align}
-\tag{3.18}\]</span></span> it is seen that all randomness enters through the one-period innovation <span class="math inline">\(\varepsilon_t^{\mathbb{P}}\)</span>. Economically, this innovation represents the unexpected component of monetary policy and macro-financial news at each date; conditional on <span class="math inline">\(r_{t-1}\)</span>, everything else in <a href="#eq-vasicek-P-drift" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-vasicek-P-drift</span></a> is deterministic. When switching to the pricing measure, <span class="math inline">\(\mathbb{Q}\)</span>, the SDF injects equilibrium investor preferences (risk premia) by adjusting the economic importance on these shocks (i.e.&nbsp;it reweights the shocks) to obtain market prices that reflect the market’s assessment of the price of risk.</p>
+\tag{2.18}\]</span></span> it is seen that all randomness enters through the one-period innovation <span class="math inline">\(\varepsilon_t^{\mathbb{P}}\)</span>. Economically, this innovation represents the unexpected component of monetary policy and macro-financial news at each date; conditional on <span class="math inline">\(r_{t-1}\)</span>, everything else in <a href="#eq-vasicek-P-drift" class="quarto-xref">Equation&nbsp;<span>2.18</span></a> is deterministic. When switching to the pricing measure, <span class="math inline">\(\mathbb{Q}\)</span>, the SDF injects equilibrium investor preferences (risk premia) by adjusting the economic importance on these shocks (i.e.&nbsp;it reweights the shocks) to obtain market prices that reflect the market’s assessment of the price of risk.</p>
 <p>It is common to assume that this risk adjustment effects the distribution of the innovation under the pricing measure <span class="math inline">\(\mathbb{Q}\)</span> by shifting the mean of the shock but leaving the variance unchanged. We can therefore define the <span class="math inline">\(\mathbb{Q}\)</span>-innovation as a shifted version of the <span class="math inline">\(\mathbb{P}\)</span>-innovation in the following way: <span id="eq-eps-Q-def2"><span class="math display">\[
 \begin{align}
     \varepsilon_{t+1}^{\mathbb{Q}}
     &amp;= \varepsilon_{t+1}^{\mathbb{P}} + \sigma \lambda_t.
 \end{align}
-\tag{3.19}\]</span></span> Effectively, the short-rate shock under <span class="math inline">\(\mathbb{Q}\)</span> has the same variance <span class="math inline">\(\sigma^2\)</span> as under <span class="math inline">\(\mathbb{P}\)</span>, but its mean is shifted by <span class="math inline">\(\sigma \lambda_t\)</span>. The scaling by <span class="math inline">\(\sigma\)</span> reflects that <span class="math inline">\(\lambda_t\)</span> is expressed as a price-per-unit-of-risk metric: a given value of <span class="math inline">\(\lambda_t\)</span> corresponds to a larger level drift correction when the innovation is more volatile. The total drift adjustment is therefore of the form: volatility-times-price-of-risk.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
-<p>Substituting <a href="#eq-eps-Q-def2" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-eps-Q-def2</span></a> into the <span class="math inline">\(\mathbb{P}\)</span>-dynamics <a href="#eq-vasicek-P-drift" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-vasicek-P-drift</span></a> gives <span id="eq-rt-sub-epsQ"><span class="math display">\[
+\tag{2.19}\]</span></span> Effectively, the short-rate shock under <span class="math inline">\(\mathbb{Q}\)</span> has the same variance <span class="math inline">\(\sigma^2\)</span> as under <span class="math inline">\(\mathbb{P}\)</span>, but its mean is shifted by <span class="math inline">\(\sigma \lambda_t\)</span>. The scaling by <span class="math inline">\(\sigma\)</span> reflects that <span class="math inline">\(\lambda_t\)</span> is expressed as a price-per-unit-of-risk metric: a given value of <span class="math inline">\(\lambda_t\)</span> corresponds to a larger level drift correction when the innovation is more volatile. The total drift adjustment is therefore of the form: volatility-times-price-of-risk.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>Substituting <a href="#eq-eps-Q-def2" class="quarto-xref">Equation&nbsp;<span>2.19</span></a> into the <span class="math inline">\(\mathbb{P}\)</span>-dynamics <a href="#eq-vasicek-P-drift" class="quarto-xref">Equation&nbsp;<span>2.18</span></a> gives <span id="eq-rt-sub-epsQ"><span class="math display">\[
 \begin{align}
     r_t
     &amp;= \alpha^{\mathbb{P}} + \rho^{\mathbb{P}} r_{t-1} + \varepsilon_t^{\mathbb{P}} \nonumber \\
     &amp;= \alpha^{\mathbb{P}} + \rho^{\mathbb{P}} r_{t-1}
         + \big( \varepsilon_t^{\mathbb{Q}} - \sigma \lambda_{t-1} \big),
 \end{align}
-\tag{3.20}\]</span></span> Inserting <a href="#eq-marketPriceOfRisk" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-marketPriceOfRisk</span></a> into <a href="#eq-rt-sub-epsQ" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-rt-sub-epsQ</span></a> and collecting terms yields <span id="eq-rt-Q-ar1"><span class="math display">\[
+\tag{2.20}\]</span></span> Inserting <a href="#eq-marketPriceOfRisk" class="quarto-xref">Equation&nbsp;<span>2.17</span></a> into <a href="#eq-rt-sub-epsQ" class="quarto-xref">Equation&nbsp;<span>2.20</span></a> and collecting terms yields <span id="eq-rt-Q-ar1"><span class="math display">\[
 \begin{align}
     r_t
     &amp;= \alpha^{\mathbb{P}} + \rho^{\mathbb{P}} r_{t-1}
@@ -638,20 +635,20 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
         + \big(\rho^{\mathbb{P}} - \sigma \lambda_1\big) r_{t-1}
         + \varepsilon_t^{\mathbb{Q}}.
 \end{align}
-\tag{3.21}\]</span></span> Under the pricing measure <span class="math inline">\(\mathbb{Q}\)</span>, the short rate still follows an AR(1) process, with the same innovation variance as under <span class="math inline">\(\mathbb{P}\)</span>, but with risk-adjusted intercept and persistence parameters: <span id="eq-alphaQ-def"><span class="math display">\[
+\tag{2.21}\]</span></span> Under the pricing measure <span class="math inline">\(\mathbb{Q}\)</span>, the short rate still follows an AR(1) process, with the same innovation variance as under <span class="math inline">\(\mathbb{P}\)</span>, but with risk-adjusted intercept and persistence parameters: <span id="eq-alphaQ-def"><span class="math display">\[
 \begin{align}
     \alpha^{\mathbb{Q}} &amp;= \alpha^{\mathbb{P}} - \sigma \lambda_0,
 \end{align}
-\tag{3.22}\]</span></span></p>
+\tag{2.22}\]</span></span></p>
 <p><span id="eq-rhoQ-def"><span class="math display">\[
 \begin{align}
     \rho^{\mathbb{Q}}   &amp;= \rho^{\mathbb{P}} - \sigma \lambda_1,
 \end{align}
-\tag{3.23}\]</span></span> which gives: <span id="eq-vasicek-Q-drift-ar1"><span class="math display">\[
+\tag{2.23}\]</span></span> which gives: <span id="eq-vasicek-Q-drift-ar1"><span class="math display">\[
 \begin{align}
     r_t &amp;= \alpha^{\mathbb{Q}} + \rho^{\mathbb{Q}} r_{t-1} + \varepsilon_t^{\mathbb{Q}}.
 \end{align}
-\tag{3.24}\]</span></span></p>
+\tag{2.24}\]</span></span></p>
 <p>Writing the historical and pricing-measure dynamics in mean-reverting form is then given by: <span id="eq-vasicek-P-meanrev"><span class="math display">\[
 \begin{align}
     r_t
@@ -659,7 +656,7 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
         + \varepsilon_t^{\mathbb{P}},
         \qquad \varepsilon_t^{\mathbb{P}} \sim N(0,\sigma^2),
 \end{align}
-\tag{3.25}\]</span></span></p>
+\tag{2.25}\]</span></span></p>
 <p><span id="eq-vasicek-Q-meanrev"><span class="math display">\[
 \begin{align}
     r_t
@@ -667,24 +664,24 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
         + \varepsilon_t^{\mathbb{Q}},
         \qquad \varepsilon_t^{\mathbb{Q}} \sim N(0,\sigma^2).
 \end{align}
-\tag{3.26}\]</span></span> with <span id="eq-muP-def"><span class="math display">\[
+\tag{2.26}\]</span></span> with <span id="eq-muP-def"><span class="math display">\[
 \begin{align}
     \mu^{\mathbb{P}}
     = \frac{\alpha^{\mathbb{P}}}{1-\rho^{\mathbb{P}}}
     \quad \texttt{and} \quad   \mu^{\mathbb{Q}}
     = \frac{\alpha^{\mathbb{Q}}}{1-\rho^{\mathbb{Q}}}.
 \end{align}
-\tag{3.27}\]</span></span> Consequently, once the historical dynamics <span class="math inline">\((\mu^{\mathbb{P}},\rho^{\mathbb{P}})\)</span> and the affine market price of risk <span class="math inline">\((\lambda_0,\lambda_1)\)</span> are specified, the no-arbitrage SDF pins down the corresponding risk-neutral dynamics <span class="math inline">\((\mu^{\mathbb{Q}},\rho^{\mathbb{Q}})\)</span>; they can no longer be treated as free parameters. The wedge between the <span class="math inline">\(\mathbb{P}\)</span>- and <span class="math inline">\(\mathbb{Q}\)</span>-parameters, and hence between <span class="math inline">\(\mathbb{E}_t^{\mathbb{P}}(y_t^{(n)})\)</span> and <span class="math inline">\(\mathbb{E}_t^{\mathbb{Q}}(y_t^{(n)})\)</span>, is entirely driven by the market price of risk and the volatility of the short-rate shocks. In this way the Vasicek model provides a simple one-factor illustration of how an explicit SDF simultaneously determines the historical and risk-neutral dynamics and generates affine term premia.</p>
+\tag{2.27}\]</span></span> Consequently, once the historical dynamics <span class="math inline">\((\mu^{\mathbb{P}},\rho^{\mathbb{P}})\)</span> and the affine market price of risk <span class="math inline">\((\lambda_0,\lambda_1)\)</span> are specified, the no-arbitrage SDF pins down the corresponding risk-neutral dynamics <span class="math inline">\((\mu^{\mathbb{Q}},\rho^{\mathbb{Q}})\)</span>; they can no longer be treated as free parameters. The wedge between the <span class="math inline">\(\mathbb{P}\)</span>- and <span class="math inline">\(\mathbb{Q}\)</span>-parameters, and hence between <span class="math inline">\(\mathbb{E}_t^{\mathbb{P}}(y_t^{(n)})\)</span> and <span class="math inline">\(\mathbb{E}_t^{\mathbb{Q}}(y_t^{(n)})\)</span>, is entirely driven by the market price of risk and the volatility of the short-rate shocks. In this way the Vasicek model provides a simple one-factor illustration of how an explicit SDF simultaneously determines the historical and risk-neutral dynamics and generates affine term premia.</p>
 </section>
-<section id="multi-factor-models" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Multi factor models</h1>
+<section id="multi-factor-models" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Multi factor models</h1>
 <p>A dynamic yield curve model driven by a single factor provides a natural starting point for thinking about interest rate risk. Yields at all maturities move together, so that the entire term structure shifts in parallel over time. This captures the dominant level‑type variation in the data and links directly to familiar fixed income concepts such as modified duration, which measures the sensitivity of a bond’s price to small, parallel changes in yields. As we will see in the PCA analysis below, this first dimension alone explains the vast majority of yield curve variability.</p>
 <p>However, yield changes are rarely perfectly parallel, so models that allow for variations in slope and curvature are essential for asset allocation, yield‑curve scenario design, and related applications. Slope movements arise when expectations about short‑ and long‑term interest rates diverge. For example, during a period of monetary policy easing (when the policy rate is lowered), while long‑run inflation expectations and expected real growth remain broadly unchanged, the curve typically steepens as short‑term yields fall relative to long‑term yields. During a tightening cycle, higher policy rates tend to compress the short–long spread and thus generates a flatter curve. In practice, slope changes can be driven from the short end (through policy actions), from the long end (through shifts in inflation and growth expectations), or from both segments simultaneously.</p>
 <p>Curvature movements describe how intermediate maturities behave relative to the short and long ends of the curve, affecting its concavity or convexity and giving rise to hump‑shaped or inverted shapes. These patterns are closely tied to expectations about the future path of the policy rate. When markets anticipate that the policy rate will fall, or remain low for an extended period, yields at the medium horizons can move down disproportionately, and the curve then exhibits pronounced concavity. On the other hand, expectations of a rapid and sustained tightening often push up medium‑term yields more strongly, producing a more convex curve with elevated rates in the central part of the maturity spectrum.</p>
 <p>These considerations naturally point towards modelling the term structure within a multi‑factor framework. Principal component analysis (PCA) provides a convenient empirical starting point for this extension. Applied to a panel of yields across maturities, PCA extracts orthogonal components that capture the main directions of the variation in the data. In typical applications the first four principal components can be interpreted as level, slope, curvature at low maturities, and curvature at higher maturities. The first component preserves the interpretation of the one‑factor models and represents the dominant yield curve level movement, while the second, third and fourth components account for changes in slope and curvature.</p>
 <p>The empirical factor structure suggested by PCA has directly influenced modern term‑structure modelling. Affine term‑structure models introduce several latent factors, often with dynamics designed to match the level, slope and curvature pattern, while maintaining consistency with no‑arbitrage restrictions. Nelson–Siegel type models and their dynamic extensions build these three factors into the parametric form of the yield curve itself, providing an economically intuitive and tractable representation. In both cases, the one‑factor perspective remains valuable as the primary driver of yield levels, but it is complemented by additional factors that capture the richer cross‑sectional and time‑series behaviour observed in the data. Modelling yields within such a multi‑factor framework therefore preserves the simplicity and intuition of the single level factor, while offering a much more realistic description of interest rate risk for practical applications.</p>
-<section id="empirically-determining-the-number-of-yield-curve-factors" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="empirically-determining-the-number-of-yield-curve-factors"><span class="header-section-number">4.1</span> Empirically determining the number of yield curve factors</h2>
+<section id="empirically-determining-the-number-of-yield-curve-factors" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="empirically-determining-the-number-of-yield-curve-factors"><span class="header-section-number">3.1</span> Empirically determining the number of yield curve factors</h2>
 <p>We begin by applying principal component analysis (PCA) to the panel of monthly US Treasury yields spanning the period from 1960 to 2026 and covering maturities from 3 to 120 months. The data are arranged in a <span class="math inline">\(T\times k\)</span> matrix <span class="math inline">\(Y\)</span>, where each row contains the cross–section of <span class="math inline">\(k=11\)</span> yields observed at a given month, and each column corresponds to one maturity. Before extracting factors the column specific mean is deducted such that the sample covariance matrix of the yields is<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="math display">\[
 \begin{align}
     S = \frac{1}{T-1} Y^{\top}\, Y.
@@ -698,16 +695,16 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
 \begin{align}
     Y = F\, L^{\top},
 \end{align}
-\tag{4.1}\]</span></span> where each column of <span class="math inline">\(F\)</span> is the time series of one principal component. Because <span class="math inline">\(L\)</span> is orthonormal, such that <span class="math inline">\((L^{\top}L\big)^{-1}=I\)</span>, this representation can be viewed as a multivariate regression of <span class="math inline">\(Y\)</span> on the loadings <span class="math inline">\(L\)</span>, in which the least–squares estimator of <span class="math inline">\(F\)</span> is particularly simple: <span id="eq-PCA-Fhat"><span class="math display">\[
+\tag{3.1}\]</span></span> where each column of <span class="math inline">\(F\)</span> is the time series of one principal component. Because <span class="math inline">\(L\)</span> is orthonormal, such that <span class="math inline">\((L^{\top}L\big)^{-1}=I\)</span>, this representation can be viewed as a multivariate regression of <span class="math inline">\(Y\)</span> on the loadings <span class="math inline">\(L\)</span>, in which the least–squares estimator of <span class="math inline">\(F\)</span> is particularly simple: <span id="eq-PCA-Fhat"><span class="math display">\[
 \begin{align}
     \widehat{F} = Y\, L \big(L^{\top}L\big)^{-1} \;=\; Y L.
 \end{align}
-\tag{4.2}\]</span></span> Substituting this expression back into the reconstruction equation shows that PCA delivers an exact factorisation of the de–meaned data, <span id="eq-PCA-exact-recon"><span class="math display">\[
+\tag{3.2}\]</span></span> Substituting this expression back into the reconstruction equation shows that PCA delivers an exact factorisation of the de–meaned data, <span id="eq-PCA-exact-recon"><span class="math display">\[
 \begin{align}
     Y \;=\; \widehat{F} L^{\top}.
 \end{align}
-\tag{4.3}\]</span></span> In other words, the observed yield curve at each point in time can be written as a linear combination of <span class="math inline">\(k\)</span> orthogonal factors, with time–varying coefficients collected in <span class="math inline">\(\widehat{F}\)</span> and fixed cross–sectional loadings given by the columns of <span class="math inline">\(L\)</span>.</p>
-<p>The empirical importance of each principal component is summarised in <a href="#tbl-PCA-eigenvalues" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-PCA-eigenvalues</span></a>. For component <span class="math inline">\(j\)</span> the associated eigenvalue <span class="math inline">\(d_j\)</span> equals the variance of that component, and the fraction of total variance explained is <span class="math display">\[
+\tag{3.3}\]</span></span> In other words, the observed yield curve at each point in time can be written as a linear combination of <span class="math inline">\(k\)</span> orthogonal factors, with time–varying coefficients collected in <span class="math inline">\(\widehat{F}\)</span> and fixed cross–sectional loadings given by the columns of <span class="math inline">\(L\)</span>.</p>
+<p>The empirical importance of each principal component is summarised in <a href="#tbl-PCA-eigenvalues" class="quarto-xref">Table&nbsp;<span>3.1</span></a>. For component <span class="math inline">\(j\)</span> the associated eigenvalue <span class="math inline">\(d_j\)</span> equals the variance of that component, and the fraction of total variance explained is <span class="math display">\[
 \begin{align}
     \text{Explained}_j \;=\; \frac{d_j}{\sum_{\ell=1}^k d_\ell}\times 100 .
 \end{align}
@@ -715,7 +712,7 @@ Figure&nbsp;3.2: Yields under the <span class="math inline">\(\mathbb{P}\)</span
 <div id="tbl-PCA-eigenvalues" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-PCA-eigenvalues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.1: PCA eigenvalues and explained variance for monthly US Treasury yields.
+Table&nbsp;3.1: PCA eigenvalues and explained variance for monthly US Treasury yields.
 </figcaption>
 <div aria-describedby="tbl-PCA-eigenvalues-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -799,9 +796,9 @@ Table&nbsp;4.1: PCA eigenvalues and explained variance for monthly US Treasury y
 </div>
 </figure>
 </div>
-<p><a href="#tbl-PCA-eigenvalues" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-PCA-eigenvalues</span></a> shows that the first principal component alone explains about <span class="math inline">\(97.7\%\)</span> of the cross–sectional variance in monthly yields, while the second component adds roughly <span class="math inline">\(2.1\%\)</span>, taking the cumulative share to <span class="math inline">\(99.8\%\)</span>. The third component contributes only an additional <span class="math inline">\(0.2\%\)</span>, and from the fourth component onwards the marginal contribution of each factor is economically negligible. This pattern is very typical for yield curve data and strongly suggests that a three–factor representation is more than sufficient to capture the salient movements in the term structure data we work with here. Of course, this results depends on the data used.</p>
-<section id="crosssectional-factor-loadings" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="crosssectional-factor-loadings"><span class="header-section-number">4.1.1</span> Cross–sectional factor loadings</h3>
+<p><a href="#tbl-PCA-eigenvalues" class="quarto-xref">Table&nbsp;<span>3.1</span></a> shows that the first principal component alone explains about <span class="math inline">\(97.7\%\)</span> of the cross–sectional variance in monthly yields, while the second component adds roughly <span class="math inline">\(2.1\%\)</span>, taking the cumulative share to <span class="math inline">\(99.8\%\)</span>. The third component contributes only an additional <span class="math inline">\(0.2\%\)</span>, and from the fourth component onwards the marginal contribution of each factor is economically negligible. This pattern is very typical for yield curve data and strongly suggests that a three–factor representation is more than sufficient to capture the salient movements in the term structure data we work with here. Of course, this results depends on the data used.</p>
+<section id="crosssectional-factor-loadings" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="crosssectional-factor-loadings"><span class="header-section-number">3.1.1</span> Cross–sectional factor loadings</h3>
 <p>Let <span class="math inline">\(y_t\)</span> denote the <span class="math inline">\(k\times 1\)</span> vector of (de–meaned) yields at time <span class="math inline">\(t\)</span>, stacked across maturities, and collect the PCA loadings in the <span class="math inline">\(k\times k\)</span> matrix: <span class="math display">\[
 \begin{align}
 \Lambda = \big[\,\ell_1 \ \ell_2 \ \cdots \ \ell_k\,\big],
@@ -820,7 +817,7 @@ Table&nbsp;4.1: PCA eigenvalues and explained variance for monthly US Treasury y
 y_t &amp;= \Lambda f_t.
 \end{align}
 \]</span> This shows that each cross–section of yields is obtained as a linear combination of the principal components with time–varying coefficients collected in <span class="math inline">\(f_t\)</span> and fixed cross–sectional loadings given by the columns of <span class="math inline">\(\Lambda\)</span>.</p>
-<p><a href="#fig-PCA-loadings" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-PCA-loadings</span></a> plots the loadings of the first three principal components across maturities from 3 to 120 months. Loadings for the first component are virtually constant across the maturity spectrum implying that this component shifts the entire yield curve up and down by the same amount, and therefore has a naturally interpreted as a level factor. The second panel shows that the loading of the second component declines monotonically with maturity, implying that this factor raises short–term yields while lowering long–term yields (or vice versa); this principal component therefore captures changes in the slope of the yield curve between short and long maturities. The third loading shows a hump–shaped pattern that is aligns which the characteristic of a curvature factor that steepens or flattens the curve around its medium–term segment.</p>
+<p><a href="#fig-PCA-loadings" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> plots the loadings of the first three principal components across maturities from 3 to 120 months. Loadings for the first component are virtually constant across the maturity spectrum implying that this component shifts the entire yield curve up and down by the same amount, and therefore has a naturally interpreted as a level factor. The second panel shows that the loading of the second component declines monotonically with maturity, implying that this factor raises short–term yields while lowering long–term yields (or vice versa); this principal component therefore captures changes in the slope of the yield curve between short and long maturities. The third loading shows a hump–shaped pattern that is aligns which the characteristic of a curvature factor that steepens or flattens the curve around its medium–term segment.</p>
 <p>Together, these three components form the familiar level–slope–curvature trio that underlies most modern dynamic yield curve models. The fact that they emerge here purely from an unsupervised statistical decomposition, without imposing any economic structure, provides strong evidence that the main drivers of yield curve dynamics are indeed low–dimensional and have a clear geometric interpretation.</p>
 <div id="fig-PCA-loadings" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -828,27 +825,27 @@ y_t &amp;= \Lambda f_t.
 <img src="img/PC_loadings.png" class="img-fluid figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PCA-loadings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.1: Cross–sectional loadings of the first three principal components
+Figure&nbsp;3.1: Cross–sectional loadings of the first three principal components
 </figcaption>
 </figure>
 </div>
 <p><em>The figure shows the loadings of the first three principal components extracted from monthly US Treasury yields across maturities from 3 to 120 months. The first component loads roughly equally on all maturities, the second loads more strongly on short maturities than on long ones, and the third exhibits a hump–shaped pattern.</em></p>
 </section>
-<section id="timeseries-behaviour-of-the-pca-factors" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="timeseries-behaviour-of-the-pca-factors"><span class="header-section-number">4.1.2</span> Time–series behaviour of the PCA factors</h3>
-<p>While the loadings describe how each factor affects the cross–section of yields at a given point in time, the factor scores trace out the temporal evolution of these effects. <a href="#fig-PCA-factors" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-PCA-factors</span></a> plots the time series of the first three principal components extracted from the monthly US Treasury yield data over the sample period.</p>
+<section id="timeseries-behaviour-of-the-pca-factors" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="timeseries-behaviour-of-the-pca-factors"><span class="header-section-number">3.1.2</span> Time–series behaviour of the PCA factors</h3>
+<p>While the loadings describe how each factor affects the cross–section of yields at a given point in time, the factor scores trace out the temporal evolution of these effects. <a href="#fig-PCA-factors" class="quarto-xref">Figure&nbsp;<span>3.2</span></a> plots the time series of the first three principal components extracted from the monthly US Treasury yield data over the sample period.</p>
 <div id="fig-PCA-factors" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PCA-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/factor_time_series.png" class="img-fluid figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PCA-factors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.2: Time series of the first three principal components
+Figure&nbsp;3.2: Time series of the first three principal components
 </figcaption>
 </figure>
 </div>
 <p><em>The figure shows the time series of the first three principal components extracted from monthly US Treasury yields across maturities from 3 to 120 months over the period 1960–2026, overlaid with simple empirical proxies. In each panel the solid blue line shows the standardised PCA score (factor), while the dashed red line shows its empirical counterpart: the 10‑year yield (level) in the top panel, the spread between the 3‑month and 10‑year yields (slope) in the middle panel, and the curvature proxy <span class="math inline">\(2y(36m) − y(3m) − y(120m)\)</span> in the bottom panel.</em></p>
-<p><a href="#fig-PCA-factors" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-PCA-factors</span></a> shows the time–series behaviour of the first three principal components extracted from the panel of monthly US Treasury yields together with simple, economically motivated yield–curve measures. Each panel plots a standardised PCA score (solid blue line) and the empirical counterpart constructed directly from the yields (dashed red line). The purpose of this comparison is to show that the statistically extracted components have a very natural interpretation as observable quantities.</p>
+<p><a href="#fig-PCA-factors" class="quarto-xref">Figure&nbsp;<span>3.2</span></a> shows the time–series behaviour of the first three principal components extracted from the panel of monthly US Treasury yields together with simple, economically motivated yield–curve measures. Each panel plots a standardised PCA score (solid blue line) and the empirical counterpart constructed directly from the yields (dashed red line). The purpose of this comparison is to show that the statistically extracted components have a very natural interpretation as observable quantities.</p>
 <p>In the top panel the first principal component is overlaid with the 10‑year yield, taken as a proxy for the overall level of the term structure. The close co–movement of the two series confirms that the first component primarily tracks the general interest rate environment: both spike during the high‑inflation episode of the late 1970s and early 1980s, decline during the subsequent disinflation, and remain low in the post‑crisis period. This visual evidence reinforces the interpretation of the first component as a level factor.</p>
 <p>The middle panel compares the second principal component with the spread between the 3‑month and 10‑year yields. This spread is a standard measure of yield–curve slope and encapsulates the relative pricing of short‑ and long‑term interest rates. The fact that the PCA score and the empirical slope proxy move almost one–for–one, including during episodes of curve steepening and inversion, indicates that the second component captures slope movements in the term structure. It therefore refines the purely parallel picture suggested by the level factor by allowing for differential shifts between the front and the back end of the curve.</p>
 <p>The bottom panel shows the third principal component together with a curvature proxy defined as <span class="math display">\[
@@ -857,34 +854,34 @@ Figure&nbsp;4.2: Time series of the first three principal components
 \end{align}
 \]</span> which measures the extent to which medium‑term yields deviate from the average of short‑ and long‑term yields. Periods in which this proxy is high correspond to yield curves that are relatively elevated at intermediate maturities (hump–shaped), whereas low values indicate curves that are depressed in the middle (inverse hump). The strong alignment between the third PCA score and this curvature measure shows that the third component captures precisely these curvature fluctuations.</p>
 </section>
-<section id="pca-as-a-static-factor-model-and-its-statespace-representation" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="pca-as-a-static-factor-model-and-its-statespace-representation"><span class="header-section-number">4.1.3</span> PCA as a static factor model and its state–space representation</h3>
+<section id="pca-as-a-static-factor-model-and-its-statespace-representation" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="pca-as-a-static-factor-model-and-its-statespace-representation"><span class="header-section-number">3.1.3</span> PCA as a static factor model and its state–space representation</h3>
 <p>The PCA decomposition can be viewed as a static factor model for the yield curve. Let <span class="math inline">\(y_t\)</span> denote the <span class="math inline">\(k\times 1\)</span> vector of de–meaned yields at time <span class="math inline">\(t\)</span>, stacked across maturities. Collecting the first <span class="math inline">\(r\)</span> principal components in the <span class="math inline">\(k\times r\)</span> loading matrix <span class="math inline">\(\Lambda\)</span> (consisting of the first <span class="math inline">\(r\)</span> columns of <span class="math inline">\(L\)</span>), and the corresponding factor scores in the <span class="math inline">\(r\times 1\)</span> vector <span class="math inline">\(f_t\)</span>, the PCA representation for <span class="math inline">\(y_t\)</span> can be written as <span id="eq-PCA-obs-equation"><span class="math display">\[
 \begin{align}
     y_t &amp;= \Lambda f_t + \varepsilon_t,
 \end{align}
-\tag{4.4}\]</span></span> where <span class="math inline">\(\varepsilon_t\)</span> is a <span class="math inline">\(k\times 1\)</span> vector of idiosyncratic residuals that are orthogonal to the factors by construction. In the exact reconstruction case discussed above the model is estimated with <span class="math inline">\(r=k\)</span> and <span class="math inline">\(\varepsilon_t\equiv 0\)</span>; in practice one typically retains only the first <span class="math inline">\(r\ll k\)</span> components (for example <span class="math inline">\(r=3\)</span>), in which case <span class="math inline">\(\varepsilon_t\)</span> collects the small amount of variation not explained by the retained factors.</p>
+\tag{3.4}\]</span></span> where <span class="math inline">\(\varepsilon_t\)</span> is a <span class="math inline">\(k\times 1\)</span> vector of idiosyncratic residuals that are orthogonal to the factors by construction. In the exact reconstruction case discussed above the model is estimated with <span class="math inline">\(r=k\)</span> and <span class="math inline">\(\varepsilon_t\equiv 0\)</span>; in practice one typically retains only the first <span class="math inline">\(r\ll k\)</span> components (for example <span class="math inline">\(r=3\)</span>), in which case <span class="math inline">\(\varepsilon_t\)</span> collects the small amount of variation not explained by the retained factors.</p>
 <p>To move towards a dynamic term–structure model, we now endow the factor vector <span class="math inline">\(f_t\)</span> with its own stochastic law of motion. The simplest and most widely used specification is a first–order vector autoregression, <span id="eq-PCA-state-equation"><span class="math display">\[
 \begin{align}
     f_{t+1} &amp;= \Phi f_t + \eta_{t+1},
 \end{align}
-\tag{4.5}\]</span></span> where <span class="math inline">\(\Phi\)</span> is an <span class="math inline">\(r\times r\)</span> coefficient matrix and <span class="math inline">\(\eta_{t+1}\)</span> is an <span class="math inline">\(r\times 1\)</span> innovation with zero mean and covariance matrix <span class="math inline">\(Q\)</span>. Together, the observation equation&nbsp;<a href="#eq-PCA-obs-equation" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PCA-obs-equation</span></a> and the state equation&nbsp;<a href="#eq-PCA-state-equation" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PCA-state-equation</span></a> define a linear Gaussian state–space model for the yield curve, with the principal components serving as latent state variables.</p>
+\tag{3.5}\]</span></span> where <span class="math inline">\(\Phi\)</span> is an <span class="math inline">\(r\times r\)</span> coefficient matrix and <span class="math inline">\(\eta_{t+1}\)</span> is an <span class="math inline">\(r\times 1\)</span> innovation with zero mean and covariance matrix <span class="math inline">\(Q\)</span>. Together, the observation equation&nbsp;<a href="#eq-PCA-obs-equation" class="quarto-xref">Equation&nbsp;<span>3.4</span></a> and the state equation&nbsp;<a href="#eq-PCA-state-equation" class="quarto-xref">Equation&nbsp;<span>3.5</span></a> define a linear Gaussian state–space model for the yield curve, with the principal components serving as latent state variables.</p>
 <p>This state–space representation provides a natural bridge from static PCA to fully dynamic yield–curve models. The PCA step identifies the dominant cross–sectional factors and their loadings, while the state equation specifies how these factors evolve over time. In subsequent chapters we will replace the reduced–form dynamics above by more structured specifications motivated by no–arbitrage and macro–financial considerations, but the underlying level–slope–curvature factor structure revealed by PCA will remain at the core of those models.</p>
 </section>
 </section>
-<section id="a-recipe-for-building-term-structure-models9" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="a-recipe-for-building-term-structure-models9"><span class="header-section-number">4.2</span> A recipe for building term-structure models<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></h2>
-<p>Virtually all Gaussian dynamic term-structure models can be built by following a relatively mechanical sequence of steps that has emerged from the affine term-structure literature, see, for example, <span class="citation" data-cites="duffie.kan.96">Duffie and Kan (<a href="#ref-duffie.kan.96" role="doc-biblioref">1996</a>)</span>, <span class="citation" data-cites="dai.singleton.00">Dai and Singleton (<a href="#ref-dai.singleton.00" role="doc-biblioref">2000</a>)</span>, and <span class="citation" data-cites="ang.piazzesi.03">Ang and Piazzesi (<a href="#ref-ang.piazzesi.03" role="doc-biblioref">2003</a>)</span>. In this section, we stay with discrete-time models, which means that the factor dynamics are specified as vector autoregressions rather than continuous-time diffusions, and that sums, instead of integrals, are used in all pricing expressions.</p>
+<section id="a-recipe-for-building-term-structure-models9" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="a-recipe-for-building-term-structure-models9"><span class="header-section-number">3.2</span> A recipe for building term-structure models<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></h2>
+<p>Virtually all Gaussian dynamic term-structure models can be built by following a relatively mechanical sequence of steps that has emerged from the affine term-structure literature, see, for example, <span class="citation" data-cites="duffie.kan.96">Duffie and Kan (<a href="references.html#ref-duffie.kan.96" role="doc-biblioref">1996</a>)</span>, <span class="citation" data-cites="dai.singleton.00">Dai and Singleton (<a href="references.html#ref-dai.singleton.00" role="doc-biblioref">2000</a>)</span>, and <span class="citation" data-cites="ang.piazzesi.03">Ang and Piazzesi (<a href="references.html#ref-ang.piazzesi.03" role="doc-biblioref">2003</a>)</span>. In this section, we stay with discrete-time models, which means that the factor dynamics are specified as vector autoregressions rather than continuous-time diffusions, and that sums, instead of integrals, are used in all pricing expressions.</p>
 <p>Let <span class="math inline">\(X_t\)</span> denote the vector of the modelled yield curve factors, at time <span class="math inline">\(t\)</span>, and let the dynamics of <span class="math inline">\(X_t\)</span> be governed by vector autoregressive (VAR) processes of order one, under both the empirical measure, <span class="math inline">\(\mathbb{P}\)</span>, and the pricing measure, <span class="math inline">\(\mathbb{Q}\)</span>: <span id="eq-factorVarP"><span class="math display">\[
 \begin{align}
     X_{t} &amp;= k^\mathbb{P}+\Phi^\mathbb{P} \cdot X_{t-1} + \Sigma^{\mathbb{P}} \epsilon^\mathbb{P}_{t}, \hspace{1cm} \epsilon^\mathbb{P}_{t} \sim N(0,1)  
 \end{align}
-\tag{4.6}\]</span></span></p>
+\tag{3.6}\]</span></span></p>
 <p><span id="eq-factorVarQ"><span class="math display">\[
 \begin{align}
     X_{t} &amp;= k^\mathbb{Q}+\Phi^\mathbb{Q} \cdot X_{t-1} +\Sigma^{\mathbb{Q}} \epsilon^\mathbb{Q}_{t}, \hspace{1cm} \epsilon^\mathbb{Q}_{t} \sim N(0,1).
 \end{align}
-\tag{4.7}\]</span></span> with <span class="math inline">\(\Sigma \Sigma^{\top}=\Omega\)</span> being the variance of the residuals, and it is assumed that <span class="math inline">\(\Sigma^{\mathbb{P}}=\Sigma^{\mathbb{Q}}\)</span>. <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> is a core element since it is responsible for the mapping of unobserved factors into observed yields. In the PCA section above, <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> corresponds to the matrix of loadings <span class="math inline">\(\Lambda\)</span> in <a href="#eq-PCA-obs-equation" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PCA-obs-equation</span></a>. If a closed form expression for the loading structure is desirable, and if a certain economic interpretation should be imposed on the factors in the model, then this is done through the parametrisation of <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span>. For example, to obtain the loadings for the dynamic Nelson-Siegel model (see, <span class="citation" data-cites="christensen.diebold.rudebusch.2011">Christensen et al. (<a href="#ref-christensen.diebold.rudebusch.2011" role="doc-biblioref">2011</a>)</span>) the following specification is used: <span class="math display">\[
+\tag{3.7}\]</span></span> with <span class="math inline">\(\Sigma \Sigma^{\top}=\Omega\)</span> being the variance of the residuals, and it is assumed that <span class="math inline">\(\Sigma^{\mathbb{P}}=\Sigma^{\mathbb{Q}}\)</span>. <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> is a core element since it is responsible for the mapping of unobserved factors into observed yields. In the PCA section above, <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> corresponds to the matrix of loadings <span class="math inline">\(\Lambda\)</span> in <a href="#eq-PCA-obs-equation" class="quarto-xref">Equation&nbsp;<span>3.4</span></a>. If a closed form expression for the loading structure is desirable, and if a certain economic interpretation should be imposed on the factors in the model, then this is done through the parametrisation of <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span>. For example, to obtain the loadings for the dynamic Nelson-Siegel model (see, <span class="citation" data-cites="christensen.diebold.rudebusch.2011">Christensen et al. (<a href="references.html#ref-christensen.diebold.rudebusch.2011" role="doc-biblioref">2011</a>)</span>) the following specification is used: <span class="math display">\[
 \begin{align}
     \Phi^{\mathbb{Q}} = \begin{bmatrix}  0 &amp; 0 &amp; 0\\
                                           0 &amp; \lambda &amp; -\lambda \\
@@ -894,16 +891,16 @@ Figure&nbsp;4.2: Time series of the first three principal components
 \begin{align}
     r_t = \rho_0 + \rho^{\top}_1 X_t.
 \end{align}
-\tag{4.8}\]</span></span></p>
+\tag{3.8}\]</span></span></p>
 <p>To impose absence of arbitrage we impose the unique pricing mechanism, that governs all traded assets: <span id="eq-noArbitrage"><span class="math display">\[
 \begin{align}
     P_{t,n} = \mathbb{E}_t \left[ M_{t+1}\cdot P_{t+1,n-1} \right]
 \end{align}
-\tag{4.9}\]</span></span> The idea here is that when the bond matures at time <span class="math inline">\(T\)</span>, its value is known with certainty, since it is default-free: the bond pays its principal value on that day, so <span class="math inline">\(P_{T,0}=1\)</span>. At any time <span class="math inline">\(t+j\)</span> before maturity, the price of the bond can therefore be found as the one-period discounted-value of the price at time <span class="math inline">\(t+j+1\)</span>, all the way back to time <span class="math inline">\(t\)</span>. Discounting is done using the stochastic discount factor (also called the pricing kernel), which is denoted by <span class="math inline">\(M_t\)</span>, and this quantity is assumed to be given by: <span id="eq-kernel"><span class="math display">\[
+\tag{3.9}\]</span></span> The idea here is that when the bond matures at time <span class="math inline">\(T\)</span>, its value is known with certainty, since it is default-free: the bond pays its principal value on that day, so <span class="math inline">\(P_{T,0}=1\)</span>. At any time <span class="math inline">\(t+j\)</span> before maturity, the price of the bond can therefore be found as the one-period discounted-value of the price at time <span class="math inline">\(t+j+1\)</span>, all the way back to time <span class="math inline">\(t\)</span>. Discounting is done using the stochastic discount factor (also called the pricing kernel), which is denoted by <span class="math inline">\(M_t\)</span>, and this quantity is assumed to be given by: <span id="eq-kernel"><span class="math display">\[
 \begin{align}
     M_{t+1} = \text{exp}\left( -r_t -\frac{1}{2} \lambda^{\top}_t \lambda_t - \lambda^{\top}_t \epsilon^\mathbb{P}_{t+1} \right)
 \end{align}
-\tag{4.10}\]</span></span> with the market price of risk (as above) given by: <span class="math display">\[
+\tag{3.10}\]</span></span> with the market price of risk (as above) given by: <span class="math display">\[
 \begin{align}
     \lambda_t = \lambda_0 + \lambda_1 \cdot X_t,
 \end{align}
@@ -916,16 +913,16 @@ Figure&nbsp;4.2: Time series of the first three principal components
 \begin{align}
     y_{t,n} = -\frac{A_{n}}{n} - \frac{B^{\top}_{n}}{n} X_t.
 \end{align}
-\tag{4.11}\]</span></span> The bond price is therefore exponential affine in terms of <span class="math inline">\(A_{n}\)</span> and <span class="math inline">\(B_{n}\)</span>: <span id="eq-Pt1"><span class="math display">\[
+\tag{3.11}\]</span></span> The bond price is therefore exponential affine in terms of <span class="math inline">\(A_{n}\)</span> and <span class="math inline">\(B_{n}\)</span>: <span id="eq-Pt1"><span class="math display">\[
 \begin{align}
     P_{t,n} = \text{exp} \left( A_{n} + B^{\top}_{n} X_t \right).
 \end{align}
-\tag{4.12}\]</span></span> To derive closed-form expressions for <span class="math inline">\(A_{n}\)</span> and <span class="math inline">\(B_{n}\)</span>, the fundamental pricing equation is invoked <a href="#eq-kernel" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-kernel</span></a>: <span class="math display">\[
+\tag{3.12}\]</span></span> To derive closed-form expressions for <span class="math inline">\(A_{n}\)</span> and <span class="math inline">\(B_{n}\)</span>, the fundamental pricing equation is invoked <a href="#eq-kernel" class="quarto-xref">Equation&nbsp;<span>3.10</span></a>: <span class="math display">\[
 \begin{align}
     P_{t,n} &amp;= \mathbb{E}_t\left[ M_{t+1} \cdot P_{t+1,n-1} \right] \\
                &amp;= \mathbb{E}_t \left[ \text{exp}\left( -r_t -\frac{1}{2} \lambda^{\top}_t\lambda_t - \lambda^{\top}_t \epsilon^\mathbb{P}_{t+1} \right) \cdot \text{exp}\left( A_{n-1} + B^{\top}_{n-1} X_{t+1} \right) \right].
 \end{align}
-\]</span> The expression for <span class="math inline">\(X_{t+1}\)</span> (see equation <a href="#eq-factorVarP" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-factorVarP</span></a>) is substituted: <span class="math display">\[
+\]</span> The expression for <span class="math inline">\(X_{t+1}\)</span> (see equation <a href="#eq-factorVarP" class="quarto-xref">Equation&nbsp;<span>3.6</span></a>) is substituted: <span class="math display">\[
 \begin{align}
     P_{t,n} = \mathbb{E}_t \left[ \text{exp}\left( -r_t -\frac{1}{2} \lambda^{\top}_t \lambda_t - \lambda^{\top}_t \epsilon^\mathbb{P}_{t+1} \right) \cdot \text{exp}\left( A_{n-1} + B^{\top}_{n-1} \left( k^\mathbb{P}+\Phi^\mathbb{P} X_{t} + \Sigma \epsilon^\mathbb{P}_{t+1} \right) \right) \right],
 \end{align}
@@ -934,7 +931,7 @@ Figure&nbsp;4.2: Time series of the first three principal components
     P_{t,n} = &amp;\text{exp}\left( -r_t - \frac{1}{2} \lambda^{\top}_t \lambda_t + A_{n-1} + B^{\top}_{n-1} k^{\mathbb{P}} +B^{\top}_{n-1} \Phi^\mathbb{P} X_{t} \right) \nonumber \\
     \cdot &amp;\mathbb{E}_t\left[ \text{exp}\left( -\lambda^{\top}_t \epsilon^{\mathbb{P}}_{t+1} + B^{\top}_{n-1} \Sigma \epsilon^\mathbb{P}_{t+1} \right)  \right].
 \end{align}
-\tag{4.13}\]</span></span> The question is then, how can we calculate the expectations part of <a href="#eq-PtIntermed" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PtIntermed</span></a>: <span class="math display">\[
+\tag{3.13}\]</span></span> The question is then, how can we calculate the expectations part of <a href="#eq-PtIntermed" class="quarto-xref">Equation&nbsp;<span>3.13</span></a>: <span class="math display">\[
 \begin{align}
     \mathbb{E}_t \left[ \text{exp}\left( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma \right) \epsilon^\mathbb{P}_{t+1}  \right].
 \end{align}
@@ -942,7 +939,7 @@ Figure&nbsp;4.2: Time series of the first three principal components
 \begin{align}
     \mathbb{E}[\text{exp}(a^{\top}\epsilon^\mathbb{P})] = \text{exp}\left( \frac{1}{2} a^{\top} \cdot I \cdot a  \right),
 \end{align}
-\]</span> so, the expectation in <a href="#eq-PtIntermed" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PtIntermed</span></a> can be calculated, using <span class="math inline">\(a^{\top}=( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma )\)</span>, as: <span class="math display">\[
+\]</span> so, the expectation in <a href="#eq-PtIntermed" class="quarto-xref">Equation&nbsp;<span>3.13</span></a> can be calculated, using <span class="math inline">\(a^{\top}=( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma )\)</span>, as: <span class="math display">\[
 \begin{align}
      &amp;\text{exp} \left[ \frac{1}{2} ( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma ) \cdot I \cdot ( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma )^{\top}  \right] \nonumber \\
     = &amp;\text{exp} \left[ \frac{1}{2} ( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma ) \cdot I \cdot ( -\lambda_t + \Sigma^{\top} B_{n-1} ) \right] \nonumber \\
@@ -953,16 +950,16 @@ Figure&nbsp;4.2: Time series of the first three principal components
     &amp;\mathbb{E}_t \left[ \text{exp}\left( -\lambda^{\top}_t + B^{\top}_{n-1} \Sigma  \right)   \epsilon^\mathbb{P}_{t+1}  \right] \nonumber \\
     = &amp;\text{exp}\left[  \left( \frac{1}{2} \lambda^{\top}_t \lambda_t - B^{\top}_{n-1} \Sigma \lambda_t + \frac{1}{2} B^{\top}_{n-1} \Sigma \Sigma^{\top} B^{\top}_{n-1} \right) \right].
 \end{align}
-\]</span> This term is then reinserted into <a href="#eq-PtIntermed" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PtIntermed</span></a>, giving: <span id="eq-Pt2"><span class="math display">\[
+\]</span> This term is then reinserted into <a href="#eq-PtIntermed" class="quarto-xref">Equation&nbsp;<span>3.13</span></a>, giving: <span id="eq-Pt2"><span class="math display">\[
 \begin{align}
     P_{t,n} = \text{exp}\left( -r_t + A_{n-1} + B^{\top}_{n-1} k^\mathbb{P} +B^{\top}_{n-1} \Phi^\mathbb{P} X_{t} - B^{\top}_{n-1} \Sigma \lambda_t + \frac{1}{2} B^{\top}_{n-1} \Sigma \Sigma^{\top} B^{\top}_{n-1} \right).
 \end{align}
-\tag{4.14}\]</span></span> It is recalled that <span class="math inline">\(r_t=\rho^{\top}_1 X_t\)</span>, and that <span class="math inline">\(\lambda_t = \lambda_0 + \lambda_1 X_t\)</span>. Inserting these expressions into <a href="#eq-Pt2" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Pt2</span></a>, gives: <span class="math display">\[
+\tag{3.14}\]</span></span> It is recalled that <span class="math inline">\(r_t=\rho^{\top}_1 X_t\)</span>, and that <span class="math inline">\(\lambda_t = \lambda_0 + \lambda_1 X_t\)</span>. Inserting these expressions into <a href="#eq-Pt2" class="quarto-xref">Equation&nbsp;<span>3.14</span></a>, gives: <span class="math display">\[
 \begin{align}
     P_{t,n} = \text{exp} \Big( -&amp;\rho^{\top}_1 X_t + A_{n-1} + B^{\top}_{n-1} k^\mathbb{P} +B^{\top}_{n-1} \Phi^\mathbb{P} X_{t} \nonumber \\
      - &amp;B^{\top}_{n-1} \Sigma \left(\lambda_0 + \lambda_1 X_t \right) + \frac{1}{2} B^{\top}_{n-1} \Sigma \Sigma^{\top} B^{\top}_{n-1} \Big).
 \end{align}
-\]</span> Reorganising this expression into terms that load on <span class="math inline">\(X_t\)</span> and terms that do not, help matching coefficients with respect to equation <a href="#eq-Pt1" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Pt1</span></a>: <span class="math display">\[
+\]</span> Reorganising this expression into terms that load on <span class="math inline">\(X_t\)</span> and terms that do not, help matching coefficients with respect to equation <a href="#eq-Pt1" class="quarto-xref">Equation&nbsp;<span>3.12</span></a>: <span class="math display">\[
 \begin{align}
     P_{t,n} = \text{exp}\Big( A_{n-1} + B^{\top}_{n-1} \left( k^\mathbb{P} - \Sigma \lambda_0 \right) + \frac{1}{2} B^{\top}_{n-1} \Sigma \Sigma^{\top} B^{\top}_{n-1} \nonumber  \\
       +  B^{\top}_{n-1} \Phi^\mathbb{P} X_{t} -\rho^{\top}_1 X_t - B^{\top}_{n-1} \Sigma \lambda_1 X_t \Big),
@@ -972,21 +969,21 @@ Figure&nbsp;4.2: Time series of the first three principal components
     P_{t,n} = \text{exp}\Bigg( A_{n-1} + B^{\top}_{n-1} \left( k^\mathbb{P} - \Sigma \lambda_0 \right) + \frac{1}{2} B^{\top}_{n-1} \Sigma \Sigma^{\top} B^{\top}_{n-1} \nonumber  \\
       +  \left[ B^{\top}_{n-1} \left( \Phi^\mathbb{P}- \Sigma \lambda_1 \right) - \rho^{\top}_1 \right] X_t \Bigg).
 \end{align}
-\tag{4.15}\]</span></span> Matching the coefficients of <a href="#eq-PtFinal" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-PtFinal</span></a> with those of <a href="#eq-Pt1" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Pt1</span></a> establishes the recursive formulas for <span class="math inline">\(A_{n}\)</span> and <span class="math inline">\(B_{n}\)</span>: <span id="eq-Bfin"><span class="math display">\[
+\tag{3.15}\]</span></span> Matching the coefficients of <a href="#eq-PtFinal" class="quarto-xref">Equation&nbsp;<span>3.15</span></a> with those of <a href="#eq-Pt1" class="quarto-xref">Equation&nbsp;<span>3.12</span></a> establishes the recursive formulas for <span class="math inline">\(A_{n}\)</span> and <span class="math inline">\(B_{n}\)</span>: <span id="eq-Bfin"><span class="math display">\[
 \begin{align}
     A_n  &amp;= A_{n-1} + B^{\top}_{n-1} k^\mathbb{Q} +\frac{1}{2} B^{\top}_{n-1} \Sigma \Sigma^{\top} B^{\top}_{n-1} \\
     B^{\top}_n &amp;= B^{\top}_{n-1} \Phi^\mathbb{Q} - \rho^{\top}_1
 \end{align}
-\tag{4.16}\]</span></span> with <span class="math inline">\(k^\mathbb{Q} = k^\mathbb{P} - \Sigma \lambda_0\)</span>, and <span class="math inline">\(\Phi^\mathbb{Q} =  \Phi^\mathbb{P}- \Sigma \lambda_1\)</span>. Using recursive substitution, we realise that the expression for <span class="math inline">\(B^{\top}_n\)</span> also can be written in the following way:<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> <span id="eq-Bn-recur-final"><span class="math display">\[
+\tag{3.16}\]</span></span> with <span class="math inline">\(k^\mathbb{Q} = k^\mathbb{P} - \Sigma \lambda_0\)</span>, and <span class="math inline">\(\Phi^\mathbb{Q} =  \Phi^\mathbb{P}- \Sigma \lambda_1\)</span>. Using recursive substitution, we realise that the expression for <span class="math inline">\(B^{\top}_n\)</span> also can be written in the following way:<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> <span id="eq-Bn-recur-final"><span class="math display">\[
 \begin{align}
     B^{\top}_{n} = -\rho^{\top}_1 \, \left[ \sum_{k=0}^{n-1}\left( \Phi^\mathbb{Q} \right)^k \right].
 \end{align}
-\tag{4.17}\]</span></span> The sum in the expression for <span class="math inline">\(B_n\)</span> in <a href="#eq-Bn-recur-final" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Bn-recur-final</span></a> is the multivariate analogue of the scalar geometric sum in <a href="#eq-Bn" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Bn</span></a>. In matrix form, and whenever the corresponding geometric matrix series is well defined, we have: <span id="eq-Bn-final"><span class="math display">\[
+\tag{3.17}\]</span></span> The sum in the expression for <span class="math inline">\(B_n\)</span> in <a href="#eq-Bn-recur-final" class="quarto-xref">Equation&nbsp;<span>3.17</span></a> is the multivariate analogue of the scalar geometric sum in <a href="#eq-Bn" class="quarto-xref">Equation&nbsp;<span>2.7</span></a>. In matrix form, and whenever the corresponding geometric matrix series is well defined, we have: <span id="eq-Bn-final"><span class="math display">\[
 \begin{align}
     B_n^{\top} = -\rho_1^{\top} \left[ \sum_{k=0}^{n-1} \left( \Phi^{\mathbb{Q}} \right)^k \right]
                = -\rho_1^{\top} \left[ \left( I - \left( \Phi^{\mathbb{Q}} \right)^n \right) \left( I - \Phi^{\mathbb{Q}} \right)^{-1} \right],
 \end{align}
-\tag{4.18}\]</span></span> which is the matrix version of the finite geometric sum. This naturally only holds when <span class="math inline">\(I - \Phi^{\mathbb{Q}}\)</span> is invertible.</p>
+\tag{3.18}\]</span></span> which is the matrix version of the finite geometric sum. This naturally only holds when <span class="math inline">\(I - \Phi^{\mathbb{Q}}\)</span> is invertible.</p>
 <p>If <span class="math inline">\(I - \Phi^{\mathbb{Q}}\)</span> is not invertible, the geometric-series cannot be used directly, and we can instead rely on the Jordan decomposition (as <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> is guaranteed to be a square matrix): <span class="math display">\[
 \begin{align}
     \Phi^{\mathbb{Q}} = S J S^{-1},
@@ -1014,8 +1011,8 @@ A_n = A_{n-1} + B_{n-1}^{\top} k^{\mathbb{Q}}
 \]</span> which aggregates contributions from the risk-neutral drift <span class="math inline">\(k^{\mathbb{Q}}\)</span> and the conditional variance <span class="math inline">\(\Sigma \Sigma^{\top}\)</span> over the maturity dimension. This demonstrate that the real difference between models that exclude arbitrage by construction, and those that do not, for example the dynamic Nelson-Siegel models, is whether the constant <span class="math inline">\(A_n\)</span> is included in the model or not.</p>
 </section>
 </section>
-<section id="implementation-and-estimation" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Implementation and estimation</h1>
+<section id="implementation-and-estimation" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Implementation and estimation</h1>
 <p>In this section we move from model construction to model implementation and estimation. Up to this point, the focus has been on specifying factor dynamics and enforcing absence of arbitrage in a general affine setting. For estimation, however, it is useful to be explicit about how we parameterise the relationship between factors, bond prices and yields. Two equivalent but notationally distinct conventions will be used throughout this chapter: a <em>price–affine</em> representation and a <em>yield–affine</em> representation.</p>
 <p>In the <strong>price–affine</strong> convention, zero–coupon bond prices are written as exponential–affine functions of the state vector, <span class="math display">\[
 \begin{align}
@@ -1045,10 +1042,10 @@ A_n^{(Y)} &amp;= - A_n^{(P)}, \\
 B_n^{(Y)} &amp;= - B_n^{(P)}.
 \end{align}
 \]</span> The choice between them is therefore purely a matter of convenience and interpretation: the underlying model, its dynamics under <span class="math inline">\(\mathbb{P}\)</span> and <span class="math inline">\(\mathbb{Q}\)</span>, and its implied prices and yields are unchanged.</p>
-<p>In what follows, this equivalence will be exploited in a systematic way. For the <em>implementation and estimation</em> of the Joslin–Singleton–Zhu (JSZ) <span class="citation" data-cites="JSZ.2011">(<a href="#ref-JSZ.2011" role="doc-biblioref">Joslin et al. 2011</a>)</span> canonical framework we work primarily with the price–affine representation, since it aligns naturally with their decomposition of the <span class="math inline">\(\mathbb{Q}\)</span>–dynamics and with the separation of cross–sectional and time–series parameters. For the affine Nelson–Siegel (AFNS) and terminal rate (TRM) models, by contrast, we will report both the price–affine coefficients produced by the general recursion and the corresponding yield–affine loadings that connect directly to the familiar level–slope–curvature and terminal–rate interpretations. Throughout this section, references back to the general derivations in the previous section will make explicit when we are working in the price–affine or yield–affine convention, and how to move between them when estimating and comparing models.</p>
-<section id="dynamic-nelson-siegel" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="dynamic-nelson-siegel"><span class="header-section-number">5.1</span> Dynamic Nelson-Siegel</h2>
-<p>The affine Nelson–Siegel (AFNS) model of <span class="citation" data-cites="christensen.diebold.rudebusch.2011">Christensen et al. (<a href="#ref-christensen.diebold.rudebusch.2011" role="doc-biblioref">2011</a>)</span> provides an arbitrage–free counterpart to the dynamic Nelson–Siegel (DNS) model <span class="citation" data-cites="diebold.li.2006">(<a href="#ref-diebold.li.2006" role="doc-biblioref">Diebold and Li 2006</a>)</span> while preserving its familiar level–slope–curvature interpretation. In this section we formulate AFNS in the discrete–time Gaussian framework introduced above and show how it fits into the general “recipe” of Section&nbsp;2.2.</p>
+<p>In what follows, this equivalence will be exploited in a systematic way. For the <em>implementation and estimation</em> of the Joslin–Singleton–Zhu (JSZ) <span class="citation" data-cites="JSZ.2011">(<a href="references.html#ref-JSZ.2011" role="doc-biblioref">Joslin et al. 2011</a>)</span> canonical framework we work primarily with the price–affine representation, since it aligns naturally with their decomposition of the <span class="math inline">\(\mathbb{Q}\)</span>–dynamics and with the separation of cross–sectional and time–series parameters. For the affine Nelson–Siegel (AFNS) and terminal rate (TRM) models, by contrast, we will report both the price–affine coefficients produced by the general recursion and the corresponding yield–affine loadings that connect directly to the familiar level–slope–curvature and terminal–rate interpretations. Throughout this section, references back to the general derivations in the previous section will make explicit when we are working in the price–affine or yield–affine convention, and how to move between them when estimating and comparing models.</p>
+<section id="dynamic-nelson-siegel" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="dynamic-nelson-siegel"><span class="header-section-number">4.1</span> Dynamic Nelson-Siegel</h2>
+<p>The affine Nelson–Siegel (AFNS) model of <span class="citation" data-cites="christensen.diebold.rudebusch.2011">Christensen et al. (<a href="references.html#ref-christensen.diebold.rudebusch.2011" role="doc-biblioref">2011</a>)</span> provides an arbitrage–free counterpart to the dynamic Nelson–Siegel (DNS) model <span class="citation" data-cites="diebold.li.2006">(<a href="references.html#ref-diebold.li.2006" role="doc-biblioref">Diebold and Li 2006</a>)</span> while preserving its familiar level–slope–curvature interpretation. In this section we formulate AFNS in the discrete–time Gaussian framework introduced above and show how it fits into the general “recipe” of Section&nbsp;2.2.</p>
 <section id="yield-representation-and-state-vector" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="yield-representation-and-state-vector">Yield representation and state vector</h3>
 <p>The starting point is the Nelson–Siegel yield representation for a given maturity <span class="math inline">\(n\)</span> (or, equivalently, maturity <span class="math inline">\(\tau_n = n \Delta t\)</span>): <span class="math display">\[
@@ -1093,7 +1090,7 @@ B_n^{(Y)}
 y_{t,n}
 &amp;= \frac{1}{\tau_n} \, B_n^{(Y)\prime} X_t.
 \end{align}
-\tag{5.1}\]</span></span> This is a <em>yield–affine</em> representation: the loadings <span class="math inline">\(B_n^{(Y)}\)</span> are directly the Nelson–Siegel factor–loading functions multiplied by maturity, and they carry the intuitive level–slope–curvature signs.</p>
+\tag{4.1}\]</span></span> This is a <em>yield–affine</em> representation: the loadings <span class="math inline">\(B_n^{(Y)}\)</span> are directly the Nelson–Siegel factor–loading functions multiplied by maturity, and they carry the intuitive level–slope–curvature signs.</p>
 </section>
 <section id="riskneutral-dynamics-and-short-rate" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="riskneutral-dynamics-and-short-rate">Risk–neutral dynamics and short rate</h3>
@@ -1102,7 +1099,7 @@ y_{t,n}
 X_t &amp;= k^Q + \Phi^Q X_{t-1} + \Sigma \varepsilon_t^Q,
 \qquad \varepsilon_t^Q \sim N(0,I_3),
 \end{align}
-\tag{5.2}\]</span></span> with the AFNS choice <span id="eq-AFNS-PhiQ"><span class="math display">\[
+\tag{4.2}\]</span></span> with the AFNS choice <span id="eq-AFNS-PhiQ"><span class="math display">\[
 \begin{align}
 \Phi^Q
 &amp;=
@@ -1114,7 +1111,7 @@ X_t &amp;= k^Q + \Phi^Q X_{t-1} + \Sigma \varepsilon_t^Q,
 \end{array}
 \right].
 \end{align}
-\tag{5.3}\]</span></span> Under this specification, the level factor is a pure random walk under <span class="math inline">\(Q\)</span>, while the slope and curvature factors follow a bivariate AR(1) system that reproduces the Nelson–Siegel loading structure in the cross–section.</p>
+\tag{4.3}\]</span></span> Under this specification, the level factor is a pure random walk under <span class="math inline">\(Q\)</span>, while the slope and curvature factors follow a bivariate AR(1) system that reproduces the Nelson–Siegel loading structure in the cross–section.</p>
 <p>Following the general recipe, the one–period short rate is assumed to be an affine function of the factors, <span class="math display">\[
 \begin{align}
 r_t &amp;= \rho_0 + \rho_1^\prime X_t.
@@ -1136,7 +1133,7 @@ r_t &amp;= \rho_0 + \rho_1^\prime X_t.
 \begin{align}
 r_t &amp;= L_t + S_t.
 \end{align}
-\tag{5.4}\]</span></span> This choice ensures that for very short maturities the yield curve coincides with the short rate, while the curvature factor affects only medium and longer maturities through the Nelson–Siegel hump.</p>
+\tag{4.4}\]</span></span> This choice ensures that for very short maturities the yield curve coincides with the short rate, while the curvature factor affects only medium and longer maturities through the Nelson–Siegel hump.</p>
 </section>
 <section id="exponentialaffine-bond-prices" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="exponentialaffine-bond-prices">Exponential–affine bond prices</h3>
@@ -1145,35 +1142,35 @@ r_t &amp;= L_t + S_t.
 P_{t,n}
 &amp;= \exp \left( A_n^{(P)} + B_n^{(P)\prime} X_t \right),
 \end{align}
-\tag{5.5}\]</span></span> with <span class="math inline">\(A_0^{(P)} = 0\)</span> and <span class="math inline">\(B_0^{(P)} = 0\)</span>. Yields are defined by <span class="math inline">\(P_{t,n} = \exp(- y_{t,n} \tau_n)\)</span>, and hence <span id="eq-AFNS-yield-from-price"><span class="math display">\[
+\tag{4.5}\]</span></span> with <span class="math inline">\(A_0^{(P)} = 0\)</span> and <span class="math inline">\(B_0^{(P)} = 0\)</span>. Yields are defined by <span class="math inline">\(P_{t,n} = \exp(- y_{t,n} \tau_n)\)</span>, and hence <span id="eq-AFNS-yield-from-price"><span class="math display">\[
 \begin{align}
 y_{t,n}
 &amp;= -\frac{1}{\tau_n} \left( A_n^{(P)} + B_n^{(P)\prime} X_t \right).
 \end{align}
-\tag{5.6}\]</span></span> Comparing with the desired Nelson–Siegel representation <a href="#eq-AFNS-yield" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-yield</span></a>, we see that the AFNS model must satisfy <span class="math display">\[
+\tag{4.6}\]</span></span> Comparing with the desired Nelson–Siegel representation <a href="#eq-AFNS-yield" class="quarto-xref">Equation&nbsp;<span>4.1</span></a>, we see that the AFNS model must satisfy <span class="math display">\[
 \begin{align}
 B_n^{(Y)} &amp;= - B_n^{(P)}, \\
 A_n^{(Y)} &amp;= - A_n^{(P)},
 \end{align}
 \]</span> where <span class="math inline">\(A_n^{(Y)}\)</span> is the constant term in the yield representation. That is, the <em>price–affine</em> coefficients <span class="math inline">\(A_n^{(P)}\)</span>, <span class="math inline">\(B_n^{(P)}\)</span> produced by the affine recursion are simply the negative of the <em>yield–affine</em> Nelson–Siegel coefficients. The minus sign resides in the mapping from prices to yields rather than in the NS loadings themselves.</p>
-<p>Given the short–rate specification <a href="#eq-AFNS-short-rate" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-short-rate</span></a> and the <span class="math inline">\(Q\)</span>–VAR <a href="#eq-AFNS-Q-VAR" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-Q-VAR</span></a>, the affine pricing recursion of Section&nbsp;2.2 applies directly: <span id="eq-AFNS-A-recursion"><span class="math display">\[
+<p>Given the short–rate specification <a href="#eq-AFNS-short-rate" class="quarto-xref">Equation&nbsp;<span>4.4</span></a> and the <span class="math inline">\(Q\)</span>–VAR <a href="#eq-AFNS-Q-VAR" class="quarto-xref">Equation&nbsp;<span>4.2</span></a>, the affine pricing recursion of Section&nbsp;2.2 applies directly: <span id="eq-AFNS-A-recursion"><span class="math display">\[
 \begin{align}
 A_n^{(P)}
 &amp;= A_{n-1}^{(P)} + B_{n-1}^{(P)\prime} k^Q
     + \frac{1}{2} B_{n-1}^{(P)\prime} \Sigma \Sigma^\prime B_{n-1}^{(P)},
 \end{align}
-\tag{5.7}\]</span></span></p>
+\tag{4.7}\]</span></span></p>
 <p><span id="eq-AFNS-B-recursion"><span class="math display">\[
 \begin{align}
 B_n^{(P)\prime}
 &amp;= B_{n-1}^{(P)\prime} \Phi^Q - \rho_1^\prime,
 \end{align}
-\tag{5.8}\]</span></span> with <span class="math inline">\(A_0^{(P)} = 0\)</span> and <span class="math inline">\(B_0^{(P)} = 0\)</span>. In matrix form, using <span class="math inline">\(\Phi^Q\)</span> from 1, these recursions can be iterated or solved in closed form using the geometric–series expressions discussed in Section&nbsp;2.2.</p>
+\tag{4.8}\]</span></span> with <span class="math inline">\(A_0^{(P)} = 0\)</span> and <span class="math inline">\(B_0^{(P)} = 0\)</span>. In matrix form, using <span class="math inline">\(\Phi^Q\)</span> from 1, these recursions can be iterated or solved in closed form using the geometric–series expressions discussed in Section&nbsp;2.2.</p>
 <p>For implementation and interpretation, it is often more convenient to work with the yield–affine NS loadings <span class="math inline">\(B_n^{(Y)}\)</span>. These are obtained simply as <span id="eq-AFNS-Byield"><span class="math display">\[
 \begin{align}
 B_n^{(Y)} &amp;= - B_n^{(P)},
 \end{align}
-\tag{5.9}\]</span></span> and enter the yield equation as <span class="math display">\[
+\tag{4.9}\]</span></span> and enter the yield equation as <span class="math display">\[
 \begin{align}
 y_{t,n}
 &amp;= \frac{1}{\tau_n} B_n^{(Y)\prime} X_t
@@ -1185,18 +1182,18 @@ y_{t,n}
 <h3 class="unnumbered anchored" data-anchor-id="implementation">Implementation</h3>
 <p>From a computational perspective, AFNS is implemented by:</p>
 <ol type="1">
-<li><p>Specifying the risk–neutral dynamics under <a href="#eq-AFNS-Q-VAR" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-Q-VAR</span></a> with the AFNS matrix <span class="math inline">\(\Phi^Q\)</span> in</p>
+<li><p>Specifying the risk–neutral dynamics under <a href="#eq-AFNS-Q-VAR" class="quarto-xref">Equation&nbsp;<span>4.2</span></a> with the AFNS matrix <span class="math inline">\(\Phi^Q\)</span> in</p>
 <ol class="example" type="1">
 <li></li>
 </ol></li>
-<li><p>Setting the short–rate coefficients <span class="math inline">\(\rho_0\)</span>, <span class="math inline">\(\rho_1\)</span> according to <a href="#eq-AFNS-short-rate" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-short-rate</span></a>.</p></li>
-<li><p>Iterating the recursions <a href="#eq-AFNS-A-recursion" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-A-recursion</span></a>–<a href="#eq-AFNS-B-recursion" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-B-recursion</span></a> up to the maximum maturity of interest to obtain <span class="math inline">\(A_n^{(P)}\)</span>, <span class="math inline">\(B_n^{(P)}\)</span> for all <span class="math inline">\(n\)</span>.</p></li>
-<li><p>Constructing the NS yield loadings via <a href="#eq-AFNS-Byield" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-AFNS-Byield</span></a> and forming model–implied yields using the yield–affine representation <span class="math inline">\(y_{t,n} = \tau_n^{-1} B_n^{(Y)\prime} X_t\)</span>.</p></li>
+<li><p>Setting the short–rate coefficients <span class="math inline">\(\rho_0\)</span>, <span class="math inline">\(\rho_1\)</span> according to <a href="#eq-AFNS-short-rate" class="quarto-xref">Equation&nbsp;<span>4.4</span></a>.</p></li>
+<li><p>Iterating the recursions <a href="#eq-AFNS-A-recursion" class="quarto-xref">Equation&nbsp;<span>4.7</span></a>–<a href="#eq-AFNS-B-recursion" class="quarto-xref">Equation&nbsp;<span>4.8</span></a> up to the maximum maturity of interest to obtain <span class="math inline">\(A_n^{(P)}\)</span>, <span class="math inline">\(B_n^{(P)}\)</span> for all <span class="math inline">\(n\)</span>.</p></li>
+<li><p>Constructing the NS yield loadings via <a href="#eq-AFNS-Byield" class="quarto-xref">Equation&nbsp;<span>4.9</span></a> and forming model–implied yields using the yield–affine representation <span class="math inline">\(y_{t,n} = \tau_n^{-1} B_n^{(Y)\prime} X_t\)</span>.</p></li>
 </ol>
 </section>
 </section>
-<section id="joslin-singleton-zhu" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="joslin-singleton-zhu"><span class="header-section-number">5.2</span> Joslin, Singleton, Zhu</h2>
+<section id="joslin-singleton-zhu" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="joslin-singleton-zhu"><span class="header-section-number">4.2</span> Joslin, Singleton, Zhu</h2>
 <p>The Gaussian dynamic term structure framework of plays a central role in the modern affine literature. They show that a wide range of existing model parametrisations are observationally equivalent—in fact identical up to a rotation of the state vector—and they provide a canonical representation in which the estimation of <span class="math inline">\(\mathbb{P}\)</span>– and <span class="math inline">\(\mathbb{Q}\)</span>–measure parameters becomes particularly transparent.</p>
 <p>From the perspective of these notes, the main insights from can be summarised as follows:</p>
 <ol type="1">
@@ -1216,18 +1213,18 @@ y_{t,n}
 \begin{align}
 X_t &amp;= W y_t,
 \end{align}
-\tag{5.10}\]</span></span> for some <span class="math inline">\(N\times k\)</span> weighting matrix <span class="math inline">\(W\)</span>. JSZ refer to <span class="math inline">\(X_t\)</span> as a vector of “portfolios of yields”. This construction encompasses, for example, principal components, level–slope–curvature factors, or any other set of linear yield portfolios.</p>
+\tag{4.10}\]</span></span> for some <span class="math inline">\(N\times k\)</span> weighting matrix <span class="math inline">\(W\)</span>. JSZ refer to <span class="math inline">\(X_t\)</span> as a vector of “portfolios of yields”. This construction encompasses, for example, principal components, level–slope–curvature factors, or any other set of linear yield portfolios.</p>
 <p>Under the risk–neutral measure <span class="math inline">\(\mathbb{Q}\)</span>, the factors follow a VAR(1) in levels, in line with the general recipe of Section&nbsp;2.2: <span id="eq-JSZ-coreVAR"><span class="math display">\[
 \begin{align}
 X_t &amp;= k^{\mathbb{Q}} + \Phi^{\mathbb{Q}} X_{t-1}
         + \Sigma^{\mathbb{Q}} u_t, \qquad u_t \sim N(0,I).
 \end{align}
-\tag{5.11}\]</span></span> The matrix <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> governs the persistence and mutual interactions of the factors under <span class="math inline">\(\mathbb{Q}\)</span> and therefore determines the shape of the yield loadings <span class="math inline">\(b_n\)</span> and the constants <span class="math inline">\(a_n\)</span> in the exponential–affine pricing representation.</p>
+\tag{4.11}\]</span></span> The matrix <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> governs the persistence and mutual interactions of the factors under <span class="math inline">\(\mathbb{Q}\)</span> and therefore determines the shape of the yield loadings <span class="math inline">\(b_n\)</span> and the constants <span class="math inline">\(a_n\)</span> in the exponential–affine pricing representation.</p>
 <p>JSZ express GDTSMs “in their purest form” by using the Jordan decomposition of <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span>. Let <span class="math inline">\(J\)</span> denote the Jordan form and <span class="math inline">\(V\)</span> an associated similarity matrix such that <span id="eq-JSZ-Jordan"><span class="math display">\[
 \begin{align}
 \Phi^{\mathbb{Q}} &amp;= V J V^{-1}.
 \end{align}
-\tag{5.12}\]</span></span> The Jordan matrix is block diagonal, <span class="math display">\[
+\tag{4.12}\]</span></span> The Jordan matrix is block diagonal, <span class="math display">\[
 \begin{align}
 J &amp;=
 \begin{bmatrix}
@@ -1284,9 +1281,9 @@ r_t
 <p>Given <span class="math inline">\((k^{\mathbb{Q}},\Phi^{\mathbb{Q}},\Sigma^{\mathbb{Q}},\rho_0,\rho_1)\)</span>, the exponential–affine bond pricing formulas and the recursions for <span class="math inline">\((A_n,B_n)\)</span> derived in Section&nbsp;2.2 apply verbatim. The JSZ contribution is to provide a canonical way of normalising <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> (via its Jordan form and ordered eigenvalues) and to show how familiar models—such as AFNS, Svensson–Söderlind–type specifications, and the SRB/terminal rate models discussed above—can all be viewed as constrained members of this general JSZ family.</p>
 </section>
 </section>
-<section id="a-terminal-rate-model" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="a-terminal-rate-model"><span class="header-section-number">5.3</span> A terminal rate model</h2>
-<p>Following <span class="citation" data-cites="KraemerNyholm2025">Kraemer and Nyholm (<a href="#ref-KraemerNyholm2025" role="doc-biblioref">2025</a>)</span>, the terminal rate model (TRM) is specified such that the underlying yield curve factors <span class="math inline">\(X_t\)</span> have the following interpretations:</p>
+<section id="a-terminal-rate-model" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="a-terminal-rate-model"><span class="header-section-number">4.3</span> A terminal rate model</h2>
+<p>Following <span class="citation" data-cites="KraemerNyholm2025">Kraemer and Nyholm (<a href="references.html#ref-KraemerNyholm2025" role="doc-biblioref">2025</a>)</span>, the terminal rate model (TRM) is specified such that the underlying yield curve factors <span class="math inline">\(X_t\)</span> have the following interpretations:</p>
 <ul>
 <li>the short rate, <span class="math inline">\(r_t\)</span>;</li>
 <li>the long–run (terminal) convergence level of the short rate (exogenously determined), denoted by <span class="math inline">\(C^{*}\)</span>;</li>
@@ -1318,11 +1315,11 @@ C^{*}_t \\
 0   &amp; 0 &amp; 0        &amp; \gamma
 \end{bmatrix}.
 \end{align}
-\tag{5.13}\]</span></span> As the first element of <span class="math inline">\(X_t\)</span> is defined to be the one–period short rate, we have <span id="eq-shortRate-2"><span class="math display">\[
+\tag{4.13}\]</span></span> As the first element of <span class="math inline">\(X_t\)</span> is defined to be the one–period short rate, we have <span id="eq-shortRate-2"><span class="math display">\[
 \begin{align}
 r_t &amp;= \rho_0 + \rho_1^{\top} X_t,
 \end{align}
-\tag{5.14}\]</span></span> with the constraints <span class="math display">\[
+\tag{4.14}\]</span></span> with the constraints <span class="math display">\[
 \begin{align}
 \rho_0 &amp;= 0, \qquad
 \rho_1 =
@@ -1339,14 +1336,14 @@ X_t &amp;= k^{\mathbb{P}} + \Phi^{\mathbb{P}} X_{t-1}
         + \Sigma^{\mathbb{P}} \varepsilon_t^{\mathbb{P}},
         \qquad \varepsilon_t^{\mathbb{P}} \sim N(0,I),
 \end{align}
-\tag{5.15}\]</span></span></p>
+\tag{4.15}\]</span></span></p>
 <p><span id="eq-factorVarQ-2"><span class="math display">\[
 \begin{align}
 X_t &amp;= k^{\mathbb{Q}} + \Phi^{\mathbb{Q}} X_{t-1}
         + \Sigma^{\mathbb{Q}} \varepsilon_t^{\mathbb{Q}},
         \qquad \varepsilon_t^{\mathbb{Q}} \sim N(0,I),
 \end{align}
-\tag{5.16}\]</span></span> with <span class="math inline">\(\Sigma \Sigma^{\top} = \Omega\)</span> denoting the covariance matrix of the innovations and <span class="math inline">\(\Sigma^{\mathbb{P}} = \Sigma^{\mathbb{Q}} = \Sigma\)</span>.</p>
+\tag{4.16}\]</span></span> with <span class="math inline">\(\Sigma \Sigma^{\top} = \Omega\)</span> denoting the covariance matrix of the innovations and <span class="math inline">\(\Sigma^{\mathbb{P}} = \Sigma^{\mathbb{Q}} = \Sigma\)</span>.</p>
 <p>Zero–coupon bond prices are assumed to be exponential–affine in the state vector, <span class="math display">\[
 \begin{align}
 P_{t,n}
@@ -1357,21 +1354,21 @@ P_{t,n}
 y_{t,n}
 &amp;= -\frac{1}{n} \left( A_n^{(P)} + B_n^{(P)\top} X_t \right).
 \end{align}
-\tag{5.17}\]</span></span> The affine recursions for <span class="math inline">\(A_n^{(P)}\)</span> and <span class="math inline">\(B_n^{(P)}\)</span> under <span class="math inline">\(\mathbb{Q}\)</span> are given by <span id="eq-TRM-A-recursion"><span class="math display">\[
+\tag{4.17}\]</span></span> The affine recursions for <span class="math inline">\(A_n^{(P)}\)</span> and <span class="math inline">\(B_n^{(P)}\)</span> under <span class="math inline">\(\mathbb{Q}\)</span> are given by <span id="eq-TRM-A-recursion"><span class="math display">\[
 \begin{align}
 A_n^{(P)}
 &amp;= A_{n-1}^{(P)} + B_{n-1}^{(P)\top} k^{\mathbb{Q}}
     + \frac{1}{2} B_{n-1}^{(P)\top} \Sigma \Sigma^{\top} B_{n-1}^{(P)},
 \end{align}
-\tag{5.18}\]</span></span></p>
+\tag{4.18}\]</span></span></p>
 <p><span id="eq-TRM-B-recursion"><span class="math display">\[
 \begin{align}
 B_n^{(P)\top}
 &amp;= B_{n-1}^{(P)\top} \Phi^{\mathbb{Q}} - \rho_1^{\top},
 \quad \text{with } A_0^{(P)} = 0, \; B_0^{(P)} = 0.
 \end{align}
-\tag{5.19}\]</span></span></p>
-<p><strong>Closed–form expression for <span class="math inline">\(B_n^{(P)}\)</span>.</strong> Inspecting <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> in <a href="#eq-trm-PhiQ" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-trm-PhiQ</span></a> reveals that it has an eigenvalue equal to <span class="math inline">\(1\)</span>, so we use the Jordan decomposition. Using MATLAB’s symbolic toolbox (or any other symbolic algebra software)<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> we obtain <span class="math display">\[
+\tag{4.19}\]</span></span></p>
+<p><strong>Closed–form expression for <span class="math inline">\(B_n^{(P)}\)</span>.</strong> Inspecting <span class="math inline">\(\Phi^{\mathbb{Q}}\)</span> in <a href="#eq-trm-PhiQ" class="quarto-xref">Equation&nbsp;<span>4.13</span></a> reveals that it has an eigenvalue equal to <span class="math inline">\(1\)</span>, so we use the Jordan decomposition. Using MATLAB’s symbolic toolbox (or any other symbolic algebra software)<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> we obtain <span class="math display">\[
 \begin{align}
 \Phi^{\mathbb{Q}} &amp;= S J S^{-1},
 \end{align}
@@ -1409,7 +1406,7 @@ n - \dfrac{1-g^n}{1-g} \\[0.25cm]
 \dfrac{1-g^n}{1-g} - g^{\,n-1} n
 \end{bmatrix}.
 \end{align}
-\tag{5.20}\]</span></span></p>
+\tag{4.20}\]</span></span></p>
 <p><strong>Constant term <span class="math inline">\(A_n^{(P)}\)</span> and the exogenous terminal rate.</strong> The constant term in the exponential–affine bond price is determined by the recursion <span class="math display">\[
 \begin{align}
 A_n^{(P)}
@@ -1417,7 +1414,7 @@ A_n^{(P)}
     + \frac{1}{2} B_{n-1}^{(P)\top} \Sigma \Sigma^{\top} B_{n-1}^{(P)}.
 \end{align}
 \]</span> The exogenous terminal rate <span class="math inline">\(C^{*}\)</span> enters through the specification of <span class="math inline">\(k^{\mathbb{Q}}\)</span> and the second factor of <span class="math inline">\(X_t\)</span>, which controls the long–run convergence level of the short rate under <span class="math inline">\(\mathbb{Q}\)</span>. In practice, <span class="math inline">\(C^{*}\)</span> can be calibrated to survey data on long–run policy expectations or imposed as a policy benchmark.</p>
-<p><strong>Yield representation.</strong> In the <em>price–affine</em> convention used above, the arbitrage–free TRM yields are given by <a href="#eq-TRM-yield-price-convention" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-TRM-yield-price-convention</span></a>: <span class="math display">\[
+<p><strong>Yield representation.</strong> In the <em>price–affine</em> convention used above, the arbitrage–free TRM yields are given by <a href="#eq-TRM-yield-price-convention" class="quarto-xref">Equation&nbsp;<span>4.17</span></a>: <span class="math display">\[
 \begin{align}
 y_{t,n}
 &amp;= -\frac{A_n^{(P)}}{n} - \frac{B_n^{(P)\top}}{n} X_t.
@@ -1440,8 +1437,8 @@ y_{t,n}
 y_{t,n}
 &amp;= \frac{B_n^{(Y)\top}}{n} X_t,
 \end{align}
-\tag{5.21}\]</span></span></p>
-<p>with <span class="math inline">\(B_n^{(Y)}\)</span> given by the closed–form expression <a href="#eq-TRM-Bn-closed-form" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-TRM-Bn-closed-form</span></a> multiplied by <span class="math inline">\(-1\)</span>.</p>
+\tag{4.21}\]</span></span></p>
+<p>with <span class="math inline">\(B_n^{(Y)}\)</span> given by the closed–form expression <a href="#eq-TRM-Bn-closed-form" class="quarto-xref">Equation&nbsp;<span>4.20</span></a> multiplied by <span class="math inline">\(-1\)</span>.</p>
 <p><strong>Estimating the Terminal Rate Model.</strong></p>
 <p>A central feature of the Terminal Rate Model (TRM) is that it explicitly separates the short-rate convergence point, which pins down the long end of the risk-free term structure and, in turn, the level and shape of term premia. In conventional term-structure models, this convergence point is determined implicitly by the estimated <span class="math inline">\(\mathbb{P}\)</span>-measure dynamics and is rarely discussed, even though it is a crucial element of the model. In economic and asset-allocation applications, such as decomposing yield changes into expectations and term-premium components, the endpoint of the risk-free curve uniquely fixes this decomposition, yet it is typically left unexamined.</p>
 <p>To make this issue transparent, the TRM is estimated under three alternative specifications for the nominal convergence point of the short rate (under the <span class="math inline">\(\mathbb{P}\)</span> measure). First, to approximate what a traditional yield-curve model would imply, a VAR is estimated for the first three principal components of the yield curve (closely mirroring a JSZ/DNS specification), using yields from 1961–2026. The VAR is then re-estimated on a shorter sample, 1991–2026, to show how the inferred convergence point depends on the estimation window. As a third approach, an economically motivated series for <span class="math inline">\(C^{\ast}\)</span> is used. This series is constructed from the real natural rate <span class="math inline">\(r^{\ast}\)</span> of , converted to a nominal rate by adding 10-year inflation expectations from the Philadelphia Fed. This is just one simple example; in practice, one could build a richer economic model that delivers <span class="math inline">\(C^{\ast}\)</span> as a function of macroeconomic aggregates and other variables thought to drive the long-run neutral nominal rate.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
@@ -1451,33 +1448,33 @@ y_{t,n}
 <img src="img/Cstar.png" class="img-fluid figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Cstar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.1: Nominal short-rate convergence levels, <span class="math inline">\(C^{\ast}\)</span>
+Figure&nbsp;4.1: Nominal short-rate convergence levels, <span class="math inline">\(C^{\ast}\)</span>
 </figcaption>
 </figure>
 </div>
-<p><em>The figure plots three alternative estimates of the nominal short-rate convergence level, <span class="math inline">\(C^{\ast}\)</span>, in percent. The blue line shows <span class="math inline">\(C^{\ast}\)</span> implied by a VAR(1) estimated on the first three principal components of Treasury yields using the full sample from 1961 to 2026. The orange line shows the corresponding <span class="math inline">\(C^{\ast}\)</span> estimate when the VAR is re-estimated on the subsample starting in 1991. The yellow line shows the nominal natural rate obtained by adding 10-year inflation expectations from the Philadelphia Fed to the real <span class="math inline">\(r^{\ast}\)</span> estimates of <span class="citation" data-cites="holston_etal.17">Holston et al. (<a href="#ref-holston_etal.17" role="doc-biblioref">2017</a>)</span>. All series are monthly and are plotted over the period shown on the horizontal axis.</em></p>
-<p><a href="#fig-Cstar" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-Cstar</span></a> compares three time series for the nominal short-rate convergence level <span class="math inline">\(C^{\ast}\)</span>, estimated over nearly six decades of US data. The blue line shows the convergence level implied by a VAR(1) fitted to the first three principal components of Treasury yields over the full sample from the early 1960s to 2026. This series displays a pronounced rise through the high-inflation 1970s, peaking in the early 1980s, followed by a gradual secular decline that brings <span class="math inline">\(C^{\ast}\)</span> down to around 3–4 percent by the 2010s. The orange line shows the corresponding VAR-based estimate when the model is re-estimated on a shorter sample starting in 1991. While it largely tracks the full-sample estimate over the overlapping period, it places <span class="math inline">\(C^{\ast}\)</span> noticeably higher during the late 1990s and early 2000s, and somewhat higher again after the global financial crisis. This highlights the sensitivity of the implied terminal rate to the estimation window and, by implication, to assumptions about which historical episodes are informative for current long-run expectations.</p>
+<p><em>The figure plots three alternative estimates of the nominal short-rate convergence level, <span class="math inline">\(C^{\ast}\)</span>, in percent. The blue line shows <span class="math inline">\(C^{\ast}\)</span> implied by a VAR(1) estimated on the first three principal components of Treasury yields using the full sample from 1961 to 2026. The orange line shows the corresponding <span class="math inline">\(C^{\ast}\)</span> estimate when the VAR is re-estimated on the subsample starting in 1991. The yellow line shows the nominal natural rate obtained by adding 10-year inflation expectations from the Philadelphia Fed to the real <span class="math inline">\(r^{\ast}\)</span> estimates of <span class="citation" data-cites="holston_etal.17">Holston et al. (<a href="references.html#ref-holston_etal.17" role="doc-biblioref">2017</a>)</span>. All series are monthly and are plotted over the period shown on the horizontal axis.</em></p>
+<p><a href="#fig-Cstar" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> compares three time series for the nominal short-rate convergence level <span class="math inline">\(C^{\ast}\)</span>, estimated over nearly six decades of US data. The blue line shows the convergence level implied by a VAR(1) fitted to the first three principal components of Treasury yields over the full sample from the early 1960s to 2026. This series displays a pronounced rise through the high-inflation 1970s, peaking in the early 1980s, followed by a gradual secular decline that brings <span class="math inline">\(C^{\ast}\)</span> down to around 3–4 percent by the 2010s. The orange line shows the corresponding VAR-based estimate when the model is re-estimated on a shorter sample starting in 1991. While it largely tracks the full-sample estimate over the overlapping period, it places <span class="math inline">\(C^{\ast}\)</span> noticeably higher during the late 1990s and early 2000s, and somewhat higher again after the global financial crisis. This highlights the sensitivity of the implied terminal rate to the estimation window and, by implication, to assumptions about which historical episodes are informative for current long-run expectations.</p>
 <p>The yellow line shows the nominal natural rate, <span class="math inline">\(C^{\ast}\)</span> constructed by adding 10-year inflation expectations from the Philadelphia Fed to the real <span class="math inline">\(r^{\ast}\)</span> estimates of . This series is smoother and lies below the two VAR-based estimates for most of the sample, particularly in the 1970s and early 1980s. From the mid-1990s onwards, the HLW-based series remains in a relatively narrow range around 2.5–3 percent, suggesting that the long-run neutral nominal rate has been considerably more stable than the terminal short-rate levels implied by purely yield-based VARs. The gap between the VAR-implied <span class="math inline">\(C^{\ast}\)</span> and the HLW nominal natural rate therefore measures the extent to which the yield curve embeds additional information—whether about risk premia, perceived regime shifts, or other factors—that is not captured by macro-based neutral-rate estimates. This comparison underscores the key message of the Terminal Rate Model: the long-run anchor of the risk-free term structure is both quantitatively important and model-dependent, and alternative ways of pinning down <span class="math inline">\(C^{\ast}\)</span> can lead to materially different interpretations of yield curve movements and term premia.</p>
-<p>The outcome is that that term premia estimates are significantly different. To focus on these differences the <span class="math inline">\(2\)</span> and <span class="math inline">\(10\)</span> year term premia are plotted in <a href="#fig-termpremia" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-termpremia</span></a> below.</p>
+<p>The outcome is that that term premia estimates are significantly different. To focus on these differences the <span class="math inline">\(2\)</span> and <span class="math inline">\(10\)</span> year term premia are plotted in <a href="#fig-termpremia" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> below.</p>
 <div id="fig-termpremia" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-termpremia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/termpremia_trm_var.png" class="img-fluid figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-termpremia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.2: Term premia estimates
+Figure&nbsp;4.2: Term premia estimates
 </figcaption>
 </figure>
 </div>
 <p><em>The figure plots term premia at the 2-year maturity (top panel) and the 10-year maturity (bottom panel), both in percentage points, estimated from the Terminal Rate Model over the period 1991–2026. The blue line corresponds to the model estimated with <span class="math inline">\(C^{\ast}\)</span> set equal to the subsample PCA VAR convergence level, and the orange line corresponds to <span class="math inline">\(C^{\ast}\)</span> set equal to the nominal natural rate of to which <span class="math inline">\(10\)</span>-year inflation expectations from the Philadelphia Fed’s survey of professional forecasters is added. All series are monthly.</em></p>
-<p>The consequences of the two alternative <span class="math inline">\(C^{\ast}\)</span> specifications are immediately apparent in <a href="#fig-termpremia" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-termpremia</span></a>, which plots the implied term premia at the 2- and 10-year maturities. The most striking feature of both panels is the persistent and substantial gap between the two series throughout much of the sample. Since a higher <span class="math inline">\(C^*\)</span> implies that the market is compensating investors for a future short rate converging to a higher long-run level, it compresses the term premium: a larger share of the observed yield is attributed to rate expectations rather than to risk compensation. Conversely, a lower <span class="math inline">\(C^{\ast}\)</span> leaves more of the yield to be explained by the term premium component. This is exactly the pattern visible in the figure: in periods where the HLW-based <span class="math inline">\(C^*\)</span> lies below the VAR-based estimate—as it does throughout most of the sample—the orange series registers higher term premia than the blue.</p>
+<p>The consequences of the two alternative <span class="math inline">\(C^{\ast}\)</span> specifications are immediately apparent in <a href="#fig-termpremia" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>, which plots the implied term premia at the 2- and 10-year maturities. The most striking feature of both panels is the persistent and substantial gap between the two series throughout much of the sample. Since a higher <span class="math inline">\(C^*\)</span> implies that the market is compensating investors for a future short rate converging to a higher long-run level, it compresses the term premium: a larger share of the observed yield is attributed to rate expectations rather than to risk compensation. Conversely, a lower <span class="math inline">\(C^{\ast}\)</span> leaves more of the yield to be explained by the term premium component. This is exactly the pattern visible in the figure: in periods where the HLW-based <span class="math inline">\(C^*\)</span> lies below the VAR-based estimate—as it does throughout most of the sample—the orange series registers higher term premia than the blue.</p>
 <p>At the 2-year horizon, the difference between the two series is already economically meaningful, with gaps frequently exceeding 100 basis points and, in some episodes, approaching 200 basis points. Crucially, the two series at times assign opposite signs to the 2-year term premium: the VAR-based estimate dips firmly into negative territory during the post-GFC easing cycle and again in the years around 2015–2019, whereas the HLW-based estimate remains positive or close to zero over these same periods. The sign of the term premium has a direct bearing on how one interprets yield curve dynamics and monetary policy transmission, so this disagreement is not merely quantitative but qualitative.</p>
 <p>The 10-year panel tells a broadly similar story, but with greater absolute magnitudes and a more pronounced secular trend. Both series decline over the sample, consistent with the well-documented compression of long-term risk premia following the Greenspan era and during the period of unconventional monetary policy. The VAR-based estimate falls more steeply, reaching negative values after the GFC and remaining subdued until the post-pandemic inflation shock of 2022–2023, when both series surge sharply upward as the Federal Reserve tightened aggressively. The HLW-based estimate tracks this broad narrative as well but at a consistently higher level, suggesting that an economically anchored <span class="math inline">\(C^{\ast}\)</span> attributes a greater fraction of any given long yield to a positive risk compensation, and a smaller fraction to mere rate expectations.</p>
 <p>Two further observations are worth highlighting. First, the co-movement between the two series—while far from perfect—is sufficiently positive to confirm that they are capturing the same underlying risk-premium dynamics to a meaningful degree; the divergence is therefore a level shift rather than noise. Second, the spread between the two estimates narrows considerably in the post-2022 episode, when the aggressive and broadly anticipated hiking cycle brought <span class="math inline">\(C^*\)</span> estimates derived from market yields and from macro fundamentals into closer alignment. This convergence is itself informative: it suggests that, in regimes where the market’s long-run anchor is well pinned by actual policy expectations, the identification uncertainty around <span class="math inline">\(C^*\)</span> diminishes, and the different specifications produce more concordant term premium estimates.</p>
-<p>Taken together, <a href="#fig-termpremia" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-termpremia</span></a> illustrates the central practical message of the Terminal Rate Model: term premium estimates are not model-free quantities, and the long-run convergence level <span class="math inline">\(C^{\ast}\)</span> is not a minor technical detail but a first-order determinant of the resulting decomposition. Practitioners and researchers who compare term premia across models or datasets must therefore be alert to differences in the implicit or explicit <span class="math inline">\(C^{\ast}\)</span> assumption embedded in each.</p>
+<p>Taken together, <a href="#fig-termpremia" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> illustrates the central practical message of the Terminal Rate Model: term premium estimates are not model-free quantities, and the long-run convergence level <span class="math inline">\(C^{\ast}\)</span> is not a minor technical detail but a first-order determinant of the resulting decomposition. Practitioners and researchers who compare term premia across models or datasets must therefore be alert to differences in the implicit or explicit <span class="math inline">\(C^{\ast}\)</span> assumption embedded in each.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-ang.piazzesi.03" class="csl-entry" role="listitem">
 Ang, A., and M. Piazzesi. 2003. <span>“A No-Arbitrage Vector Autoregression of Term Structure Dynamics with Macroeconomic and Latent Variables.”</span> <em>Journal of Monetary Economics</em> 50 (4): 745–87.
 </div>
@@ -1530,10 +1527,10 @@ Vasicek, O. 1977. <span>“An Equilibrium Characterization of the Term Structure
 <li id="fn2"><p>In the affine term-structure literature there are two common, but equivalent, sign conventions. Some authors (e.g.&nbsp;Joslin, Singleton and Zhu) define bond prices as <span class="math inline">\(P_t^{(n)} = \exp(A_n + B_n^\top X_t)\)</span>, which implies <span class="math inline">\(y_t^{(n)} = -\tfrac{1}{n}(A_n + B_n^\top X_t)\)</span> and hence <span class="math inline">\(a_n = -A_n/n\)</span>, <span class="math inline">\(b_n = -B_n/n\)</span>. Here, we instead start from the pricing relation <span class="math inline">\(P_t^{(n)} = \exp\!\big(-\sum_{j=0}^{(n-1)} r_{t+j}\Delta t\big)\)</span> and use the definition <span class="math inline">\(y=-\tfrac{1}{n}log(P)\)</span>, such that <span class="math inline">\(E_t(y_t^{(n)}) = \tfrac{1}{n}E_t(A_n + B_n^\top X_t)\)</span> and <span class="math inline">\(a_n = A_n/n\)</span>, <span class="math inline">\(b_n = B_n/n\)</span>. Both conventions are algebraically equivalent; only the placement of the minus sign differs.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>This is an example of the general idea of certainty-equivalent cash flows: the risk adjustment is moved into the pricing kernel (or, equivalently, into the probability measure under which prices are computed), so that the resulting cash flows can be discounted at the risk-free rate. More broadly, it reflects the fundamental principle that the riskiness of cash flows and the discount rate must be aligned.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Formally, this term ensures that, after the change of measure to <span class="math inline">\(\mathbb{Q}\)</span>, discounted asset prices are martingales.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Formally, the change of measure from <span class="math inline">\(\mathbb{P}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span> is implemented via the Radon–Nikodym derivative, which expresses how probabilities under <span class="math inline">\(\mathbb{Q}\)</span> are obtained by reweighting probabilities under <span class="math inline">\(\mathbb{P}\)</span>. In the Gaussian, log-normal SDF case considered, this Radon–Nikodym derivative is exponential in <span class="math inline">\(e_{t+1}^{\mathbb{P}}\)</span>, and the standard result of exponential tilting of normal distributions implies exactly the mean shift in <a href="#eq-eps-Q-def2" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-eps-Q-def2</span></a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Formally, the change of measure from <span class="math inline">\(\mathbb{P}\)</span> to <span class="math inline">\(\mathbb{Q}\)</span> is implemented via the Radon–Nikodym derivative, which expresses how probabilities under <span class="math inline">\(\mathbb{Q}\)</span> are obtained by reweighting probabilities under <span class="math inline">\(\mathbb{P}\)</span>. In the Gaussian, log-normal SDF case considered, this Radon–Nikodym derivative is exponential in <span class="math inline">\(e_{t+1}^{\mathbb{P}}\)</span>, and the standard result of exponential tilting of normal distributions implies exactly the mean shift in <a href="#eq-eps-Q-def2" class="quarto-xref">Equation&nbsp;<span>2.19</span></a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Note that this is done automatically the MATLAB’s pca function.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>See also Chapter&nbsp;0.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>See also <span class="citation" data-cites="Nyholm2021">Nyholm (<a href="#ref-Nyholm2021" role="doc-biblioref">2021</a>)</span><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>See also <span class="citation" data-cites="Nyholm2021">Nyholm (<a href="references.html#ref-Nyholm2021" role="doc-biblioref">2021</a>)</span><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>We see this through an example. For <span class="math inline">\(n=3\)</span>, we have: <span class="math display">\[
 \begin{align}
     B^{\top}_1 &amp;= -\rho^{\top}_1 \nonumber \\
@@ -1545,7 +1542,7 @@ Vasicek, O. 1977. <span>“An Equilibrium Characterization of the Term Structure
      %      \text{so,} \nonumber \\
     %  B_3&amp;= -\left[  \sum_{k=0}^2\left( \Phi^\mathbb{Q} \right)^k \right]^{\top} \rho_1, \nonumber
 \end{align}
-\]</span> which generalises to equation <a href="#eq-Bn-recur-final" class="quarto-xref">Equation&nbsp;<span class="quarto-unresolved-ref">eq-Bn-recur-final</span></a>.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+\]</span> which generalises to equation <a href="#eq-Bn-recur-final" class="quarto-xref">Equation&nbsp;<span>3.17</span></a>.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>The necessary calculations are shown in the script <code>closed_form_Bn.m</code>.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn11"><p>The <span class="math inline">\(r^{\ast}\)</span> time series is obtained here: <a href="https://www.newyorkfed.org/research/policy/rstar" class="uri">https://www.newyorkfed.org/research/policy/rstar</a> and inflation expectations are obtained here: <a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/inflation-forecasts" class="uri">https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/inflation-forecasts</a><a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
@@ -1955,12 +1952,12 @@ Vasicek, O. 1977. <span>“An Equilibrium Characterization of the Term Structure
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./theToolbox.html" class="pagination-link" aria-label="Notation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Notation</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Notation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./DBPensions.html" class="pagination-link" aria-label="Defined-Benefit Pensions">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Defined-Benefit Pensions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
