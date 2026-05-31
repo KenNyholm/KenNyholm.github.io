@@ -6,9 +6,9 @@ Welcome to my website!
 
 Here you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.
 
-### Textbook in progress
+### Textbook - work in progress
 
-I am currently writing a web-based textbook called: [*A Practitioner's Guide to Financial Market Analysis*](/textbook/index.html), covering yield curve modelling, DB pension funds, and related topics. Take a look and give me feedback!
+I am currently writing a web-based textbook called: [*A Practitioner's Guide to Financial Market Analysis*](/textbook/index.html), with the aim to include the topics covered by intermediate finance textbooks garnished with practical examples. Take a look at the current draft chapter and feel free to give me feedback!
 
 ### Links
 
