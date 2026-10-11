@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "links.html",
-    "href": "links.html",
-    "title": "Links",
-    "section": "",
-    "text": "Google Scholar\nResearchGate\nECB working papers"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ken Nyholm’s website",
-    "section": "",
-    "text": "Welcome to my website!\nHere you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.\n\nTextbook in progress\nI am currently writing a web-based textbook called: A Practitioner’s Guide to Financial Market Analysis, covering yield curve modelling, DB pension funds, and related topics. Take a look and give me feedback!\n\n\nLinks\nFind me on Google Scholar, ResearchGate, and the ECB author page.\n\n\nDisclaimer\nI work at the European Central Bank. Views expressed on this site are my own and do not necessarily represent the ECB. Please read the disclaimer."
-  },
-  {
     "objectID": "code.html",
     "href": "code.html",
     "title": "Code & Papers",
@@ -33,6 +19,27 @@
     "title": "Code & Papers",
     "section": "Julia",
     "text": "Julia\n\nPortfolio optimisation example\n\nPDF write-up\nJulia code and data\nHTML version"
+  },
+  {
+    "objectID": "otherstuff.html",
+    "href": "otherstuff.html",
+    "title": "Other Stuff",
+    "section": "",
+    "text": "Stuff on this page are made for fun and that should not be taken too seriously.\nDo you want to learn Spanish but is bored using Duolingo and other proper language raining tools? Then try Queso-Quest! - Queso-Quest"
+  },
+  {
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Links",
+    "section": "",
+    "text": "Google Scholar\nResearchGate\nECB working papers"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ken Nyholm’s website",
+    "section": "",
+    "text": "Welcome to my website!\nHere you can find papers, MATLAB and Julia code related to my work on yield curve modelling, fixed income markets, and asset allocation.\n\nTextbook - work in progress\nI am currently writing a web-based textbook called: A Practitioner’s Guide to Financial Market Analysis, with the aim to include the topics covered by intermediate finance textbooks garnished with practical examples. Take a look at the current draft chapter and feel free to give me feedback!\n\n\nLinks\nFind me on Google Scholar, ResearchGate, and the ECB author page.\n\n\nDisclaimer\nI work at the European Central Bank. Views expressed on this site are my own and do not necessarily represent the ECB. Please read the disclaimer."
   },
   {
     "objectID": "disclaimer.html",
