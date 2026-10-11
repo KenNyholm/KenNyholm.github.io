@@ -14,6 +14,7 @@ website:
       - href: links.qmd
         text: Links
       - href: otherstuff.qmd
+        text: Other Stuff
       - href: disclaimer.qmd
         text: Disclaimer
     right:
