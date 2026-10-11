@@ -13,6 +13,7 @@ website:
         text: Code & Papers
       - href: links.qmd
         text: Links
+      - href: otherstuff.qmd
       - href: disclaimer.qmd
         text: Disclaimer
     right:
